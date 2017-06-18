@@ -1,0 +1,4627 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: Voucherify API
+  description: 'TODO: Add Description'
+  license:
+    name: MIT
+    url: http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT
+host: api.voucherify.io
+basePath: /
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /v1/campaigns:
+    post:
+      description: 'TODO: Add Description'
+      summary: TC6 - Create campaign
+      tags:
+      - TC6 - Campaign with Validation Rules
+      operationId: TC6 - Create campaign
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc6  create campaignrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/campaigns
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: >-
+            {
+                "name": "TC6 - test campaign",
+                "start_date": "2016-09-26T00:00:00Z",
+                "expiration_date": "2020-12-26T00:00:00Z",
+                "type": "AUTO_UPDATE",
+                "vouchers_count": 10,
+                "voucher": {
+                    "type": "DISCOUNT_VOUCHER",
+                    "discount": {
+                        "percent_off": "10.0",
+                        "type": "PERCENT"
+                    },
+                    "redemption": {
+                      "quantity": 1
+                    },
+                    "code_config": {
+                        "pattern": "TC6-PROMO-#######"
+                    }
+                },
+                "metadata": {
+                  "test": true
+                }
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: TC6 - Create campaign
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/campaigns/test campaign:
+    get:
+      description: 'TODO: Add Description'
+      summary: Get campaign
+      tags:
+      - Campaigns
+      operationId: Get campaign
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /v1/campaigns/test campaign
+          headers:
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Get campaign
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/customers:
+    post:
+      description: 'TODO: Add Description'
+      summary: Create
+      tags:
+      - Customers
+      operationId: Create
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateRequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/customers
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: >-
+            {
+                "name" : "Jan Kowalski",
+                "email" : "jan1497782357@kowalski.pl"
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Create
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/customers/{customerId}:
+    get:
+      description: 'TODO: Add Description'
+      summary: Get
+      tags:
+      - Customers
+      operationId: Get
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: customerId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    put:
+      description: 'TODO: Add Description'
+      summary: Update
+      tags:
+      - Customers
+      operationId: Update
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateRequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: customerId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/customers/{createdCustomerId}:
+    delete:
+      description: 'TODO: Add Description'
+      summary: Delete
+      tags:
+      - Customers
+      operationId: Delete
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/DeleteRequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: createdCustomerId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/test-activity/enable:
+    post:
+      description: 'TODO: Add Description'
+      summary: Enable
+      tags:
+      - Enable/disable
+      operationId: Enable
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers/test-activity/enable
+          headers:
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Enable
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/test-activity/disable:
+    post:
+      description: 'TODO: Add Description'
+      summary: Disable
+      tags:
+      - Enable/disable
+      operationId: Disable
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/DisableRequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers/test-activity/disable
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: >-
+            {
+                "campaign": "100k-test",
+                "channel": "MailChimp"
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Disable
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/exports:
+    post:
+      description: 'TODO: Add Description'
+      summary: Create Export
+      tags:
+      - Export
+      operationId: Create Export
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateExportrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/exports
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: >-
+            {
+                "exported_object": "voucher",
+              "parameters" : {
+                "fields": ["code", "voucher_type"],
+                "filter" : {
+                  "categories" : {
+                    "conditions" : {
+                      "$in" : ["postman"]
+                    }
+                  }
+                }
+              }
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Create Export
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/exports/{exportId}:
+    get:
+      description: 'TODO: Add Description'
+      summary: Get Export
+      tags:
+      - Export
+      operationId: Get Export
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: exportId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    delete:
+      description: 'TODO: Add Description'
+      summary: Delete Export
+      tags:
+      - Export
+      operationId: Delete Export
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: exportId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/import:
+    get:
+      description: 'TODO: Add Description'
+      summary: Import vouchers
+      tags:
+      - Import
+      operationId: Import vouchers
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /v1/vouchers/import
+          headers:
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Import vouchers
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    post:
+      description: 'TODO: Add Description'
+      summary: Import vouchers - duplicate
+      tags:
+      - Import
+      operationId: Import vouchers - duplicate
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/Import vouchers  duplicaterequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers/import
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: >-
+            [
+                {
+                    "code": "test",
+                    "category": "postman",
+                    "type": "DISCOUNT_VOUCHER",
+                    "discount": {
+                        "amount_off": 3000,
+                        "type": "AMOUNT"
+                    },
+                    "start_date": "2015-12-01T23:00:00Z",
+                    "expiration_date": "2015-12-19T23:00:00Z",
+                    "redemption": {
+                        "quantity": 1.0
+                    },
+                    "metadata": {"unit": "EUR"},
+                    "additional_info": "secret-code1"
+                }
+            ]
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Import vouchers - duplicate
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/campaigns/postman-import/import:
+    post:
+      description: 'TODO: Add Description'
+      summary: Import vouchers - to campaign
+      tags:
+      - Import
+      operationId: Import vouchers - to campaign
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/Import vouchers  to campaignrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/campaigns/postman-import/import
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: >-
+            [
+                {
+                    "code": "CODE_1497782357",
+                    "redemption": {
+                        "quantity": 1.0
+                    },
+                    "metadata": {"unit": "EUR"},
+                    "additional_info": "secret-code1"
+                }
+            ]
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Import vouchers - to campaign
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/products:
+    get:
+      description: 'TODO: Add Description'
+      summary: List products
+      tags:
+      - Products
+      operationId: List products
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /v1/products
+          headers:
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: List products
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    post:
+      description: 'TODO: Add Description'
+      summary: TC6 - Create Product
+      tags:
+      - TC6 - Campaign with Validation Rules
+      operationId: TC6 - Create Product
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc6  create productrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/products
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: >-
+            {
+                "name" : "Apple iPhone 7",
+                "source_id" : "internal_crm_id_1497782357",
+                "attributes": [ "color", "memory" ],
+                "metadata": {
+                  "test": true
+                }
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: TC6 - Create Product
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/products/{createdProductId}:
+    get:
+      description: 'TODO: Add Description'
+      summary: Get product
+      tags:
+      - Products
+      operationId: Get product
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: createdProductId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    put:
+      description: 'TODO: Add Description'
+      summary: Update product
+      tags:
+      - Products
+      operationId: Update product
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateProductrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: createdProductId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    delete:
+      description: 'TODO: Add Description'
+      summary: Delete product
+      tags:
+      - Products
+      operationId: Delete product
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: createdProductId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/products/{createdProductId}/skus:
+    get:
+      description: 'TODO: Add Description'
+      summary: List SKUs
+      tags:
+      - Products
+      operationId: List SKUs
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: createdProductId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    post:
+      description: 'TODO: Add Description'
+      summary: TC6 - Add SKU
+      tags:
+      - TC6 - Campaign with Validation Rules
+      operationId: TC6 - Add SKU
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc6  add skurequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: createdProductId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/products/{createdProductId}/skus/{createdSKUId}:
+    get:
+      description: 'TODO: Add Description'
+      summary: Get SKU
+      tags:
+      - Products
+      operationId: Get SKU
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: createdProductId
+        in: path
+        required: true
+        type: string
+        description: ''
+      - name: createdSKUId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    put:
+      description: 'TODO: Add Description'
+      summary: Update SKU
+      tags:
+      - Products
+      operationId: Update SKU
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateSkurequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: createdProductId
+        in: path
+        required: true
+        type: string
+        description: ''
+      - name: createdSKUId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    delete:
+      description: 'TODO: Add Description'
+      summary: Delete SKU
+      tags:
+      - Products
+      operationId: Delete SKU
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: createdProductId
+        in: path
+        required: true
+        type: string
+        description: ''
+      - name: createdSKUId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/publish:
+    post:
+      description: 'TODO: Add Description'
+      summary: TC4 - Publish voucher form auto-update campaign
+      tags:
+      - TC4 - Distribution
+      operationId: TC4 - Publish voucher form auto-update campaign
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc4  publish voucher form autoUpdate campaignrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers/publish
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: >-
+            {
+              "campaign": "TEST-DEMO-1",
+              "customer": {
+                "source_id": "test@myshop.pl",
+                "name": "Test Publish Customer"
+              },
+              "metadata": {
+                "test": true,
+                "app": "postman"
+              }
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: TC4 - Publish voucher form auto-update campaign
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/publications:
+    get:
+      description: 'TODO: Add Description'
+      summary: List Publications filters
+      tags:
+      - Publish
+      operationId: List Publications filters
+      produces:
+      - application/json
+      parameters:
+      - name: filters[campaign][conditions][$is][0]
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: filters[Result][conditions][$is][1]
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /v1/publications?filters[campaign][conditions][$is][0]=StaticOne&filters[Result][conditions][$is][1]=FAILURE
+          headers:
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: List Publications filters
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/test/redemption:
+    get:
+      description: 'TODO: Add Description'
+      summary: Get voucher's redemptions
+      tags:
+      - Redemptions
+      operationId: Get voucher's redemptions
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /v1/vouchers/test/redemption
+          headers:
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Get voucher's redemptions
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    post:
+      description: 'TODO: Add Description'
+      summary: Redeem
+      tags:
+      - Redeem
+      operationId: Redeem
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers/test/redemption
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: '{}'
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Redeem
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/NotFound123/redemption:
+    post:
+      description: 'TODO: Add Description'
+      summary: Redeem - not found
+      tags:
+      - Redeem
+      operationId: Redeem - not found
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers/NotFound123/redemption
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: '{}'
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Redeem - not found
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/invalid/redemption:
+    post:
+      description: 'TODO: Add Description'
+      summary: Redeem - expired
+      tags:
+      - Redeem
+      operationId: Redeem - expired
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers/invalid/redemption
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: '{}'
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Redeem - expired
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /client/v1/redeem:
+    post:
+      description: 'TODO: Add Description'
+      summary: Redeem - client side
+      tags:
+      - Redeem
+      operationId: Redeem - client side
+      produces:
+      - application/json
+      parameters:
+      - name: code
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
+      - name: X-Client-Application-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-Client-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Origin
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /client/v1/redeem?code=test
+          headers:
+            Content-Type: application/json
+            X-Client-Application-Id: 011240bf-d5fc-4ef1-9e82-11eb68c43bf5
+            X-Client-Token: 9e2230c5-71fb-460a-91c6-fbee64707a20
+            Origin: origin
+          body: '{}'
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Redeem - client side
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/LdprQtRL/redemption:
+    post:
+      description: 'TODO: Add Description'
+      summary: Redeem - order details
+      tags:
+      - Redeem
+      operationId: Redeem - order details
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Redeem  order detailsrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers/LdprQtRL/redemption
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: >-
+            {
+                "order": {
+                    "items": [
+                      { "sku_id": "sku_dSbRQfbyUMyHnt", "quantity": "1" },
+                        { "sku_id": "sku_0KtP4rvwEECQ2U", "quantity": "1" }
+                    ]
+                }
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Redeem - order details
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/redemptions:
+    get:
+      description: 'TODO: Add Description'
+      summary: List redemptions - success
+      tags:
+      - Redemptions
+      operationId: List redemptions - success
+      produces:
+      - application/json
+      parameters:
+      - name: result
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /v1/redemptions?result=SUCCESS
+          headers:
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: List redemptions - success
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/segments:
+    post:
+      description: 'TODO: Add Description'
+      summary: Create segment
+      tags:
+      - Segments
+      operationId: Create segment
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateSegmentrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/segments
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: >-
+            {
+              "name": "test segment2",
+              "customers": ["cust_EkqCdCA7JyIDlFBvkOMTnceJ"],
+              "type": "static"
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Create segment
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/segments/{createdSegmentId}:
+    get:
+      description: 'TODO: Add Description'
+      summary: Get segment
+      tags:
+      - Segments
+      operationId: Get segment
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: createdSegmentId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    delete:
+      description: 'TODO: Add Description'
+      summary: Delete segment
+      tags:
+      - Segments
+      operationId: Delete segment
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: createdSegmentId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers:
+    get:
+      description: 'TODO: Add Description'
+      summary: List vouchers - paging
+      tags:
+      - Standalone2
+      operationId: List vouchers - paging1
+      produces:
+      - application/json
+      parameters:
+      - name: campaign
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: limit
+        in: query
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      - name: skip
+        in: query
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /v1/vouchers?campaign=postman-paging&limit=2&skip=8
+          headers:
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: List vouchers - paging
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    post:
+      description: 'TODO: Add Description'
+      summary: Create voucher without code
+      tags:
+      - Standalone2
+      operationId: Create voucher without code1
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateVoucherWithoutCoderequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: "{\n    \"type\": \"DISCOUNT_VOUCHER\",\n    \"discount\": {\n        \"percent_off\": \"10.0\",\n        \"type\": \"PERCENT\"\n    },\n    \"redemption\": {\n        \"quantity\": \"1\" \n    },\n    \"category\": \"postman\"\n}"
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Create voucher without code
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/1497782357:
+    post:
+      description: 'TODO: Add Description'
+      summary: Create voucher with a given code
+      tags:
+      - Standalone2
+      operationId: Create voucher with a given code1
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateVoucherWithAGivenCoderequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers/1497782357
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: "{\n    \"type\": \"DISCOUNT_VOUCHER\",\n    \"discount\": {\n        \"percent_off\": \"10.0\",\n        \"type\": \"PERCENT\"\n    },\n    \"redemption\": {\n        \"quantity\": \"1\" \n    },\n    \"category\": \"postman\"\n}"
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Create voucher with a given code
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/test:
+    get:
+      description: 'TODO: Add Description'
+      summary: Get voucher - existing
+      tags:
+      - Standalone2
+      operationId: Get voucher - existing1
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /v1/vouchers/test
+          headers:
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Get voucher - existing
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    put:
+      description: 'TODO: Add Description'
+      summary: Update voucher
+      tags:
+      - Standalone2
+      operationId: Update voucher1
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateVoucherrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: PUT
+          uri: /v1/vouchers/test
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: "{\n    \"metadata\": {\n        \"update_time\": \"1497782357\" \n    },\n    \"category\": \"postman\"\n}"
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Update voucher
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/notfound123:
+    get:
+      description: 'TODO: Add Description'
+      summary: Get voucher - non-existent
+      tags:
+      - Standalone2
+      operationId: Get voucher - non-existent1
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /v1/vouchers/notfound123
+          headers:
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Get voucher - non-existent
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/{generatedCode}:
+    delete:
+      description: 'TODO: Add Description'
+      summary: Delete voucher
+      tags:
+      - Standalone2
+      operationId: Delete voucher1
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: generatedCode
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/{TC1-code}/validate:
+    post:
+      description: 'TODO: Add Description'
+      summary: TC1 - Validate
+      tags:
+      - TC1 - Redemption limit 1
+      operationId: TC1 - Validate
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: TC1-code
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/{TC1-code}/redemption:
+    get:
+      description: 'TODO: Add Description'
+      summary: TC1 - Get  redemptions
+      tags:
+      - TC1 - Redemption limit 1
+      operationId: TC1 - Get  redemptions
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: TC1-code
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    post:
+      description: 'TODO: Add Description'
+      summary: TC1 - Second redeem
+      tags:
+      - TC1 - Redemption limit 1
+      operationId: TC1 - Second redeem
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: TC1-code
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/IzvHT3Ba/redemption:
+    post:
+      description: 'TODO: Add Description'
+      summary: TC3 - Redeem
+      tags:
+      - TC3 - discount rules
+      operationId: TC3 - Redeem
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc3  redeemrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers/IzvHT3Ba/redemption
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: >
+            {
+                "customer": {
+                     "id": "cust_eIH9UtbvIfRUP9nZyBqDeMEv"
+                },
+                "order": {
+                    "items": [
+                        { "product_id": "prod_anJ03RZZq74z4v", "quantity": "1" }
+                    ]
+                }
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: TC3 - Redeem
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/{TC3-code}/validate:
+    post:
+      description: 'TODO: Add Description'
+      summary: Validate voucher for given customer order
+      tags:
+      - TC3 - e-commerce integration
+      operationId: Validate voucher for given customer order
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/ValidateVoucherForGivenCustomerOrderrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: TC3-code
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/{TC3-code}/redemption:
+    get:
+      description: 'TODO: Add Description'
+      summary: Get  redemption
+      tags:
+      - TC3 - e-commerce integration
+      operationId: Get  redemption
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: TC3-code
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    post:
+      description: 'TODO: Add Description'
+      summary: TC2 - Redeem 2nd time after rollback
+      tags:
+      - TC3 - e-commerce integration
+      operationId: TC2 - Redeem 2nd time after rollback
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc2  redeem 2nd time after rollbackrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: TC3-code
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/customers/{TC3-customer-id}:
+    get:
+      description: 'TODO: Add Description'
+      summary: TC2 - Get  customer
+      tags:
+      - TC3 - e-commerce integration
+      operationId: TC2 - Get  customer
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: TC3-customer-id
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/redemptions/{TC3-redemption-id}/rollback:
+    post:
+      description: 'TODO: Add Description'
+      summary: TC2 - Rollback redemption
+      tags:
+      - TC3 - e-commerce integration
+      operationId: TC2 - Rollback redemption
+      produces:
+      - application/json
+      parameters:
+      - name: tracking_id
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: TC3-redemption-id
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/TC4-DIS-BJ5J-iRuy-L7C-2016:
+    get:
+      description: 'TODO: Add Description'
+      summary: TC4 - Get voucher
+      tags:
+      - TC4 - Distribution
+      operationId: TC4 - Get voucher
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /v1/vouchers/TC4-DIS-BJ5J-iRuy-L7C-2016
+          headers:
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: TC4 - Get voucher
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/{TC5-code}/redemption:
+    post:
+      description: 'TODO: Add Description'
+      summary: TC5 - Redeem 2nd time
+      tags:
+      - TC5 - Rollback Redemption
+      operationId: TC5 - Redeem 2nd time
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc5  redeemrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: TC5-code
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/redemptions/{TC5-redemption-id}/rollback:
+    post:
+      description: 'TODO: Add Description'
+      summary: TC5 - Rollback 2nd time Redemption - pass related customer profile
+      tags:
+      - TC5 - Rollback Redemption
+      operationId: TC5 - Rollback 2nd time Redemption - pass related customer profile
+      produces:
+      - application/json
+      parameters:
+      - name: reason
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: TC5-redemption-id
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/validation-rules:
+    post:
+      description: 'TODO: Add Description'
+      summary: Create
+      tags:
+      - Validation rules
+      operationId: Create2
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateRequest107'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/validation-rules
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: >-
+            {
+              "voucher_code" : "val_rul_test",
+              "orders": {
+                  "total_amount": {
+                    "$more_than":[10000]
+                  }
+                }
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Create
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/validation-rules/{createdValidationRulesId}:
+    get:
+      description: 'TODO: Add Description'
+      summary: Get
+      tags:
+      - Validation rules
+      operationId: Get1
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: createdValidationRulesId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    put:
+      description: 'TODO: Add Description'
+      summary: Update
+      tags:
+      - Validation rules
+      operationId: Update1
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateRequest110'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: createdValidationRulesId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    delete:
+      description: 'TODO: Add Description'
+      summary: Delete
+      tags:
+      - Validation rules
+      operationId: Delete1
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: createdValidationRulesId
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/campaigns/{createdCampaignName}/vouchers:
+    post:
+      description: 'TODO: Add Description'
+      summary: TC6 - Add voucher to campaign
+      tags:
+      - TC6 - Campaign with Validation Rules
+      operationId: TC6 - Add voucher to campaign
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc6  add voucher to campaignrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: createdCampaignName
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/test/validate:
+    post:
+      description: 'TODO: Add Description'
+      summary: Validate
+      tags:
+      - Validate
+      operationId: Validate
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/ValidateRequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers/test/validate
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: >-
+            {
+              "order":{
+                "amount":1000
+              }
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Validate
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/invalid/validate:
+    post:
+      description: 'TODO: Add Description'
+      summary: Validate - expired
+      tags:
+      - Validate
+      operationId: Validate - expired
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers/invalid/validate
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: '{}'
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Validate - expired
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/invalid-disabled/validate:
+    post:
+      description: 'TODO: Add Description'
+      summary: Validate - disabled
+      tags:
+      - Validate
+      operationId: Validate - disabled
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers/invalid-disabled/validate
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: '{}'
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Validate - disabled
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /client/v1/validate:
+    get:
+      description: 'TODO: Add Description'
+      summary: Validate - client side
+      tags:
+      - Validate
+      operationId: Validate - client side
+      produces:
+      - application/json
+      parameters:
+      - name: code
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: X-Client-Application-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-Client-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Origin
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/IzvHT3Ba/validate:
+    post:
+      description: 'TODO: Add Description'
+      summary: Validate - order details
+      tags:
+      - Validate
+      operationId: Validate - order details
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Validate  order detailsrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers/IzvHT3Ba/validate
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: >
+            {
+                "customer": {
+                     "id": "cust_eIH9UtbvIfRUP9nZyBqDeMEv"
+                },
+                "order": {
+                    "items": [
+                        { "product_id": "prod_anJ03RZZq74z4v", "quantity": "1" }
+                    ]
+                }
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Validate - order details
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /v1/vouchers/LdprQtRL/validate:
+    post:
+      description: 'TODO: Add Description'
+      summary: Validate - order details skus
+      tags:
+      - Validate
+      operationId: Validate - order details skus
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Validate  order details skusrequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/vouchers/LdprQtRL/validate
+          headers:
+            Content-Type: application/json
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+          body: >
+            {
+                "order": {
+                    "items": [
+                      { "sku_id": "sku_dSbRQfbyUMyHnt", "quantity": "1" },
+                        { "sku_id": "sku_0KtP4rvwEECQ2U", "quantity": "1" }
+                    ]
+                }
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Validate - order details skus
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+definitions:
+  CreateCampaignrequest:
+    title: Create campaignRequest
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      start_date:
+        description: ''
+        type: string
+      expiration_date:
+        description: ''
+        type: string
+      vouchers_count:
+        description: ''
+        type: integer
+        format: int32
+      voucher:
+        $ref: '#/definitions/Voucher'
+      metadata:
+        $ref: '#/definitions/Metadata'
+    required:
+    - name
+    - start_date
+    - expiration_date
+    - vouchers_count
+    - voucher
+    - metadata
+  Voucher:
+    title: Voucher
+    type: object
+    properties:
+      type:
+        description: ''
+        type: string
+      discount:
+        $ref: '#/definitions/Discount'
+      redemption:
+        $ref: '#/definitions/Redemption'
+      code_config:
+        $ref: '#/definitions/CodeConfig'
+    required:
+    - type
+    - discount
+    - redemption
+    - code_config
+  Discount:
+    title: Discount
+    type: object
+    properties:
+      percent_off:
+        description: ''
+        type: string
+      type:
+        description: ''
+        type: string
+    required:
+    - percent_off
+    - type
+  Redemption:
+    title: Redemption
+    type: object
+    properties:
+      quantity:
+        description: ''
+        type: integer
+        format: int32
+    required:
+    - quantity
+  CodeConfig:
+    title: CodeConfig
+    type: object
+    properties:
+      pattern:
+        description: ''
+        type: string
+    required:
+    - pattern
+  Metadata:
+    title: Metadata
+    type: object
+    properties:
+      test:
+        description: ''
+        type: boolean
+    required:
+    - test
+  CreateGiftCardCampaignrequest:
+    title: Create gift card campaignRequest
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      vouchers_count:
+        description: ''
+        type: integer
+        format: int32
+      voucher:
+        $ref: '#/definitions/Voucher7'
+    required:
+    - name
+    - vouchers_count
+    - voucher
+  Voucher7:
+    title: Voucher7
+    type: object
+    properties:
+      type:
+        description: ''
+        type: string
+      gift:
+        $ref: '#/definitions/Gift'
+      redemption:
+        $ref: '#/definitions/Redemption9'
+    required:
+    - type
+    - gift
+    - redemption
+  Gift:
+    title: Gift
+    type: object
+    properties:
+      amount:
+        description: ''
+        type: integer
+        format: int32
+    required:
+    - amount
+  Redemption9:
+    title: Redemption9
+    type: object
+    properties:
+      quantity:
+        description: ''
+        type: string
+    required:
+    - quantity
+  Create  src idrequest:
+    title: Create - src idRequest
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      email:
+        description: ''
+        type: string
+      description:
+        description: ''
+        type: string
+      source_id:
+        description: ''
+        type: string
+      phone:
+        description: ''
+        type: string
+    required:
+    - name
+    - email
+    - description
+    - source_id
+    - phone
+  UpdateRequest:
+    title: UpdateRequest
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      email:
+        description: ''
+        type: string
+    required:
+    - name
+    - email
+  CreateRequest:
+    title: CreateRequest
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      email:
+        description: ''
+        type: string
+    required:
+    - name
+    - email
+  DeleteRequest:
+    title: DeleteRequest
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      email:
+        description: ''
+        type: string
+    required:
+    - name
+    - email
+  DisableRequest:
+    title: DisableRequest
+    type: object
+    properties:
+      campaign:
+        description: ''
+        type: string
+      channel:
+        description: ''
+        type: string
+    required:
+    - campaign
+    - channel
+  CreateExportrequest:
+    title: Create ExportRequest
+    type: object
+    properties:
+      exported_object:
+        description: ''
+        type: string
+      parameters:
+        $ref: '#/definitions/Parameters'
+    required:
+    - exported_object
+    - parameters
+  Parameters:
+    title: Parameters
+    type: object
+    properties:
+      fields:
+        description: ''
+        type: array
+        items:
+          type: string
+      filter:
+        $ref: '#/definitions/Filter'
+    required:
+    - fields
+    - filter
+  Filter:
+    title: Filter
+    type: object
+    properties:
+      categories:
+        $ref: '#/definitions/Categories'
+    required:
+    - categories
+  Categories:
+    title: Categories
+    type: object
+    properties:
+      conditions:
+        $ref: '#/definitions/Conditions'
+    required:
+    - conditions
+  Conditions:
+    title: Conditions
+    type: object
+    properties:
+      $in:
+        description: ''
+        type: array
+        items:
+          type: string
+    required:
+    - $in
+  Import vouchers  duplicaterequest:
+    title: Import vouchers - duplicateRequest
+    type: object
+    properties:
+      code:
+        description: ''
+        type: string
+      category:
+        description: ''
+        type: string
+      type:
+        description: ''
+        type: string
+      discount:
+        $ref: '#/definitions/Discount21'
+      start_date:
+        description: ''
+        type: string
+      expiration_date:
+        description: ''
+        type: string
+      redemption:
+        $ref: '#/definitions/Redemption22'
+      metadata:
+        $ref: '#/definitions/Metadata23'
+      additional_info:
+        description: ''
+        type: string
+    required:
+    - code
+    - category
+    - type
+    - discount
+    - start_date
+    - expiration_date
+    - redemption
+    - metadata
+    - additional_info
+  Discount21:
+    title: Discount21
+    type: object
+    properties:
+      amount_off:
+        description: ''
+        type: integer
+        format: int32
+      type:
+        description: ''
+        type: string
+    required:
+    - amount_off
+    - type
+  Redemption22:
+    title: Redemption22
+    type: object
+    properties:
+      quantity:
+        description: ''
+        type: number
+        format: double
+    required:
+    - quantity
+  Metadata23:
+    title: Metadata23
+    type: object
+    properties:
+      unit:
+        description: ''
+        type: string
+    required:
+    - unit
+  Import vouchers  to campaignrequest:
+    title: Import vouchers - to campaignRequest
+    type: object
+    properties:
+      code:
+        description: ''
+        type: string
+      redemption:
+        $ref: '#/definitions/Redemption22'
+      metadata:
+        $ref: '#/definitions/Metadata23'
+      additional_info:
+        description: ''
+        type: string
+    required:
+    - code
+    - redemption
+    - metadata
+    - additional_info
+  CreateRequest27:
+    title: CreateRequest27
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      source_id:
+        description: ''
+        type: string
+      attributes:
+        description: ''
+        type: array
+        items:
+          type: string
+      metadata:
+        $ref: '#/definitions/Metadata'
+    required:
+    - name
+    - source_id
+    - attributes
+    - metadata
+  UpdateProductrequest:
+    title: Update productRequest
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      metadata:
+        $ref: '#/definitions/Metadata30'
+    required:
+    - name
+    - metadata
+  Metadata30:
+    title: Metadata30
+    type: object
+    properties:
+      test:
+        description: ''
+        type: string
+    required:
+    - test
+  AddSkurequest:
+    title: Add SKURequest
+    type: object
+    properties:
+      sku:
+        description: ''
+        type: string
+      source_id:
+        description: ''
+        type: string
+      currency:
+        description: ''
+        type: string
+      price:
+        description: ''
+        type: integer
+        format: int32
+      attributes:
+        $ref: '#/definitions/Attributes'
+    required:
+    - sku
+    - source_id
+    - currency
+    - price
+    - attributes
+  Attributes:
+    title: Attributes
+    type: object
+    properties:
+      color:
+        description: ''
+        type: string
+      memory:
+        description: ''
+        type: string
+    required:
+    - color
+    - memory
+  UpdateSkurequest:
+    title: Update SKURequest
+    type: object
+    properties:
+      price:
+        description: ''
+        type: integer
+        format: int32
+      attributes:
+        $ref: '#/definitions/Attributes34'
+    required:
+    - price
+    - attributes
+  Attributes34:
+    title: Attributes34
+    type: object
+    properties:
+      memory:
+        description: ''
+        type: integer
+        format: int32
+    required:
+    - memory
+  PublishRequest:
+    title: PublishRequest
+    type: object
+    properties:
+      campaign:
+        description: ''
+        type: string
+      channel:
+        description: ''
+        type: string
+    required:
+    - campaign
+    - channel
+  PublishBadRequestrequest:
+    title: Publish bad requestRequest
+    type: object
+    properties:
+      campaign:
+        description: ''
+        type: string
+      channel:
+        description: ''
+        type: string
+    required:
+    - campaign
+    - channel
+  Redeem  order detailsrequest:
+    title: Redeem - order detailsRequest
+    type: object
+    properties:
+      order:
+        $ref: '#/definitions/Order'
+    required:
+    - order
+  Order:
+    title: Order
+    type: object
+    properties:
+      items:
+        description: ''
+        type: array
+        items:
+          $ref: '#/definitions/Item'
+    required:
+    - items
+  Item:
+    title: Item
+    type: object
+    properties:
+      sku_id:
+        description: ''
+        type: string
+      quantity:
+        description: ''
+        type: string
+    required:
+    - sku_id
+    - quantity
+  CreateSegmentrequest:
+    title: Create segmentRequest
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      customers:
+        description: ''
+        type: array
+        items:
+          type: string
+      type:
+        description: ''
+        type: string
+    required:
+    - name
+    - customers
+    - type
+  CreateVoucherWithoutCoderequest:
+    title: Create voucher without codeRequest
+    type: object
+    properties:
+      type:
+        description: ''
+        type: string
+      discount:
+        $ref: '#/definitions/Discount'
+      redemption:
+        $ref: '#/definitions/Redemption9'
+      category:
+        description: ''
+        type: string
+    required:
+    - type
+    - discount
+    - redemption
+    - category
+  CreateVoucherWithAGivenCoderequest:
+    title: Create voucher with a given codeRequest
+    type: object
+    properties:
+      type:
+        description: ''
+        type: string
+      discount:
+        $ref: '#/definitions/Discount'
+      redemption:
+        $ref: '#/definitions/Redemption9'
+      category:
+        description: ''
+        type: string
+    required:
+    - type
+    - discount
+    - redemption
+    - category
+  UpdateVoucherrequest:
+    title: Update voucherRequest
+    type: object
+    properties:
+      metadata:
+        $ref: '#/definitions/Metadata48'
+      category:
+        description: ''
+        type: string
+    required:
+    - metadata
+    - category
+  Metadata48:
+    title: Metadata48
+    type: object
+    properties:
+      update_time:
+        description: ''
+        type: string
+    required:
+    - update_time
+  Tc1  create voucher without coderequest:
+    title: TC1 - Create voucher without codeRequest
+    type: object
+    properties:
+      type:
+        description: ''
+        type: string
+      discount:
+        $ref: '#/definitions/Discount'
+      redemption:
+        $ref: '#/definitions/Redemption9'
+      category:
+        description: ''
+        type: string
+    required:
+    - type
+    - discount
+    - redemption
+    - category
+  Tc3  redeemrequest:
+    title: TC3 - RedeemRequest
+    type: object
+    properties:
+      customer:
+        $ref: '#/definitions/Customer'
+      order:
+        $ref: '#/definitions/Order54'
+    required:
+    - customer
+    - order
+  Customer:
+    title: Customer
+    type: object
+    properties:
+      id:
+        description: ''
+        type: string
+    required:
+    - id
+  Order54:
+    title: Order54
+    type: object
+    properties:
+      items:
+        description: ''
+        type: array
+        items:
+          $ref: '#/definitions/Item55'
+    required:
+    - items
+  Item55:
+    title: Item55
+    type: object
+    properties:
+      product_id:
+        description: ''
+        type: string
+      quantity:
+        description: ''
+        type: string
+    required:
+    - product_id
+    - quantity
+  Tc2  create voucher without coderequest:
+    title: TC2 - Create voucher without codeRequest
+    type: object
+    properties:
+      type:
+        description: ''
+        type: string
+      discount:
+        $ref: '#/definitions/Discount'
+      redemption:
+        $ref: '#/definitions/Redemption9'
+      category:
+        description: ''
+        type: string
+      code_config:
+        $ref: '#/definitions/CodeConfig'
+    required:
+    - type
+    - discount
+    - redemption
+    - category
+    - code_config
+  ValidateVoucherForGivenCustomerOrderrequest:
+    title: Validate voucher for given customer orderRequest
+    type: object
+    properties:
+      tracking_id:
+        description: ''
+        type: string
+      order:
+        $ref: '#/definitions/Order61'
+    required:
+    - tracking_id
+    - order
+  Order61:
+    title: Order61
+    type: object
+    properties:
+      amount:
+        description: ''
+        type: integer
+        format: int32
+      items:
+        description: ''
+        type: array
+        items:
+          type: string
+    required:
+    - amount
+    - items
+  RedeemRequest:
+    title: RedeemRequest
+    type: object
+    properties:
+      order:
+        $ref: '#/definitions/Order61'
+    required:
+    - order
+  Tc2  redeem 2nd time after rollbackrequest:
+    title: TC2 - Redeem 2nd time after rollbackRequest
+    type: object
+    properties:
+      customer:
+        $ref: '#/definitions/Customer65'
+      order:
+        $ref: '#/definitions/Order61'
+    required:
+    - customer
+    - order
+  Customer65:
+    title: Customer65
+    type: object
+    properties:
+      id:
+        description: ''
+        type: string
+      name:
+        description: ''
+        type: string
+      email:
+        description: ''
+        type: string
+    required:
+    - id
+    - name
+    - email
+  Tc4  publish voucher form autoUpdate campaignrequest:
+    title: TC4 - Publish voucher form auto-update campaignRequest
+    type: object
+    properties:
+      campaign:
+        description: ''
+        type: string
+      customer:
+        $ref: '#/definitions/Customer68'
+      metadata:
+        $ref: '#/definitions/Metadata69'
+    required:
+    - campaign
+    - customer
+    - metadata
+  Customer68:
+    title: Customer68
+    type: object
+    properties:
+      source_id:
+        description: ''
+        type: string
+      name:
+        description: ''
+        type: string
+    required:
+    - source_id
+    - name
+  Metadata69:
+    title: Metadata69
+    type: object
+    properties:
+      test:
+        description: ''
+        type: boolean
+      app:
+        description: ''
+        type: string
+    required:
+    - test
+    - app
+  Tc5  redeemrequest:
+    title: TC5 - RedeemRequest
+    type: object
+    properties:
+      customer:
+        $ref: '#/definitions/Customer75'
+      order:
+        $ref: '#/definitions/Order61'
+    required:
+    - customer
+    - order
+  Customer75:
+    title: Customer75
+    type: object
+    properties:
+      source_id:
+        description: ''
+        type: string
+      email:
+        description: ''
+        type: string
+      name:
+        description: ''
+        type: string
+      description:
+        description: ''
+        type: string
+    required:
+    - source_id
+    - email
+    - name
+    - description
+  Tc6  create campaignrequest:
+    title: TC6 - Create campaignRequest
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      start_date:
+        description: ''
+        type: string
+      expiration_date:
+        description: ''
+        type: string
+      type:
+        description: ''
+        type: string
+      vouchers_count:
+        description: ''
+        type: integer
+        format: int32
+      voucher:
+        $ref: '#/definitions/Voucher'
+      metadata:
+        $ref: '#/definitions/Metadata'
+    required:
+    - name
+    - start_date
+    - expiration_date
+    - type
+    - vouchers_count
+    - voucher
+    - metadata
+  Tc6  create productrequest:
+    title: TC6 - Create ProductRequest
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      source_id:
+        description: ''
+        type: string
+      attributes:
+        description: ''
+        type: array
+        items:
+          type: string
+      metadata:
+        $ref: '#/definitions/Metadata'
+    required:
+    - name
+    - source_id
+    - attributes
+    - metadata
+  Tc6  add skurequest:
+    title: TC6 - Add SKURequest
+    type: object
+    properties:
+      sku:
+        description: ''
+        type: string
+      source_id:
+        description: ''
+        type: string
+      currency:
+        description: ''
+        type: string
+      price:
+        description: ''
+        type: integer
+        format: int32
+      attributes:
+        $ref: '#/definitions/Attributes'
+    required:
+    - sku
+    - source_id
+    - currency
+    - price
+    - attributes
+  Tc6  create validation rulesrequest:
+    title: TC6 - Create Validation RulesRequest
+    type: object
+    properties:
+      campaign_name:
+        description: ''
+        type: string
+      junction:
+        description: ''
+        type: string
+      skus:
+        $ref: '#/definitions/Skus'
+      orders:
+        $ref: '#/definitions/Orders'
+    required:
+    - campaign_name
+    - junction
+    - skus
+    - orders
+  Skus:
+    title: Skus
+    type: object
+    properties:
+      junction:
+        description: ''
+        type: string
+      conditions:
+        $ref: '#/definitions/Conditions92'
+    required:
+    - junction
+    - conditions
+  Conditions92:
+    title: Conditions92
+    type: object
+    properties:
+      $is:
+        description: ''
+        type: array
+        items:
+          $ref: '#/definitions/Is'
+    required:
+    - $is
+  Is:
+    title: Is
+    type: object
+    properties:
+      id:
+        description: ''
+        type: string
+    required:
+    - id
+  Orders:
+    title: Orders
+    type: object
+    properties:
+      junction:
+        description: ''
+        type: string
+      total_amount:
+        description: ''
+        type: string
+      products_count:
+        $ref: '#/definitions/ProductsCount'
+    required:
+    - junction
+    - total_amount
+    - products_count
+  ProductsCount:
+    title: ProductsCount
+    type: object
+    properties:
+      $more_than:
+        description: ''
+        type: array
+        items:
+          type: integer
+          format: int32
+    required:
+    - $more_than
+  Tc6  add voucher to campaignrequest:
+    title: TC6 - Add voucher to campaignRequest
+    type: object
+    properties:
+      metadata:
+        $ref: '#/definitions/Metadata'
+    required:
+    - metadata
+  ValidateRequest:
+    title: ValidateRequest
+    type: object
+    properties:
+      order:
+        $ref: '#/definitions/Order99'
+    required:
+    - order
+  Order99:
+    title: Order99
+    type: object
+    properties:
+      amount:
+        description: ''
+        type: integer
+        format: int32
+    required:
+    - amount
+  Validate  order detailsrequest:
+    title: Validate - order detailsRequest
+    type: object
+    properties:
+      customer:
+        $ref: '#/definitions/Customer'
+      order:
+        $ref: '#/definitions/Order54'
+    required:
+    - customer
+    - order
+  Validate  order details skusrequest:
+    title: Validate - order details skusRequest
+    type: object
+    properties:
+      order:
+        $ref: '#/definitions/Order'
+    required:
+    - order
+  CreateRequest107:
+    title: CreateRequest107
+    type: object
+    properties:
+      voucher_code:
+        description: ''
+        type: string
+      orders:
+        $ref: '#/definitions/Orders108'
+    required:
+    - voucher_code
+    - orders
+  Orders108:
+    title: Orders108
+    type: object
+    properties:
+      total_amount:
+        $ref: '#/definitions/TotalAmount'
+    required:
+    - total_amount
+  TotalAmount:
+    title: TotalAmount
+    type: object
+    properties:
+      $more_than:
+        description: ''
+        type: array
+        items:
+          type: integer
+          format: int32
+    required:
+    - $more_than
+  UpdateRequest110:
+    title: UpdateRequest110
+    type: object
+    properties:
+      orders:
+        $ref: '#/definitions/Orders108'
+    required:
+    - orders
