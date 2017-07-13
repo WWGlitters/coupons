@@ -197,7 +197,7 @@ paths:
           body: >-
             {
                 "name" : "Jan Kowalski",
-                "email" : "jan1499855944@kowalski.pl"
+                "email" : "jan1499942344@kowalski.pl"
             }
         expectedResponse:
           x-allowExtraHeaders: true
@@ -795,7 +795,7 @@ paths:
           body: >-
             [
                 {
-                    "code": "CODE_1499855944",
+                    "code": "CODE_1499942344",
                     "redemption": {
                         "quantity": 1.0
                     },
@@ -917,7 +917,7 @@ paths:
           body: >-
             {
                 "name" : "Apple iPhone 7",
-                "source_id" : "internal_crm_id_1499855944",
+                "source_id" : "internal_crm_id_1499942344",
                 "attributes": [ "color", "memory" ],
                 "metadata": {
                   "test": true
@@ -2129,7 +2129,7 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /v1/vouchers/1499855944:
+  /v1/vouchers/1499942344:
     post:
       description: 'TODO: Add Description'
       summary: Create voucher with a given code
@@ -2167,7 +2167,7 @@ paths:
       x-unitTests:
       - request:
           method: POST
-          uri: /v1/vouchers/1499855944
+          uri: /v1/vouchers/1499942344
           headers:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
@@ -2284,7 +2284,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: "{\n    \"metadata\": {\n        \"update_time\": \"1499855944\" \n    },\n    \"category\": \"postman\"\n}"
+          body: "{\n    \"metadata\": {\n        \"update_time\": \"1499942344\" \n    },\n    \"category\": \"postman\"\n}"
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -3564,6 +3564,22 @@ paths:
 definitions:
   CreateCampaignrequest:
     title: Create campaignRequest
+    example:
+      name: test campaign 1499942344
+      start_date: 2016-10-26T00:00:00.0000000Z
+      expiration_date: 2016-12-26T00:00:00.0000000Z
+      vouchers_count: 100
+      voucher:
+        type: DISCOUNT_VOUCHER
+        discount:
+          percent_off: 10.0
+          type: PERCENT
+        redemption:
+          quantity: 1
+        code_config:
+          pattern: TC6-PROMO-#######
+      metadata:
+        test: true
     type: object
     properties:
       name:
@@ -3651,6 +3667,15 @@ definitions:
     - test
   CreateGiftCardCampaignrequest:
     title: Create gift card campaignRequest
+    example:
+      name: gitf_card_1499942344
+      vouchers_count: 50
+      voucher:
+        type: GIFT_VOUCHER
+        gift:
+          amount: 10000
+        redemption:
+          quantity: 
     type: object
     properties:
       name:
@@ -3702,6 +3727,12 @@ definitions:
     - quantity
   Create  src idrequest:
     title: Create - src idRequest
+    example:
+      name: Jan Kowalski
+      email: jan@kowalski.pl
+      description: 1499942344
+      source_id: src_id
+      phone: +48 123456789
     type: object
     properties:
       name:
@@ -3727,6 +3758,9 @@ definitions:
     - phone
   UpdateRequest:
     title: UpdateRequest
+    example:
+      name: John Doe
+      email: john@doe.com
     type: object
     properties:
       name:
@@ -3740,6 +3774,9 @@ definitions:
     - email
   CreateRequest:
     title: CreateRequest
+    example:
+      name: Jan Kowalski
+      email: jan1499942344@kowalski.pl
     type: object
     properties:
       name:
@@ -3753,6 +3790,9 @@ definitions:
     - email
   DeleteRequest:
     title: DeleteRequest
+    example:
+      name: Jan Kowalski
+      email: jan1499942344@kowalski.pl
     type: object
     properties:
       name:
@@ -3766,6 +3806,9 @@ definitions:
     - email
   DisableRequest:
     title: DisableRequest
+    example:
+      campaign: 100k-test
+      channel: MailChimp
     type: object
     properties:
       campaign:
@@ -3779,6 +3822,17 @@ definitions:
     - channel
   CreateExportrequest:
     title: Create ExportRequest
+    example:
+      exported_object: voucher
+      parameters:
+        fields:
+        - code
+        - voucher_type
+        filter:
+          categories:
+            conditions:
+              $in:
+              - postman
     type: object
     properties:
       exported_object:
@@ -3832,6 +3886,20 @@ definitions:
     - $in
   Import vouchers  duplicaterequest:
     title: Import vouchers - duplicateRequest
+    example:
+    - code: test
+      category: postman
+      type: DISCOUNT_VOUCHER
+      discount:
+        amount_off: 3000
+        type: AMOUNT
+      start_date: 2015-12-01T23:00:00.0000000Z
+      expiration_date: 2015-12-19T23:00:00.0000000Z
+      redemption:
+        quantity: 1
+      metadata:
+        unit: EUR
+      additional_info: secret-code1
     type: object
     properties:
       code:
@@ -3903,6 +3971,13 @@ definitions:
     - unit
   Import vouchers  to campaignrequest:
     title: Import vouchers - to campaignRequest
+    example:
+    - code: CODE_1499942344
+      redemption:
+        quantity: 1
+      metadata:
+        unit: EUR
+      additional_info: secret-code1
     type: object
     properties:
       code:
@@ -3922,6 +3997,14 @@ definitions:
     - additional_info
   CreateRequest27:
     title: CreateRequest27
+    example:
+      name: Apple iPhone 7
+      source_id: internal_crm_id_1499942344
+      attributes:
+      - color
+      - memory
+      metadata:
+        test: true
     type: object
     properties:
       name:
@@ -3944,6 +4027,10 @@ definitions:
     - metadata
   UpdateProductrequest:
     title: Update productRequest
+    example:
+      name: Apple iPhone 8
+      metadata:
+        test: false
     type: object
     properties:
       name:
@@ -3965,6 +4052,14 @@ definitions:
     - test
   AddSkurequest:
     title: Add SKURequest
+    example:
+      sku: APPLE_IPHONE_7
+      source_id: internal_erp_sku_id_1499942344
+      currency: USD
+      price: 70000
+      attributes:
+        color: black
+        memory: 32
     type: object
     properties:
       sku:
@@ -4003,6 +4098,10 @@ definitions:
     - memory
   UpdateSkurequest:
     title: Update SKURequest
+    example:
+      price: 50000
+      attributes:
+        memory: 16
     type: object
     properties:
       price:
@@ -4026,6 +4125,9 @@ definitions:
     - memory
   PublishRequest:
     title: PublishRequest
+    example:
+      campaign: 100k-test
+      channel: MailChimp
     type: object
     properties:
       campaign:
@@ -4039,6 +4141,9 @@ definitions:
     - channel
   PublishBadRequestrequest:
     title: Publish bad requestRequest
+    example:
+      campaign: postman-paging
+      channel: MailChimp
     type: object
     properties:
       campaign:
@@ -4052,6 +4157,13 @@ definitions:
     - channel
   Redeem  order detailsrequest:
     title: Redeem - order detailsRequest
+    example:
+      order:
+        items:
+        - sku_id: sku_dSbRQfbyUMyHnt
+          quantity: 1
+        - sku_id: sku_0KtP4rvwEECQ2U
+          quantity: 1
     type: object
     properties:
       order:
@@ -4084,6 +4196,11 @@ definitions:
     - quantity
   CreateSegmentrequest:
     title: Create segmentRequest
+    example:
+      name: test segment2
+      customers:
+      - cust_EkqCdCA7JyIDlFBvkOMTnceJ
+      type: static
     type: object
     properties:
       name:
@@ -4103,6 +4220,14 @@ definitions:
     - type
   CreateVoucherWithoutCoderequest:
     title: Create voucher without codeRequest
+    example:
+      type: DISCOUNT_VOUCHER
+      discount:
+        percent_off: 10.0
+        type: PERCENT
+      redemption:
+        quantity: 1
+      category: postman
     type: object
     properties:
       type:
@@ -4122,6 +4247,14 @@ definitions:
     - category
   CreateVoucherWithAGivenCoderequest:
     title: Create voucher with a given codeRequest
+    example:
+      type: DISCOUNT_VOUCHER
+      discount:
+        percent_off: 10.0
+        type: PERCENT
+      redemption:
+        quantity: 1
+      category: postman
     type: object
     properties:
       type:
@@ -4141,6 +4274,10 @@ definitions:
     - category
   UpdateVoucherrequest:
     title: Update voucherRequest
+    example:
+      metadata:
+        update_time: 1499942344
+      category: postman
     type: object
     properties:
       metadata:
@@ -4162,6 +4299,14 @@ definitions:
     - update_time
   Tc1  create voucher without coderequest:
     title: TC1 - Create voucher without codeRequest
+    example:
+      type: DISCOUNT_VOUCHER
+      discount:
+        percent_off: 10.0
+        type: PERCENT
+      redemption:
+        quantity: 1
+      category: postman
     type: object
     properties:
       type:
@@ -4181,6 +4326,13 @@ definitions:
     - category
   Tc3  redeemrequest:
     title: TC3 - RedeemRequest
+    example:
+      customer:
+        id: cust_eIH9UtbvIfRUP9nZyBqDeMEv
+      order:
+        items:
+        - product_id: prod_anJ03RZZq74z4v
+          quantity: 1
     type: object
     properties:
       customer:
@@ -4225,6 +4377,16 @@ definitions:
     - quantity
   Tc2  create voucher without coderequest:
     title: TC2 - Create voucher without codeRequest
+    example:
+      type: DISCOUNT_VOUCHER
+      discount:
+        percent_off: 10.0
+        type: PERCENT
+      redemption:
+        quantity: 1
+      category: postman-tc3
+      code_config:
+        pattern: TC4-PROMO-#######
     type: object
     properties:
       type:
@@ -4247,6 +4409,11 @@ definitions:
     - code_config
   ValidateVoucherForGivenCustomerOrderrequest:
     title: Validate voucher for given customer orderRequest
+    example:
+      tracking_id: shop@myshop.com
+      order:
+        amount: 10000
+        items: []
     type: object
     properties:
       tracking_id:
@@ -4275,6 +4442,10 @@ definitions:
     - items
   RedeemRequest:
     title: RedeemRequest
+    example:
+      order:
+        amount: 10000
+        items: []
     type: object
     properties:
       order:
@@ -4283,6 +4454,14 @@ definitions:
     - order
   Tc2  redeem 2nd time after rollbackrequest:
     title: TC2 - Redeem 2nd time after rollbackRequest
+    example:
+      customer:
+        id: '{{TC3-customer-id}}'
+        name: Test Customer Postman
+        email: test@myshop.com
+      order:
+        amount: 10000
+        items: []
     type: object
     properties:
       customer:
@@ -4311,6 +4490,14 @@ definitions:
     - email
   Tc4  publish voucher form autoUpdate campaignrequest:
     title: TC4 - Publish voucher form auto-update campaignRequest
+    example:
+      campaign: TEST-DEMO-1
+      customer:
+        source_id: test@myshop.pl
+        name: Test Publish Customer
+      metadata:
+        test: true
+        app: postman
     type: object
     properties:
       campaign:
@@ -4352,6 +4539,15 @@ definitions:
     - app
   Tc5  redeemrequest:
     title: TC5 - RedeemRequest
+    example:
+      customer:
+        source_id: test-postman@voucherify.io
+        email: test-postman@voucherify.io
+        name: Test Postman
+        description: Test done from postman client
+      order:
+        amount: 10000
+        items: []
     type: object
     properties:
       customer:
@@ -4384,6 +4580,23 @@ definitions:
     - description
   Tc6  create campaignrequest:
     title: TC6 - Create campaignRequest
+    example:
+      name: TC6 - test campaign
+      start_date: 2016-09-26T00:00:00.0000000Z
+      expiration_date: 2020-12-26T00:00:00.0000000Z
+      type: AUTO_UPDATE
+      vouchers_count: 10
+      voucher:
+        type: DISCOUNT_VOUCHER
+        discount:
+          percent_off: 10.0
+          type: PERCENT
+        redemption:
+          quantity: 1
+        code_config:
+          pattern: TC6-PROMO-#######
+      metadata:
+        test: true
     type: object
     properties:
       name:
@@ -4416,6 +4629,14 @@ definitions:
     - metadata
   Tc6  create productrequest:
     title: TC6 - Create ProductRequest
+    example:
+      name: Apple iPhone 7
+      source_id: internal_crm_id_1499942344
+      attributes:
+      - color
+      - memory
+      metadata:
+        test: true
     type: object
     properties:
       name:
@@ -4438,6 +4659,14 @@ definitions:
     - metadata
   Tc6  add skurequest:
     title: TC6 - Add SKURequest
+    example:
+      sku: APPLE_IPHONE_7
+      source_id: internal_erp_sku_id_1499942344
+      currency: USD
+      price: 70000
+      attributes:
+        color: black
+        memory: 32
     type: object
     properties:
       sku:
@@ -4463,6 +4692,20 @@ definitions:
     - attributes
   Tc6  create validation rulesrequest:
     title: TC6 - Create Validation RulesRequest
+    example:
+      campaign_name: '{{createdCampaignName}}'
+      junction: AND
+      skus:
+        junction: AND
+        conditions:
+          $is:
+          - id: '{{createdSKUId}}'
+      orders:
+        junction: AND
+        total_amount: 
+        products_count:
+          $more_than:
+          - 1
     type: object
     properties:
       campaign_name:
@@ -4542,6 +4785,9 @@ definitions:
     - $more_than
   Tc6  add voucher to campaignrequest:
     title: TC6 - Add voucher to campaignRequest
+    example:
+      metadata:
+        test: true
     type: object
     properties:
       metadata:
@@ -4550,6 +4796,9 @@ definitions:
     - metadata
   ValidateRequest:
     title: ValidateRequest
+    example:
+      order:
+        amount: 1000
     type: object
     properties:
       order:
@@ -4568,6 +4817,13 @@ definitions:
     - amount
   Validate  order detailsrequest:
     title: Validate - order detailsRequest
+    example:
+      customer:
+        id: cust_eIH9UtbvIfRUP9nZyBqDeMEv
+      order:
+        items:
+        - product_id: prod_anJ03RZZq74z4v
+          quantity: 1
     type: object
     properties:
       customer:
@@ -4579,6 +4835,13 @@ definitions:
     - order
   Validate  order details skusrequest:
     title: Validate - order details skusRequest
+    example:
+      order:
+        items:
+        - sku_id: sku_dSbRQfbyUMyHnt
+          quantity: 1
+        - sku_id: sku_0KtP4rvwEECQ2U
+          quantity: 1
     type: object
     properties:
       order:
@@ -4587,6 +4850,12 @@ definitions:
     - order
   CreateRequest107:
     title: CreateRequest107
+    example:
+      voucher_code: val_rul_test
+      orders:
+        total_amount:
+          $more_than:
+          - 10000
     type: object
     properties:
       voucher_code:
@@ -4619,6 +4888,11 @@ definitions:
     - $more_than
   UpdateRequest110:
     title: UpdateRequest110
+    example:
+      orders:
+        total_amount:
+          $more_than:
+          - 5000
     type: object
     properties:
       orders:
