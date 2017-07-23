@@ -197,7 +197,7 @@ paths:
           body: >-
             {
                 "name" : "Jan Kowalski",
-                "email" : "jan1500719943@kowalski.pl"
+                "email" : "jan1500806342@kowalski.pl"
             }
         expectedResponse:
           x-allowExtraHeaders: true
@@ -795,7 +795,7 @@ paths:
           body: >-
             [
                 {
-                    "code": "CODE_1500719943",
+                    "code": "CODE_1500806342",
                     "redemption": {
                         "quantity": 1.0
                     },
@@ -917,7 +917,7 @@ paths:
           body: >-
             {
                 "name" : "Apple iPhone 7",
-                "source_id" : "internal_crm_id_1500719943",
+                "source_id" : "internal_crm_id_1500806342",
                 "attributes": [ "color", "memory" ],
                 "metadata": {
                   "test": true
@@ -2072,10 +2072,10 @@ paths:
         IsMultiContentStreaming: false
     post:
       description: 'TODO: Add Description'
-      summary: Create voucher without code
+      summary: TC5 - Create voucher without code
       tags:
-      - Standalone2
-      operationId: Create voucher without code1
+      - TC5 - Rollback Redemption
+      operationId: TC5 - Create voucher without code
       produces:
       - application/json
       parameters:
@@ -2084,7 +2084,7 @@ paths:
         required: true
         description: ''
         schema:
-          $ref: '#/definitions/CreateVoucherWithoutCoderequest'
+          $ref: '#/definitions/Tc2  create voucher without coderequest'
       - name: X-App-Id
         in: header
         required: true
@@ -2112,7 +2112,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: "{\n    \"type\": \"DISCOUNT_VOUCHER\",\n    \"discount\": {\n        \"percent_off\": \"10.0\",\n        \"type\": \"PERCENT\"\n    },\n    \"redemption\": {\n        \"quantity\": \"1\" \n    },\n    \"category\": \"postman\"\n}"
+          body: "{\n    \"type\": \"DISCOUNT_VOUCHER\",\n    \"discount\": {\n        \"percent_off\": \"10.0\",\n        \"type\": \"PERCENT\"\n    },\n    \"redemption\": {\n        \"quantity\": \"1\" \n    },\n    \"category\": \"postman-tc5\",\n    \"code_config\": {\n      \"pattern\": \"TC5-PROMO-#######\"\n    }\n}"
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2122,14 +2122,14 @@ paths:
           headers: {}
         x-testShouldPass: true
         x-testEnabled: true
-        x-testName: Create voucher without code
+        x-testName: TC5 - Create voucher without code
         x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /v1/vouchers/1500719943:
+  /v1/vouchers/1500806342:
     post:
       description: 'TODO: Add Description'
       summary: Create voucher with a given code
@@ -2167,7 +2167,7 @@ paths:
       x-unitTests:
       - request:
           method: POST
-          uri: /v1/vouchers/1500719943
+          uri: /v1/vouchers/1500806342
           headers:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
@@ -2284,7 +2284,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: "{\n    \"metadata\": {\n        \"update_time\": \"1500719943\" \n    },\n    \"category\": \"postman\"\n}"
+          body: "{\n    \"metadata\": {\n        \"update_time\": \"1500806342\" \n    },\n    \"category\": \"postman\"\n}"
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2970,7 +2970,7 @@ paths:
         required: true
         description: ''
         schema:
-          $ref: '#/definitions/CreateRequest107'
+          $ref: '#/definitions/CreateRequest115'
       - name: X-App-Id
         in: header
         required: true
@@ -3077,7 +3077,7 @@ paths:
         required: true
         description: ''
         schema:
-          $ref: '#/definitions/UpdateRequest110'
+          $ref: '#/definitions/UpdateRequest118'
       - name: X-App-Id
         in: header
         required: true
@@ -3565,7 +3565,7 @@ definitions:
   CreateCampaignrequest:
     title: Create campaignRequest
     example:
-      name: test campaign 1500719943
+      name: test campaign 1500806342
       start_date: 2016-10-26T00:00:00.0000000Z
       expiration_date: 2016-12-26T00:00:00.0000000Z
       vouchers_count: 100
@@ -3721,7 +3721,7 @@ definitions:
     example:
       name: Jan Kowalski
       email: jan@kowalski.pl
-      description: 1500719943
+      description: 1500806342
       source_id: src_id
       phone: +48 123456789
     type: object
@@ -3767,7 +3767,7 @@ definitions:
     title: CreateRequest
     example:
       name: Jan Kowalski
-      email: jan1500719943@kowalski.pl
+      email: jan1500806342@kowalski.pl
     type: object
     properties:
       name:
@@ -3783,7 +3783,7 @@ definitions:
     title: DeleteRequest
     example:
       name: Jan Kowalski
-      email: jan1500719943@kowalski.pl
+      email: jan1500806342@kowalski.pl
     type: object
     properties:
       name:
@@ -3963,7 +3963,7 @@ definitions:
   Import vouchers  to campaignrequest:
     title: Import vouchers - to campaignRequest
     example:
-    - code: CODE_1500719943
+    - code: CODE_1500806342
       redemption:
         quantity: 1
       metadata:
@@ -3990,7 +3990,7 @@ definitions:
     title: CreateRequest27
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1500719943
+      source_id: internal_crm_id_1500806342
       attributes:
       - color
       - memory
@@ -4045,7 +4045,7 @@ definitions:
     title: Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1500719943
+      source_id: internal_erp_sku_id_1500806342
       currency: USD
       price: 70000
       attributes:
@@ -4267,7 +4267,7 @@ definitions:
     title: Update voucherRequest
     example:
       metadata:
-        update_time: 1500719943
+        update_time: 1500806342
       category: postman
     type: object
     properties:
@@ -4329,7 +4329,7 @@ definitions:
       customer:
         $ref: '#/definitions/Customer'
       order:
-        $ref: '#/definitions/Order54'
+        $ref: '#/definitions/Order62'
     required:
     - customer
     - order
@@ -4342,19 +4342,19 @@ definitions:
         type: string
     required:
     - id
-  Order54:
-    title: Order54
+  Order62:
+    title: Order62
     type: object
     properties:
       items:
         description: ''
         type: array
         items:
-          $ref: '#/definitions/Item55'
+          $ref: '#/definitions/Item63'
     required:
     - items
-  Item55:
-    title: Item55
+  Item63:
+    title: Item63
     type: object
     properties:
       product_id:
@@ -4411,12 +4411,12 @@ definitions:
         description: ''
         type: string
       order:
-        $ref: '#/definitions/Order61'
+        $ref: '#/definitions/Order69'
     required:
     - tracking_id
     - order
-  Order61:
-    title: Order61
+  Order69:
+    title: Order69
     type: object
     properties:
       amount:
@@ -4440,7 +4440,7 @@ definitions:
     type: object
     properties:
       order:
-        $ref: '#/definitions/Order61'
+        $ref: '#/definitions/Order69'
     required:
     - order
   Tc2  redeem 2nd time after rollbackrequest:
@@ -4456,14 +4456,14 @@ definitions:
     type: object
     properties:
       customer:
-        $ref: '#/definitions/Customer65'
+        $ref: '#/definitions/Customer73'
       order:
-        $ref: '#/definitions/Order61'
+        $ref: '#/definitions/Order69'
     required:
     - customer
     - order
-  Customer65:
-    title: Customer65
+  Customer73:
+    title: Customer73
     type: object
     properties:
       id:
@@ -4495,15 +4495,15 @@ definitions:
         description: ''
         type: string
       customer:
-        $ref: '#/definitions/Customer68'
+        $ref: '#/definitions/Customer76'
       metadata:
-        $ref: '#/definitions/Metadata69'
+        $ref: '#/definitions/Metadata77'
     required:
     - campaign
     - customer
     - metadata
-  Customer68:
-    title: Customer68
+  Customer76:
+    title: Customer76
     type: object
     properties:
       source_id:
@@ -4515,8 +4515,8 @@ definitions:
     required:
     - source_id
     - name
-  Metadata69:
-    title: Metadata69
+  Metadata77:
+    title: Metadata77
     type: object
     properties:
       test:
@@ -4542,14 +4542,14 @@ definitions:
     type: object
     properties:
       customer:
-        $ref: '#/definitions/Customer75'
+        $ref: '#/definitions/Customer83'
       order:
-        $ref: '#/definitions/Order61'
+        $ref: '#/definitions/Order69'
     required:
     - customer
     - order
-  Customer75:
-    title: Customer75
+  Customer83:
+    title: Customer83
     type: object
     properties:
       source_id:
@@ -4622,7 +4622,7 @@ definitions:
     title: TC6 - Create ProductRequest
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1500719943
+      source_id: internal_crm_id_1500806342
       attributes:
       - color
       - memory
@@ -4652,7 +4652,7 @@ definitions:
     title: TC6 - Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1500719943
+      source_id: internal_erp_sku_id_1500806342
       currency: USD
       price: 70000
       attributes:
@@ -4708,12 +4708,12 @@ definitions:
         description: ''
         type: string
       conditions:
-        $ref: '#/definitions/Conditions92'
+        $ref: '#/definitions/Conditions100'
     required:
     - junction
     - conditions
-  Conditions92:
-    title: Conditions92
+  Conditions100:
+    title: Conditions100
     type: object
     properties:
       $is:
@@ -4779,11 +4779,11 @@ definitions:
     type: object
     properties:
       order:
-        $ref: '#/definitions/Order99'
+        $ref: '#/definitions/Order107'
     required:
     - order
-  Order99:
-    title: Order99
+  Order107:
+    title: Order107
     type: object
     properties:
       amount:
@@ -4806,7 +4806,7 @@ definitions:
       customer:
         $ref: '#/definitions/Customer'
       order:
-        $ref: '#/definitions/Order54'
+        $ref: '#/definitions/Order62'
     required:
     - customer
     - order
@@ -4825,8 +4825,8 @@ definitions:
         $ref: '#/definitions/Order'
     required:
     - order
-  CreateRequest107:
-    title: CreateRequest107
+  CreateRequest115:
+    title: CreateRequest115
     example:
       voucher_code: val_rul_test
       orders:
@@ -4839,12 +4839,12 @@ definitions:
         description: ''
         type: string
       orders:
-        $ref: '#/definitions/Orders108'
+        $ref: '#/definitions/Orders116'
     required:
     - voucher_code
     - orders
-  Orders108:
-    title: Orders108
+  Orders116:
+    title: Orders116
     type: object
     properties:
       total_amount:
@@ -4863,8 +4863,8 @@ definitions:
           format: int32
     required:
     - $more_than
-  UpdateRequest110:
-    title: UpdateRequest110
+  UpdateRequest118:
+    title: UpdateRequest118
     example:
       orders:
         total_amount:
@@ -4873,6 +4873,6 @@ definitions:
     type: object
     properties:
       orders:
-        $ref: '#/definitions/Orders108'
+        $ref: '#/definitions/Orders116'
     required:
     - orders
