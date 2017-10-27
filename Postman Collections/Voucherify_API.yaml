@@ -6,10 +6,10 @@ info:
   license:
     name: MIT
     url: http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT
-host: api.voucherify.io
-basePath: /
+host: 'https:'
+basePath: //api.voucherify.io/v1
 schemes:
-- https
+- http
 consumes:
 - application/json
 produces:
@@ -197,7 +197,7 @@ paths:
           body: >-
             {
                 "name" : "Jan Kowalski",
-                "email" : "jan1509014342@kowalski.pl"
+                "email" : "jan1509100745@kowalski.pl"
             }
         expectedResponse:
           x-allowExtraHeaders: true
@@ -795,7 +795,7 @@ paths:
           body: >-
             [
                 {
-                    "code": "CODE_1509014342",
+                    "code": "CODE_1509100745",
                     "redemption": {
                         "quantity": 1.0
                     },
@@ -917,7 +917,7 @@ paths:
           body: >-
             {
                 "name" : "Apple iPhone 7",
-                "source_id" : "internal_crm_id_1509014342",
+                "source_id" : "internal_crm_id_1509100745",
                 "attributes": [ "color", "memory" ],
                 "metadata": {
                   "test": true
@@ -1367,6 +1367,59 @@ paths:
   /v1/publications:
     get:
       description: 'TODO: Add Description'
+      summary: List Publications
+      tags:
+      - Publish
+      operationId: List Publications
+      produces:
+      - application/json
+      parameters:
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /v1/publications
+          headers:
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: List Publications
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /publications:
+    get:
+      description: 'TODO: Add Description'
       summary: List Publications filters
       tags:
       - Publish
@@ -1406,7 +1459,7 @@ paths:
       x-unitTests:
       - request:
           method: GET
-          uri: /v1/publications?filters[campaign][conditions][$is][0]=StaticOne&filters[Result][conditions][$is][1]=FAILURE
+          uri: /publications?filters[campaign][conditions][$is][0]=StaticOne&filters[Result][conditions][$is][1]=FAILURE
           headers:
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
@@ -1798,7 +1851,7 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /v1/redemptions:
+  /redemptions:
     get:
       description: 'TODO: Add Description'
       summary: List redemptions - success
@@ -1835,7 +1888,7 @@ paths:
       x-unitTests:
       - request:
           method: GET
-          uri: /v1/redemptions?result=SUCCESS
+          uri: /redemptions?result=SUCCESS
           headers:
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
@@ -2001,75 +2054,6 @@ paths:
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
   /v1/vouchers:
-    get:
-      description: 'TODO: Add Description'
-      summary: List vouchers - paging
-      tags:
-      - Standalone2
-      operationId: List vouchers - paging1
-      produces:
-      - application/json
-      parameters:
-      - name: campaign
-        in: query
-        required: true
-        type: string
-        description: ''
-      - name: limit
-        in: query
-        required: true
-        type: integer
-        format: int32
-        description: ''
-      - name: skip
-        in: query
-        required: true
-        type: integer
-        format: int32
-        description: ''
-      - name: X-App-Id
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: X-App-Token
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      responses:
-        200:
-          description: ''
-      security: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /v1/vouchers?campaign=postman-paging&limit=2&skip=8
-          headers:
-            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
-            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-            Content-Type: application/json
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: List vouchers - paging
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
     post:
       description: 'TODO: Add Description'
       summary: TC5 - Create voucher without code
@@ -2129,7 +2113,7 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /v1/vouchers/1509014342:
+  /v1/vouchers/1509100745:
     post:
       description: 'TODO: Add Description'
       summary: Create voucher with a given code
@@ -2167,7 +2151,7 @@ paths:
       x-unitTests:
       - request:
           method: POST
-          uri: /v1/vouchers/1509014342
+          uri: /v1/vouchers/1509100745
           headers:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
@@ -2284,7 +2268,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: "{\n    \"metadata\": {\n        \"update_time\": \"1509014342\" \n    },\n    \"category\": \"postman\"\n}"
+          body: "{\n    \"metadata\": {\n        \"update_time\": \"1509100745\" \n    },\n    \"category\": \"postman\"\n}"
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2348,6 +2332,76 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Get voucher - non-existent
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /vouchers:
+    get:
+      description: 'TODO: Add Description'
+      summary: List vouchers - paging
+      tags:
+      - Standalone2
+      operationId: List vouchers - paging1
+      produces:
+      - application/json
+      parameters:
+      - name: campaign
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: limit
+        in: query
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      - name: skip
+        in: query
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /vouchers?campaign=postman-paging&limit=2&skip=8
+          headers:
+            X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
+            X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: List vouchers - paging
         x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
@@ -2641,6 +2695,57 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
+  /vouchers/{TC3-code}/redemption:
+    post:
+      description: 'TODO: Add Description'
+      summary: Redeem
+      tags:
+      - TC3 - e-commerce integration
+      operationId: Redeem1
+      produces:
+      - application/json
+      parameters:
+      - name: tracking_id
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/RedeemRequest'
+      - name: X-App-Id
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: X-App-Token
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: TC3-code
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
   /v1/vouchers/{TC3-code}/redemption:
     get:
       description: 'TODO: Add Description'
@@ -2766,7 +2871,7 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /v1/redemptions/{TC3-redemption-id}/rollback:
+  /redemptions/{TC3-redemption-id}/rollback:
     post:
       description: 'TODO: Add Description'
       summary: TC2 - Rollback redemption
@@ -2910,7 +3015,7 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /v1/redemptions/{TC5-redemption-id}/rollback:
+  /redemptions/{TC5-redemption-id}/rollback:
     post:
       description: 'TODO: Add Description'
       summary: TC5 - Rollback 2nd time Redemption - pass related customer profile
@@ -3565,7 +3670,7 @@ definitions:
   CreateCampaignrequest:
     title: Create campaignRequest
     example:
-      name: test campaign 1509014342
+      name: test campaign 1509100745
       start_date: 2016-10-26T00:00:00.0000000Z
       expiration_date: 2016-12-26T00:00:00.0000000Z
       vouchers_count: 100
@@ -3668,7 +3773,7 @@ definitions:
   CreateGiftCardCampaignrequest:
     title: Create gift card campaignRequest
     example:
-      name: gitf_card_1509014342
+      name: gitf_card_1509100745
       vouchers_count: 50
       voucher:
         type: GIFT_VOUCHER
@@ -3730,7 +3835,7 @@ definitions:
     example:
       name: Jan Kowalski
       email: jan@kowalski.pl
-      description: 1509014342
+      description: 1509100745
       source_id: src_id
       phone: +48 123456789
     type: object
@@ -3776,7 +3881,7 @@ definitions:
     title: CreateRequest
     example:
       name: Jan Kowalski
-      email: jan1509014342@kowalski.pl
+      email: jan1509100745@kowalski.pl
     type: object
     properties:
       name:
@@ -3792,7 +3897,7 @@ definitions:
     title: DeleteRequest
     example:
       name: Jan Kowalski
-      email: jan1509014342@kowalski.pl
+      email: jan1509100745@kowalski.pl
     type: object
     properties:
       name:
@@ -3972,7 +4077,7 @@ definitions:
   Import vouchers  to campaignrequest:
     title: Import vouchers - to campaignRequest
     example:
-      code: CODE_1509014342
+      code: CODE_1509100745
       redemption:
         quantity: 1
       metadata:
@@ -3999,7 +4104,7 @@ definitions:
     title: CreateRequest27
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1509014342
+      source_id: internal_crm_id_1509100745
       attributes:
       - color
       - memory
@@ -4054,7 +4159,7 @@ definitions:
     title: Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1509014342
+      source_id: internal_erp_sku_id_1509100745
       currency: USD
       price: 70000
       attributes:
@@ -4276,7 +4381,7 @@ definitions:
     title: Update voucherRequest
     example:
       metadata:
-        update_time: 1509014342
+        update_time: 1509100745
       category: postman
     type: object
     properties:
@@ -4631,7 +4736,7 @@ definitions:
     title: TC6 - Create ProductRequest
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1509014342
+      source_id: internal_crm_id_1509100745
       attributes:
       - color
       - memory
@@ -4661,7 +4766,7 @@ definitions:
     title: TC6 - Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1509014342
+      source_id: internal_erp_sku_id_1509100745
       currency: USD
       price: 70000
       attributes:
