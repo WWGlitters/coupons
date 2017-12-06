@@ -197,7 +197,7 @@ paths:
           body: >-
             {
                 "name" : "Jan Kowalski",
-                "email" : "jan1512471653@kowalski.pl"
+                "email" : "jan1512556742@kowalski.pl"
             }
         expectedResponse:
           x-allowExtraHeaders: true
@@ -795,7 +795,7 @@ paths:
           body: >-
             [
                 {
-                    "code": "CODE_1512471653",
+                    "code": "CODE_1512556742",
                     "redemption": {
                         "quantity": 1.0
                     },
@@ -917,7 +917,7 @@ paths:
           body: >-
             {
                 "name" : "Apple iPhone 7",
-                "source_id" : "internal_crm_id_1512471653",
+                "source_id" : "internal_crm_id_1512556742",
                 "attributes": [ "color", "memory" ],
                 "metadata": {
                   "test": true
@@ -2113,7 +2113,7 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /v1/vouchers/1512471653:
+  /v1/vouchers/1512556742:
     post:
       description: Create discount voucher with a given code
       summary: Create voucher with a given code
@@ -2151,7 +2151,7 @@ paths:
       x-unitTests:
       - request:
           method: POST
-          uri: /v1/vouchers/1512471653
+          uri: /v1/vouchers/1512556742
           headers:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
@@ -2268,7 +2268,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: "{\n    \"metadata\": {\n        \"update_time\": \"1512471653\" \n    },\n    \"category\": \"postman\"\n}"
+          body: "{\n    \"metadata\": {\n        \"update_time\": \"1512556742\" \n    },\n    \"category\": \"postman\"\n}"
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -3689,7 +3689,7 @@ definitions:
   CreateCampaignrequest:
     title: Create campaignRequest
     example:
-      name: test campaign 1512471653
+      name: test campaign 1512556742
       start_date: 2016-10-26T00:00:00.0000000Z
       expiration_date: 2016-12-26T00:00:00.0000000Z
       vouchers_count: 100
@@ -3792,7 +3792,7 @@ definitions:
   CreateGiftCardCampaignrequest:
     title: Create gift card campaignRequest
     example:
-      name: gitf_card_1512471653
+      name: gitf_card_1512556742
       vouchers_count: 50
       voucher:
         type: GIFT_VOUCHER
@@ -3854,7 +3854,7 @@ definitions:
     example:
       name: Jan Kowalski
       email: jan@kowalski.pl
-      description: 1512471653
+      description: 1512556742
       source_id: src_id
       phone: +48 123456789
     type: object
@@ -3900,7 +3900,7 @@ definitions:
     title: CreateRequest
     example:
       name: Jan Kowalski
-      email: jan1512471653@kowalski.pl
+      email: jan1512556742@kowalski.pl
     type: object
     properties:
       name:
@@ -3916,7 +3916,7 @@ definitions:
     title: DeleteRequest
     example:
       name: Jan Kowalski
-      email: jan1512471653@kowalski.pl
+      email: jan1512556742@kowalski.pl
     type: object
     properties:
       name:
@@ -4096,7 +4096,7 @@ definitions:
   Import vouchers  to campaignrequest:
     title: Import vouchers - to campaignRequest
     example:
-      code: CODE_1512471653
+      code: CODE_1512556742
       redemption:
         quantity: 1
       metadata:
@@ -4123,7 +4123,7 @@ definitions:
     title: CreateRequest27
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1512471653
+      source_id: internal_crm_id_1512556742
       attributes:
       - color
       - memory
@@ -4178,7 +4178,7 @@ definitions:
     title: Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1512471653
+      source_id: internal_erp_sku_id_1512556742
       currency: USD
       price: 70000
       attributes:
@@ -4400,7 +4400,7 @@ definitions:
     title: Update voucherRequest
     example:
       metadata:
-        update_time: 1512471653
+        update_time: 1512556742
       category: postman
     type: object
     properties:
@@ -4755,7 +4755,7 @@ definitions:
     title: TC6 - Create ProductRequest
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1512471653
+      source_id: internal_crm_id_1512556742
       attributes:
       - color
       - memory
@@ -4785,7 +4785,7 @@ definitions:
     title: TC6 - Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1512471653
+      source_id: internal_erp_sku_id_1512556742
       currency: USD
       price: 70000
       attributes:
