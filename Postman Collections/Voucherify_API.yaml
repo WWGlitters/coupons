@@ -21,7 +21,7 @@ paths:
       summary: TC6 - Create campaign
       tags:
       - TC6 - Campaign with Validation Rules
-      operationId: TC6 - Create campaign
+      operationId: V1CampaignsPost3
       produces:
       - application/json
       parameters:
@@ -104,7 +104,7 @@ paths:
       summary: Get campaign
       tags:
       - Campaigns
-      operationId: Get campaign
+      operationId: V1CampaignsTestCampaignGet
       produces:
       - application/json
       parameters:
@@ -157,7 +157,7 @@ paths:
       summary: Create
       tags:
       - Customers
-      operationId: Create
+      operationId: V1CustomersPost2
       produces:
       - application/json
       parameters:
@@ -197,7 +197,7 @@ paths:
           body: >-
             {
                 "name" : "Jan Kowalski",
-                "email" : "jan1512556742@kowalski.pl"
+                "email" : "jan1512643427@kowalski.pl"
             }
         expectedResponse:
           x-allowExtraHeaders: true
@@ -221,7 +221,7 @@ paths:
       summary: Get
       tags:
       - Customers
-      operationId: Get
+      operationId: V1CustomersByCustomerIdGet
       produces:
       - application/json
       parameters:
@@ -260,7 +260,7 @@ paths:
       summary: Update
       tags:
       - Customers
-      operationId: Update
+      operationId: V1CustomersByCustomerIdPut
       produces:
       - application/json
       parameters:
@@ -306,7 +306,7 @@ paths:
       summary: Delete
       tags:
       - Customers
-      operationId: Delete
+      operationId: V1CustomersByCreatedCustomerIdDelete
       produces:
       - application/json
       parameters:
@@ -352,7 +352,7 @@ paths:
       summary: Enable
       tags:
       - Enable/disable
-      operationId: Enable
+      operationId: V1VouchersTestActivityEnablePost
       produces:
       - application/json
       parameters:
@@ -405,7 +405,7 @@ paths:
       summary: Disable
       tags:
       - Enable/disable
-      operationId: Disable
+      operationId: V1VouchersTestActivityDisablePost
       produces:
       - application/json
       parameters:
@@ -469,7 +469,7 @@ paths:
       summary: Create Export
       tags:
       - Export
-      operationId: Create Export
+      operationId: V1ExportsPost
       produces:
       - application/json
       parameters:
@@ -542,7 +542,7 @@ paths:
       summary: Get Export
       tags:
       - Export
-      operationId: Get Export
+      operationId: V1ExportsByExportIdGet
       produces:
       - application/json
       parameters:
@@ -581,7 +581,7 @@ paths:
       summary: Delete Export
       tags:
       - Export
-      operationId: Delete Export
+      operationId: V1ExportsByExportIdDelete
       produces:
       - application/json
       parameters:
@@ -621,7 +621,7 @@ paths:
       summary: Import vouchers
       tags:
       - Import
-      operationId: Import vouchers
+      operationId: V1VouchersImportGet
       produces:
       - application/json
       parameters:
@@ -673,7 +673,7 @@ paths:
       summary: Import vouchers - duplicate
       tags:
       - Import
-      operationId: Import vouchers - duplicate
+      operationId: V1VouchersImportPost
       produces:
       - application/json
       parameters:
@@ -753,7 +753,7 @@ paths:
       summary: Import vouchers - to campaign
       tags:
       - Import
-      operationId: Import vouchers - to campaign
+      operationId: V1CampaignsPostmanImportImportPost
       produces:
       - application/json
       parameters:
@@ -795,7 +795,7 @@ paths:
           body: >-
             [
                 {
-                    "code": "CODE_1512556742",
+                    "code": "CODE_1512643427",
                     "redemption": {
                         "quantity": 1.0
                     },
@@ -825,7 +825,7 @@ paths:
       summary: List products
       tags:
       - Products
-      operationId: List products
+      operationId: V1ProductsGet
       produces:
       - application/json
       parameters:
@@ -877,7 +877,7 @@ paths:
       summary: TC6 - Create Product
       tags:
       - TC6 - Campaign with Validation Rules
-      operationId: TC6 - Create Product
+      operationId: V1ProductsPost2
       produces:
       - application/json
       parameters:
@@ -917,7 +917,7 @@ paths:
           body: >-
             {
                 "name" : "Apple iPhone 7",
-                "source_id" : "internal_crm_id_1512556742",
+                "source_id" : "internal_crm_id_1512643427",
                 "attributes": [ "color", "memory" ],
                 "metadata": {
                   "test": true
@@ -945,7 +945,7 @@ paths:
       summary: Get product
       tags:
       - Products
-      operationId: Get product
+      operationId: V1ProductsByCreatedProductIdGet
       produces:
       - application/json
       parameters:
@@ -984,7 +984,7 @@ paths:
       summary: Update product
       tags:
       - Products
-      operationId: Update product
+      operationId: V1ProductsByCreatedProductIdPut
       produces:
       - application/json
       parameters:
@@ -1029,7 +1029,7 @@ paths:
       summary: Delete product
       tags:
       - Products
-      operationId: Delete product
+      operationId: V1ProductsByCreatedProductIdDelete
       produces:
       - application/json
       parameters:
@@ -1075,7 +1075,7 @@ paths:
       summary: List SKUs
       tags:
       - Products
-      operationId: List SKUs
+      operationId: V1ProductsSkusByCreatedProductIdGet
       produces:
       - application/json
       parameters:
@@ -1114,7 +1114,7 @@ paths:
       summary: TC6 - Add SKU
       tags:
       - TC6 - Campaign with Validation Rules
-      operationId: TC6 - Add SKU
+      operationId: V1ProductsSkusByCreatedProductIdPost2
       produces:
       - application/json
       parameters:
@@ -1160,7 +1160,7 @@ paths:
       summary: Get SKU
       tags:
       - Products
-      operationId: Get SKU
+      operationId: V1ProductsSkusByCreatedProductIdAndCreatedSKUIdGet
       produces:
       - application/json
       parameters:
@@ -1204,7 +1204,7 @@ paths:
       summary: Update SKU
       tags:
       - Products
-      operationId: Update SKU
+      operationId: V1ProductsSkusByCreatedProductIdAndCreatedSKUIdPut
       produces:
       - application/json
       parameters:
@@ -1254,7 +1254,7 @@ paths:
       summary: Delete SKU
       tags:
       - Products
-      operationId: Delete SKU
+      operationId: V1ProductsSkusByCreatedProductIdAndCreatedSKUIdDelete
       produces:
       - application/json
       parameters:
@@ -1299,7 +1299,7 @@ paths:
       summary: TC4 - Publish voucher form auto-update campaign
       tags:
       - TC4 - Distribution
-      operationId: TC4 - Publish voucher form auto-update campaign
+      operationId: V1VouchersPublishPost3
       produces:
       - application/json
       parameters:
@@ -1370,7 +1370,7 @@ paths:
       summary: List Publications
       tags:
       - Publish
-      operationId: List Publications
+      operationId: V1PublicationsGet
       produces:
       - application/json
       parameters:
@@ -1423,7 +1423,7 @@ paths:
       summary: List Publications filters
       tags:
       - Publish
-      operationId: List Publications filters
+      operationId: PublicationsGet
       produces:
       - application/json
       parameters:
@@ -1486,7 +1486,7 @@ paths:
       summary: Get voucher's redemptions
       tags:
       - Redemptions
-      operationId: Get voucher's redemptions
+      operationId: V1VouchersTestRedemptionGet
       produces:
       - application/json
       parameters:
@@ -1538,7 +1538,7 @@ paths:
       summary: Redeem
       tags:
       - Redeem
-      operationId: Redeem
+      operationId: V1VouchersTestRedemptionPost
       produces:
       - application/json
       parameters:
@@ -1598,7 +1598,7 @@ paths:
       summary: Redeem - not found
       tags:
       - Redeem
-      operationId: Redeem - not found
+      operationId: V1VouchersNotFound123RedemptionPost
       produces:
       - application/json
       parameters:
@@ -1658,7 +1658,7 @@ paths:
       summary: Redeem - expired
       tags:
       - Redeem
-      operationId: Redeem - expired
+      operationId: V1VouchersInvalidRedemptionPost
       produces:
       - application/json
       parameters:
@@ -1718,7 +1718,7 @@ paths:
       summary: Redeem - client side
       tags:
       - Redeem
-      operationId: Redeem - client side
+      operationId: ClientV1RedeemPost
       produces:
       - application/json
       parameters:
@@ -1789,7 +1789,7 @@ paths:
       summary: Redeem - order details
       tags:
       - Redeem
-      operationId: Redeem - order details
+      operationId: V1VouchersLdprQtRLRedemptionPost
       produces:
       - application/json
       parameters:
@@ -1857,7 +1857,7 @@ paths:
       summary: List redemptions - success
       tags:
       - Redemptions
-      operationId: List redemptions - success
+      operationId: RedemptionsGet
       produces:
       - application/json
       parameters:
@@ -1915,7 +1915,7 @@ paths:
       summary: Create segment
       tags:
       - Segments
-      operationId: Create segment
+      operationId: V1SegmentsPost
       produces:
       - application/json
       parameters:
@@ -1980,7 +1980,7 @@ paths:
       summary: Get segment
       tags:
       - Segments
-      operationId: Get segment
+      operationId: V1SegmentsByCreatedSegmentIdGet
       produces:
       - application/json
       parameters:
@@ -2019,7 +2019,7 @@ paths:
       summary: Delete segment
       tags:
       - Segments
-      operationId: Delete segment
+      operationId: V1SegmentsByCreatedSegmentIdDelete
       produces:
       - application/json
       parameters:
@@ -2059,7 +2059,7 @@ paths:
       summary: TC5 - Create voucher without code
       tags:
       - TC5 - Rollback Redemption
-      operationId: TC5 - Create voucher without code
+      operationId: V1VouchersPost5
       produces:
       - application/json
       parameters:
@@ -2113,13 +2113,13 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /v1/vouchers/1512556742:
+  /v1/vouchers/1512643427:
     post:
       description: Create discount voucher with a given code
       summary: Create voucher with a given code
       tags:
       - Standalone2
-      operationId: Create voucher with a given code1
+      operationId: V1Vouchers1512643427Post2
       produces:
       - application/json
       parameters:
@@ -2151,7 +2151,7 @@ paths:
       x-unitTests:
       - request:
           method: POST
-          uri: /v1/vouchers/1512556742
+          uri: /v1/vouchers/1512643427
           headers:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
@@ -2179,7 +2179,7 @@ paths:
       summary: Get voucher - existing
       tags:
       - Standalone2
-      operationId: Get voucher - existing1
+      operationId: V1VouchersTestGet2
       produces:
       - application/json
       parameters:
@@ -2231,7 +2231,7 @@ paths:
       summary: Update voucher
       tags:
       - Standalone2
-      operationId: Update voucher1
+      operationId: V1VouchersTestPut2
       produces:
       - application/json
       parameters:
@@ -2268,7 +2268,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: "{\n    \"metadata\": {\n        \"update_time\": \"1512556742\" \n    },\n    \"category\": \"postman\"\n}"
+          body: "{\n    \"metadata\": {\n        \"update_time\": \"1512643427\" \n    },\n    \"category\": \"postman\"\n}"
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2291,7 +2291,7 @@ paths:
       summary: Get voucher - non-existent
       tags:
       - Standalone2
-      operationId: Get voucher - non-existent1
+      operationId: V1VouchersNotfound123Get2
       produces:
       - application/json
       parameters:
@@ -2344,7 +2344,7 @@ paths:
       summary: List vouchers - paging
       tags:
       - Standalone2
-      operationId: List vouchers - paging1
+      operationId: VouchersGet4
       produces:
       - application/json
       parameters:
@@ -2414,7 +2414,7 @@ paths:
       summary: Delete voucher
       tags:
       - Standalone2
-      operationId: Delete voucher1
+      operationId: V1VouchersByGeneratedCodeDelete2
       produces:
       - application/json
       parameters:
@@ -2454,7 +2454,7 @@ paths:
       summary: TC1 - Validate
       tags:
       - TC1 - Redemption limit 1
-      operationId: TC1 - Validate
+      operationId: V1VouchersValidateByTC1CodePost
       produces:
       - application/json
       parameters:
@@ -2500,7 +2500,7 @@ paths:
       summary: TC1 - Get  redemptions
       tags:
       - TC1 - Redemption limit 1
-      operationId: TC1 - Get  redemptions
+      operationId: V1VouchersRedemptionByTC1CodeGet
       produces:
       - application/json
       parameters:
@@ -2539,7 +2539,7 @@ paths:
       summary: TC1 - Second redeem
       tags:
       - TC1 - Redemption limit 1
-      operationId: TC1 - Second redeem
+      operationId: V1VouchersRedemptionByTC1CodePost2
       produces:
       - application/json
       parameters:
@@ -2585,7 +2585,7 @@ paths:
       summary: TC3 - Redeem
       tags:
       - TC3 - discount rules
-      operationId: TC3 - Redeem
+      operationId: V1VouchersIzvHT3BaRedemptionPost
       produces:
       - application/json
       parameters:
@@ -2655,7 +2655,7 @@ paths:
       summary: Validate voucher for given customer order
       tags:
       - TC3 - e-commerce integration
-      operationId: Validate voucher for given customer order
+      operationId: V1VouchersValidateByTC3CodePost
       produces:
       - application/json
       parameters:
@@ -2701,7 +2701,7 @@ paths:
       summary: Redeem
       tags:
       - TC3 - e-commerce integration
-      operationId: Redeem1
+      operationId: VouchersRedemptionByTC3CodePost
       produces:
       - application/json
       parameters:
@@ -2752,7 +2752,7 @@ paths:
       summary: Get  redemption
       tags:
       - TC3 - e-commerce integration
-      operationId: Get  redemption
+      operationId: V1VouchersRedemptionByTC3CodeGet
       produces:
       - application/json
       parameters:
@@ -2791,7 +2791,7 @@ paths:
       summary: TC2 - Redeem 2nd time after rollback
       tags:
       - TC3 - e-commerce integration
-      operationId: TC2 - Redeem 2nd time after rollback
+      operationId: V1VouchersRedemptionByTC3CodePost
       produces:
       - application/json
       parameters:
@@ -2837,7 +2837,7 @@ paths:
       summary: TC2 - Get  customer
       tags:
       - TC3 - e-commerce integration
-      operationId: TC2 - Get  customer
+      operationId: V1CustomersByTC3CustomerIdGet
       produces:
       - application/json
       parameters:
@@ -2877,7 +2877,7 @@ paths:
       summary: TC2 - Rollback redemption
       tags:
       - TC3 - e-commerce integration
-      operationId: TC2 - Rollback redemption
+      operationId: RedemptionsRollbackByTC3RedemptionIdPost
       produces:
       - application/json
       parameters:
@@ -2922,7 +2922,7 @@ paths:
       summary: TC4 - Get voucher
       tags:
       - TC4 - Distribution
-      operationId: TC4 - Get voucher
+      operationId: V1VouchersTC4DISBJ5JIRuyL7C2016Get
       produces:
       - application/json
       parameters:
@@ -2975,7 +2975,7 @@ paths:
       summary: TC5 - Redeem 2nd time
       tags:
       - TC5 - Rollback Redemption
-      operationId: TC5 - Redeem 2nd time
+      operationId: V1VouchersRedemptionByTC5CodePost2
       produces:
       - application/json
       parameters:
@@ -3021,7 +3021,7 @@ paths:
       summary: TC5 - Rollback 2nd time Redemption - pass related customer profile
       tags:
       - TC5 - Rollback Redemption
-      operationId: TC5 - Rollback 2nd time Redemption - pass related customer profile
+      operationId: RedemptionsRollbackByTC5RedemptionIdPost2
       produces:
       - application/json
       parameters:
@@ -3066,7 +3066,7 @@ paths:
       summary: Create
       tags:
       - Validation rules
-      operationId: Create2
+      operationId: V1ValidationRulesPost2
       produces:
       - application/json
       parameters:
@@ -3134,7 +3134,7 @@ paths:
       summary: Get
       tags:
       - Validation rules
-      operationId: Get1
+      operationId: V1ValidationRulesByCreatedValidationRulesIdGet2
       produces:
       - application/json
       parameters:
@@ -3173,7 +3173,7 @@ paths:
       summary: Update
       tags:
       - Validation rules
-      operationId: Update1
+      operationId: V1ValidationRulesByCreatedValidationRulesIdPut
       produces:
       - application/json
       parameters:
@@ -3218,7 +3218,7 @@ paths:
       summary: Delete
       tags:
       - Validation rules
-      operationId: Delete1
+      operationId: V1ValidationRulesByCreatedValidationRulesIdDelete
       produces:
       - application/json
       parameters:
@@ -3258,7 +3258,7 @@ paths:
       summary: TC6 - Add voucher to campaign
       tags:
       - TC6 - Campaign with Validation Rules
-      operationId: TC6 - Add voucher to campaign
+      operationId: V1CampaignsVouchersByCreatedCampaignNamePost
       produces:
       - application/json
       parameters:
@@ -3304,7 +3304,7 @@ paths:
       summary: Validate
       tags:
       - Validate
-      operationId: Validate
+      operationId: V1VouchersTestValidatePost
       produces:
       - application/json
       parameters:
@@ -3369,7 +3369,7 @@ paths:
       summary: Validate - expired
       tags:
       - Validate
-      operationId: Validate - expired
+      operationId: V1VouchersInvalidValidatePost
       produces:
       - application/json
       parameters:
@@ -3429,7 +3429,7 @@ paths:
       summary: Validate - disabled
       tags:
       - Validate
-      operationId: Validate - disabled
+      operationId: V1VouchersInvalidDisabledValidatePost
       produces:
       - application/json
       parameters:
@@ -3489,7 +3489,7 @@ paths:
       summary: Validate - client side
       tags:
       - Validate
-      operationId: Validate - client side
+      operationId: ClientV1ValidateGet
       produces:
       - application/json
       parameters:
@@ -3553,7 +3553,7 @@ paths:
       summary: Validate - order details
       tags:
       - Validate
-      operationId: Validate - order details
+      operationId: V1VouchersIzvHT3BaValidatePost
       produces:
       - application/json
       parameters:
@@ -3623,7 +3623,7 @@ paths:
       summary: Validate - order details skus
       tags:
       - Validate
-      operationId: Validate - order details skus
+      operationId: V1VouchersLdprQtRLValidatePost
       produces:
       - application/json
       parameters:
@@ -3689,7 +3689,7 @@ definitions:
   CreateCampaignrequest:
     title: Create campaignRequest
     example:
-      name: test campaign 1512556742
+      name: test campaign 1512643427
       start_date: 2016-10-26T00:00:00.0000000Z
       expiration_date: 2016-12-26T00:00:00.0000000Z
       vouchers_count: 100
@@ -3792,7 +3792,7 @@ definitions:
   CreateGiftCardCampaignrequest:
     title: Create gift card campaignRequest
     example:
-      name: gitf_card_1512556742
+      name: gitf_card_1512643427
       vouchers_count: 50
       voucher:
         type: GIFT_VOUCHER
@@ -3854,7 +3854,7 @@ definitions:
     example:
       name: Jan Kowalski
       email: jan@kowalski.pl
-      description: 1512556742
+      description: 1512643427
       source_id: src_id
       phone: +48 123456789
     type: object
@@ -3900,7 +3900,7 @@ definitions:
     title: CreateRequest
     example:
       name: Jan Kowalski
-      email: jan1512556742@kowalski.pl
+      email: jan1512643427@kowalski.pl
     type: object
     properties:
       name:
@@ -3916,7 +3916,7 @@ definitions:
     title: DeleteRequest
     example:
       name: Jan Kowalski
-      email: jan1512556742@kowalski.pl
+      email: jan1512643427@kowalski.pl
     type: object
     properties:
       name:
@@ -4096,7 +4096,7 @@ definitions:
   Import vouchers  to campaignrequest:
     title: Import vouchers - to campaignRequest
     example:
-      code: CODE_1512556742
+      code: CODE_1512643427
       redemption:
         quantity: 1
       metadata:
@@ -4123,7 +4123,7 @@ definitions:
     title: CreateRequest27
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1512556742
+      source_id: internal_crm_id_1512643427
       attributes:
       - color
       - memory
@@ -4178,7 +4178,7 @@ definitions:
     title: Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1512556742
+      source_id: internal_erp_sku_id_1512643427
       currency: USD
       price: 70000
       attributes:
@@ -4400,7 +4400,7 @@ definitions:
     title: Update voucherRequest
     example:
       metadata:
-        update_time: 1512556742
+        update_time: 1512643427
       category: postman
     type: object
     properties:
@@ -4755,7 +4755,7 @@ definitions:
     title: TC6 - Create ProductRequest
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1512556742
+      source_id: internal_crm_id_1512643427
       attributes:
       - color
       - memory
@@ -4785,7 +4785,7 @@ definitions:
     title: TC6 - Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1512556742
+      source_id: internal_erp_sku_id_1512643427
       currency: USD
       price: 70000
       attributes:
