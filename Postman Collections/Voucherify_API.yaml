@@ -14,7 +14,7 @@ produces:
 paths:
   /v1/campaigns:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: TC6 - Create campaign
       tags:
       - TC6 - Campaign with Validation Rules
@@ -89,7 +89,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: TC6 - Create campaign
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -97,7 +97,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/campaigns/test campaign:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Get campaign
       tags:
       - Campaigns
@@ -142,7 +142,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Get campaign
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -150,7 +150,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/customers:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Create
       tags:
       - Customers
@@ -194,7 +194,7 @@ paths:
           body: >-
             {
                 "name" : "Jan Kowalski",
-                "email" : "jan1520505542@kowalski.pl"
+                "email" : "jan1520592687@kowalski.pl"
             }
         expectedResponse:
           x-allowExtraHeaders: true
@@ -206,7 +206,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Create
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -214,7 +214,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/customers/{customerId}:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Get
       tags:
       - Customers
@@ -253,7 +253,7 @@ paths:
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     put:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Update
       tags:
       - Customers
@@ -299,7 +299,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/customers/{createdCustomerId}:
     delete:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Delete
       tags:
       - Customers
@@ -345,7 +345,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/test-activity/enable:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Enable
       tags:
       - Enable/disable
@@ -390,7 +390,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Enable
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -398,7 +398,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/test-activity/disable:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Disable
       tags:
       - Enable/disable
@@ -454,7 +454,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Disable
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -462,7 +462,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/exports:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Create Export
       tags:
       - Export
@@ -527,7 +527,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Create Export
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -535,7 +535,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/exports/{exportId}:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Get Export
       tags:
       - Export
@@ -574,7 +574,7 @@ paths:
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     delete:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Delete Export
       tags:
       - Export
@@ -614,7 +614,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/import:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Import vouchers
       tags:
       - Import
@@ -659,14 +659,14 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Import vouchers
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Import vouchers - duplicate
       tags:
       - Import
@@ -738,7 +738,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Import vouchers - duplicate
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -746,7 +746,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/campaigns/postman-import/import:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Import vouchers - to campaign
       tags:
       - Import
@@ -792,7 +792,7 @@ paths:
           body: >-
             [
                 {
-                    "code": "CODE_1520505542",
+                    "code": "CODE_1520592687",
                     "redemption": {
                         "quantity": 1.0
                     },
@@ -810,7 +810,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Import vouchers - to campaign
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -818,7 +818,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/products:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: List products
       tags:
       - Products
@@ -863,14 +863,14 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: List products
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: TC6 - Create Product
       tags:
       - TC6 - Campaign with Validation Rules
@@ -914,7 +914,7 @@ paths:
           body: >-
             {
                 "name" : "Apple iPhone 7",
-                "source_id" : "internal_crm_id_1520505542",
+                "source_id" : "internal_crm_id_1520592687",
                 "attributes": [ "color", "memory" ],
                 "metadata": {
                   "test": true
@@ -930,7 +930,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: TC6 - Create Product
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -938,7 +938,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/products/{createdProductId}:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Get product
       tags:
       - Products
@@ -977,7 +977,7 @@ paths:
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     put:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Update product
       tags:
       - Products
@@ -1022,7 +1022,7 @@ paths:
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     delete:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Delete product
       tags:
       - Products
@@ -1068,7 +1068,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/products/{createdProductId}/skus:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: List SKUs
       tags:
       - Products
@@ -1107,7 +1107,7 @@ paths:
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: TC6 - Add SKU
       tags:
       - TC6 - Campaign with Validation Rules
@@ -1153,7 +1153,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/products/{createdProductId}/skus/{createdSKUId}:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Get SKU
       tags:
       - Products
@@ -1197,7 +1197,7 @@ paths:
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     put:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Update SKU
       tags:
       - Products
@@ -1247,7 +1247,7 @@ paths:
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     delete:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Delete SKU
       tags:
       - Products
@@ -1292,7 +1292,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/publish:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: TC4 - Publish voucher form auto-update campaign
       tags:
       - TC4 - Distribution
@@ -1355,7 +1355,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: TC4 - Publish voucher form auto-update campaign
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1363,7 +1363,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/publications:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: List Publications
       tags:
       - Publish
@@ -1408,7 +1408,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: List Publications
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1416,7 +1416,7 @@ paths:
         IsMultiContentStreaming: false
   /publications:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: List Publications filters
       tags:
       - Publish
@@ -1471,7 +1471,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: List Publications filters
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1479,7 +1479,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/test/redemption:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Get voucher's redemptions
       tags:
       - Redemptions
@@ -1524,14 +1524,14 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Get voucher's redemptions
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Redeem
       tags:
       - Redeem
@@ -1583,7 +1583,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Redeem
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1591,7 +1591,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/NotFound123/redemption:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Redeem - not found
       tags:
       - Redeem
@@ -1643,7 +1643,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Redeem - not found
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1651,7 +1651,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/invalid/redemption:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Redeem - expired
       tags:
       - Redeem
@@ -1703,7 +1703,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Redeem - expired
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1711,7 +1711,7 @@ paths:
         IsMultiContentStreaming: false
   /client/v1/redeem:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Redeem - client side
       tags:
       - Redeem
@@ -1774,7 +1774,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Redeem - client side
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1782,7 +1782,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/LdprQtRL/redemption:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Redeem - order details
       tags:
       - Redeem
@@ -1842,7 +1842,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Redeem - order details
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1850,7 +1850,7 @@ paths:
         IsMultiContentStreaming: false
   /redemptions:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: List redemptions - success
       tags:
       - Redemptions
@@ -1900,7 +1900,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: List redemptions - success
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1908,7 +1908,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/segments:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Create segment
       tags:
       - Segments
@@ -1965,7 +1965,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Create segment
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1973,7 +1973,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/segments/{createdSegmentId}:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Get segment
       tags:
       - Segments
@@ -2012,7 +2012,7 @@ paths:
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     delete:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Delete segment
       tags:
       - Segments
@@ -2110,13 +2110,13 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /v1/vouchers/1520505542:
+  /v1/vouchers/1520592687:
     post:
       description: Create discount voucher with a given code
       summary: Create voucher with a given code
       tags:
       - Standalone2
-      operationId: V1Vouchers1520505542Post2
+      operationId: V1Vouchers1520592687Post2
       produces:
       - application/json
       parameters:
@@ -2148,7 +2148,7 @@ paths:
       x-unitTests:
       - request:
           method: POST
-          uri: /v1/vouchers/1520505542
+          uri: /v1/vouchers/1520592687
           headers:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
@@ -2265,7 +2265,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: "{\n    \"metadata\": {\n        \"update_time\": \"1520505542\" \n    },\n    \"category\": \"postman\"\n}"
+          body: "{\n    \"metadata\": {\n        \"update_time\": \"1520592687\" \n    },\n    \"category\": \"postman\"\n}"
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2284,7 +2284,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/notfound123:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Get voucher - non-existent
       tags:
       - Standalone2
@@ -2329,7 +2329,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Get voucher - non-existent
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2337,7 +2337,7 @@ paths:
         IsMultiContentStreaming: false
   /vouchers:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: List vouchers - paging
       tags:
       - Standalone2
@@ -2399,7 +2399,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: List vouchers - paging
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2407,7 +2407,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/{generatedCode}:
     delete:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Delete voucher
       tags:
       - Standalone2
@@ -2447,7 +2447,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/{TC1-code}/validate:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: TC1 - Validate
       tags:
       - TC1 - Redemption limit 1
@@ -2493,7 +2493,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/{TC1-code}/redemption:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: TC1 - Get  redemptions
       tags:
       - TC1 - Redemption limit 1
@@ -2578,7 +2578,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/IzvHT3Ba/redemption:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: TC3 - Redeem
       tags:
       - TC3 - discount rules
@@ -2640,7 +2640,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: TC3 - Redeem
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2648,7 +2648,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/{TC3-code}/validate:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Validate voucher for given customer order
       tags:
       - TC3 - e-commerce integration
@@ -2694,7 +2694,7 @@ paths:
         IsMultiContentStreaming: false
   /vouchers/{TC3-code}/redemption:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Redeem
       tags:
       - TC3 - e-commerce integration
@@ -2745,7 +2745,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/{TC3-code}/redemption:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Get  redemption
       tags:
       - TC3 - e-commerce integration
@@ -2830,7 +2830,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/customers/{TC3-customer-id}:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: TC2 - Get  customer
       tags:
       - TC3 - e-commerce integration
@@ -2915,7 +2915,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/TC4-DIS-BJ5J-iRuy-L7C-2016:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: TC4 - Get voucher
       tags:
       - TC4 - Distribution
@@ -2960,7 +2960,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: TC4 - Get voucher
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2968,7 +2968,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/{TC5-code}/redemption:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: TC5 - Redeem 2nd time
       tags:
       - TC5 - Rollback Redemption
@@ -3014,7 +3014,7 @@ paths:
         IsMultiContentStreaming: false
   /redemptions/{TC5-redemption-id}/rollback:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: TC5 - Rollback 2nd time Redemption - pass related customer profile
       tags:
       - TC5 - Rollback Redemption
@@ -3059,7 +3059,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/validation-rules:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Create
       tags:
       - Validation rules
@@ -3119,7 +3119,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Create
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -3127,7 +3127,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/validation-rules/{createdValidationRulesId}:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Get
       tags:
       - Validation rules
@@ -3166,7 +3166,7 @@ paths:
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     put:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Update
       tags:
       - Validation rules
@@ -3211,7 +3211,7 @@ paths:
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     delete:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Delete
       tags:
       - Validation rules
@@ -3251,7 +3251,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/campaigns/{createdCampaignName}/vouchers:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: TC6 - Add voucher to campaign
       tags:
       - TC6 - Campaign with Validation Rules
@@ -3297,7 +3297,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/test/validate:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Validate
       tags:
       - Validate
@@ -3354,7 +3354,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Validate
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -3362,7 +3362,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/invalid/validate:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Validate - expired
       tags:
       - Validate
@@ -3414,7 +3414,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Validate - expired
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -3422,7 +3422,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/invalid-disabled/validate:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Validate - disabled
       tags:
       - Validate
@@ -3474,7 +3474,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Validate - disabled
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -3482,7 +3482,7 @@ paths:
         IsMultiContentStreaming: false
   /client/v1/validate:
     get:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Validate - client side
       tags:
       - Validate
@@ -3538,7 +3538,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Validate - client side
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -3546,7 +3546,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/IzvHT3Ba/validate:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Validate - order details
       tags:
       - Validate
@@ -3608,7 +3608,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Validate - order details
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -3616,7 +3616,7 @@ paths:
         IsMultiContentStreaming: false
   /v1/vouchers/LdprQtRL/validate:
     post:
-      description: ''
+      description: 'TODO: Add Description'
       summary: Validate - order details skus
       tags:
       - Validate
@@ -3676,7 +3676,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Validate - order details skus
-        x-testDescription: ''
+        x-testDescription: 'TODO: Add Description'
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -3686,7 +3686,7 @@ definitions:
   CreateCampaignrequest:
     title: Create campaignRequest
     example:
-      name: test campaign 1520505542
+      name: test campaign 1520592687
       start_date: 2016-10-26T00:00:00.0000000Z
       expiration_date: 2016-12-26T00:00:00.0000000Z
       vouchers_count: 100
@@ -3705,7 +3705,7 @@ definitions:
     properties:
       name:
         description: ''
-        example: test campaign 1520505542
+        example: test campaign 1520592687
         type: string
       start_date:
         description: ''
@@ -3817,7 +3817,7 @@ definitions:
   CreateGiftCardCampaignrequest:
     title: Create gift card campaignRequest
     example:
-      name: gitf_card_1520505542
+      name: gitf_card_1520592687
       vouchers_count: 50
       voucher:
         type: GIFT_VOUCHER
@@ -3829,7 +3829,7 @@ definitions:
     properties:
       name:
         description: ''
-        example: gitf_card_1520505542
+        example: gitf_card_1520592687
         type: string
       vouchers_count:
         description: ''
@@ -3892,7 +3892,7 @@ definitions:
     example:
       name: Jan Kowalski
       email: jan@kowalski.pl
-      description: 1520505542
+      description: 1520592687
       source_id: src_id
       phone: +48 123456789
     type: object
@@ -3907,7 +3907,7 @@ definitions:
         type: string
       description:
         description: ''
-        example: 1520505542
+        example: 1520592687
         type: string
       source_id:
         description: ''
@@ -3945,7 +3945,7 @@ definitions:
     title: CreateRequest
     example:
       name: Jan Kowalski
-      email: jan1520505542@kowalski.pl
+      email: jan1520592687@kowalski.pl
     type: object
     properties:
       name:
@@ -3954,7 +3954,7 @@ definitions:
         type: string
       email:
         description: ''
-        example: jan1520505542@kowalski.pl
+        example: jan1520592687@kowalski.pl
         type: string
     required:
     - name
@@ -3963,7 +3963,7 @@ definitions:
     title: DeleteRequest
     example:
       name: Jan Kowalski
-      email: jan1520505542@kowalski.pl
+      email: jan1520592687@kowalski.pl
     type: object
     properties:
       name:
@@ -3972,7 +3972,7 @@ definitions:
         type: string
       email:
         description: ''
-        example: jan1520505542@kowalski.pl
+        example: jan1520592687@kowalski.pl
         type: string
     required:
     - name
@@ -4191,7 +4191,7 @@ definitions:
   Import vouchers  to campaignrequest:
     title: Import vouchers - to campaignRequest
     example:
-      code: CODE_1520505542
+      code: CODE_1520592687
       redemption:
         quantity: 1
       metadata:
@@ -4201,7 +4201,7 @@ definitions:
     properties:
       code:
         description: ''
-        example: CODE_1520505542
+        example: CODE_1520592687
         type: string
       redemption:
         $ref: '#/definitions/Redemption22'
@@ -4220,7 +4220,7 @@ definitions:
     title: CreateRequest27
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1520505542
+      source_id: internal_crm_id_1520592687
       attributes:
       - color
       - memory
@@ -4234,7 +4234,7 @@ definitions:
         type: string
       source_id:
         description: ''
-        example: internal_crm_id_1520505542
+        example: internal_crm_id_1520592687
         type: string
       attributes:
         description: ''
@@ -4284,7 +4284,7 @@ definitions:
     title: Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1520505542
+      source_id: internal_erp_sku_id_1520592687
       currency: USD
       price: 70000
       attributes:
@@ -4298,7 +4298,7 @@ definitions:
         type: string
       source_id:
         description: ''
-        example: internal_erp_sku_id_1520505542
+        example: internal_erp_sku_id_1520592687
         type: string
       currency:
         description: ''
@@ -4559,7 +4559,7 @@ definitions:
     title: Update voucherRequest
     example:
       metadata:
-        update_time: 1520505542
+        update_time: 1520592687
       category: postman
     type: object
     properties:
@@ -4575,12 +4575,12 @@ definitions:
   Metadata48:
     title: Metadata48
     example:
-      update_time: 1520505542
+      update_time: 1520592687
     type: object
     properties:
       update_time:
         description: ''
-        example: 1520505542
+        example: 1520592687
         type: string
     required:
     - update_time
@@ -4975,7 +4975,7 @@ definitions:
     title: TC6 - Create ProductRequest
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1520505542
+      source_id: internal_crm_id_1520592687
       attributes:
       - color
       - memory
@@ -4989,7 +4989,7 @@ definitions:
         type: string
       source_id:
         description: ''
-        example: internal_crm_id_1520505542
+        example: internal_crm_id_1520592687
         type: string
       attributes:
         description: ''
@@ -5010,7 +5010,7 @@ definitions:
     title: TC6 - Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1520505542
+      source_id: internal_erp_sku_id_1520592687
       currency: USD
       price: 70000
       attributes:
@@ -5024,7 +5024,7 @@ definitions:
         type: string
       source_id:
         description: ''
-        example: internal_erp_sku_id_1520505542
+        example: internal_erp_sku_id_1520592687
         type: string
       currency:
         description: ''
