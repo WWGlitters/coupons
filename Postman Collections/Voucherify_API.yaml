@@ -55,30 +55,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: >-
-            {
-                "name": "TC6 - test campaign",
-                "start_date": "2016-09-26T00:00:00Z",
-                "expiration_date": "2020-12-26T00:00:00Z",
-                "type": "AUTO_UPDATE",
-                "vouchers_count": 10,
-                "voucher": {
-                    "type": "DISCOUNT_VOUCHER",
-                    "discount": {
-                        "percent_off": "10.0",
-                        "type": "PERCENT"
-                    },
-                    "redemption": {
-                      "quantity": 1
-                    },
-                    "code_config": {
-                        "pattern": "TC6-PROMO-#######"
-                    }
-                },
-                "metadata": {
-                  "test": true
-                }
-            }
+          body: '{"name":"TC6 - test campaign","start_date":"2016-09-26T00:00:00Z","expiration_date":"2020-12-26T00:00:00Z","type":"AUTO_UPDATE","vouchers_count":10,"voucher":{"type":"DISCOUNT_VOUCHER","discount":{"percent_off":"10.0","type":"PERCENT"},"redemption":{"quantity":1},"code_config":{"pattern":"TC6-PROMO-#######"}},"metadata":{"test":true}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -191,11 +168,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: >-
-            {
-                "name" : "Jan Kowalski",
-                "email" : "jan1521110976@kowalski.pl"
-            }
+          body: '{"name":"Jan Kowalski","email":"jan1521196746@kowalski.pl"}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -439,11 +412,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: >-
-            {
-                "campaign": "100k-test",
-                "channel": "MailChimp"
-            }
+          body: '{"campaign":"100k-test","channel":"MailChimp"}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -503,20 +472,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: >-
-            {
-                "exported_object": "voucher",
-              "parameters" : {
-                "fields": ["code", "voucher_type"],
-                "filter" : {
-                  "categories" : {
-                    "conditions" : {
-                      "$in" : ["postman"]
-                    }
-                  }
-                }
-              }
-            }
+          body: '{"exported_object":"voucher","parameters":{"fields":["code","voucher_type"],"filter":{"categories":{"conditions":{"$in":["postman"]}}}}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -709,25 +665,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: >-
-            [
-                {
-                    "code": "test",
-                    "category": "postman",
-                    "type": "DISCOUNT_VOUCHER",
-                    "discount": {
-                        "amount_off": 3000,
-                        "type": "AMOUNT"
-                    },
-                    "start_date": "2015-12-01T23:00:00Z",
-                    "expiration_date": "2015-12-19T23:00:00Z",
-                    "redemption": {
-                        "quantity": 1.0
-                    },
-                    "metadata": {"unit": "EUR"},
-                    "additional_info": "secret-code1"
-                }
-            ]
+          body: '[{"code":"test","category":"postman","type":"DISCOUNT_VOUCHER","discount":{"amount_off":3000,"type":"AMOUNT"},"start_date":"2015-12-01T23:00:00Z","expiration_date":"2015-12-19T23:00:00Z","redemption":{"quantity":1.0},"metadata":{"unit":"EUR"},"additional_info":"secret-code1"}]'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -789,17 +727,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: >-
-            [
-                {
-                    "code": "CODE_1521110976",
-                    "redemption": {
-                        "quantity": 1.0
-                    },
-                    "metadata": {"unit": "EUR"},
-                    "additional_info": "secret-code1"
-                }
-            ]
+          body: '[{"code":"CODE_1521196746","redemption":{"quantity":1.0},"metadata":{"unit":"EUR"},"additional_info":"secret-code1"}]'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -911,15 +839,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: >-
-            {
-                "name" : "Apple iPhone 7",
-                "source_id" : "internal_crm_id_1521110976",
-                "attributes": [ "color", "memory" ],
-                "metadata": {
-                  "test": true
-                }
-            }
+          body: '{"name":"Apple iPhone 7","source_id":"internal_crm_id_1521196746","attributes":["color","memory"],"metadata":{"test":true}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1333,18 +1253,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: >-
-            {
-              "campaign": "TEST-DEMO-1",
-              "customer": {
-                "source_id": "test@myshop.pl",
-                "name": "Test Publish Customer"
-              },
-              "metadata": {
-                "test": true,
-                "app": "postman"
-              }
-            }
+          body: '{"campaign":"TEST-DEMO-1","customer":{"source_id":"test@myshop.pl","name":"Test Publish Customer"},"metadata":{"test":true,"app":"postman"}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1823,15 +1732,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: >-
-            {
-                "order": {
-                    "items": [
-                      { "sku_id": "sku_dSbRQfbyUMyHnt", "quantity": "1" },
-                        { "sku_id": "sku_0KtP4rvwEECQ2U", "quantity": "1" }
-                    ]
-                }
-            }
+          body: '{"order":{"items":[{"sku_id":"sku_dSbRQfbyUMyHnt","quantity":"1"},{"sku_id":"sku_0KtP4rvwEECQ2U","quantity":"1"}]}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1949,12 +1850,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: >-
-            {
-              "name": "test segment2",
-              "customers": ["cust_EkqCdCA7JyIDlFBvkOMTnceJ"],
-              "type": "static"
-            }
+          body: '{"name":"test segment2","customers":["cust_EkqCdCA7JyIDlFBvkOMTnceJ"],"type":"static"}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2093,7 +1989,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: "{\n    \"type\": \"DISCOUNT_VOUCHER\",\n    \"discount\": {\n        \"percent_off\": \"10.0\",\n        \"type\": \"PERCENT\"\n    },\n    \"redemption\": {\n        \"quantity\": \"1\" \n    },\n    \"category\": \"postman-tc5\",\n    \"code_config\": {\n      \"pattern\": \"TC5-PROMO-#######\"\n    }\n}"
+          body: '{"type":"DISCOUNT_VOUCHER","discount":{"percent_off":"10.0","type":"PERCENT"},"redemption":{"quantity":"1"},"category":"postman-tc5","code_config":{"pattern":"TC5-PROMO-#######"}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2110,13 +2006,13 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /v1/vouchers/1521110976:
+  /v1/vouchers/1521196746:
     post:
       description: Create discount voucher with a given code
       summary: Create voucher with a given code
       tags:
       - Standalone2
-      operationId: V1Vouchers1521110976Post2
+      operationId: V1Vouchers1521196746Post2
       produces:
       - application/json
       parameters:
@@ -2148,12 +2044,12 @@ paths:
       x-unitTests:
       - request:
           method: POST
-          uri: /v1/vouchers/1521110976
+          uri: /v1/vouchers/1521196746
           headers:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: "{\n    \"type\": \"DISCOUNT_VOUCHER\",\n    \"discount\": {\n        \"percent_off\": \"10.0\",\n        \"type\": \"PERCENT\"\n    },\n    \"redemption\": {\n        \"quantity\": \"1\" \n    },\n    \"category\": \"postman\"\n}"
+          body: '{"type":"DISCOUNT_VOUCHER","discount":{"percent_off":"10.0","type":"PERCENT"},"redemption":{"quantity":"1"},"category":"postman"}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2265,7 +2161,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: "{\n    \"metadata\": {\n        \"update_time\": \"1521110976\" \n    },\n    \"category\": \"postman\"\n}"
+          body: '{"metadata":{"update_time":"1521196746"},"category":"postman"}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2619,17 +2515,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: >
-            {
-                "customer": {
-                     "id": "cust_eIH9UtbvIfRUP9nZyBqDeMEv"
-                },
-                "order": {
-                    "items": [
-                        { "product_id": "prod_anJ03RZZq74z4v", "quantity": "1" }
-                    ]
-                }
-            }
+          body: '{"customer":{"id":"cust_eIH9UtbvIfRUP9nZyBqDeMEv"},"order":{"items":[{"product_id":"prod_anJ03RZZq74z4v","quantity":"1"}]}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -3100,15 +2986,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: >-
-            {
-              "voucher_code" : "val_rul_test",
-              "orders": {
-                  "total_amount": {
-                    "$more_than":[10000]
-                  }
-                }
-            }
+          body: '{"voucher_code":"val_rul_test","orders":{"total_amount":{"$more_than":[10000]}}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -3338,12 +3216,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: >-
-            {
-              "order":{
-                "amount":1000
-              }
-            }
+          body: '{"order":{"amount":1000}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -3587,17 +3460,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: >
-            {
-                "customer": {
-                     "id": "cust_eIH9UtbvIfRUP9nZyBqDeMEv"
-                },
-                "order": {
-                    "items": [
-                        { "product_id": "prod_anJ03RZZq74z4v", "quantity": "1" }
-                    ]
-                }
-            }
+          body: '{"customer":{"id":"cust_eIH9UtbvIfRUP9nZyBqDeMEv"},"order":{"items":[{"product_id":"prod_anJ03RZZq74z4v","quantity":"1"}]}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -3657,15 +3520,7 @@ paths:
             Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: >
-            {
-                "order": {
-                    "items": [
-                      { "sku_id": "sku_dSbRQfbyUMyHnt", "quantity": "1" },
-                        { "sku_id": "sku_0KtP4rvwEECQ2U", "quantity": "1" }
-                    ]
-                }
-            }
+          body: '{"order":{"items":[{"sku_id":"sku_dSbRQfbyUMyHnt","quantity":"1"},{"sku_id":"sku_0KtP4rvwEECQ2U","quantity":"1"}]}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -3686,7 +3541,7 @@ definitions:
   CreateCampaignrequest:
     title: Create campaignRequest
     example:
-      name: test campaign 1521110976
+      name: test campaign 1521196746
       start_date: 2016-10-26T00:00:00.0000000Z
       expiration_date: 2016-12-26T00:00:00.0000000Z
       vouchers_count: 100
@@ -3705,7 +3560,7 @@ definitions:
     properties:
       name:
         description: ''
-        example: test campaign 1521110976
+        example: test campaign 1521196746
         type: string
       start_date:
         description: ''
@@ -3817,7 +3672,7 @@ definitions:
   CreateGiftCardCampaignrequest:
     title: Create gift card campaignRequest
     example:
-      name: gitf_card_1521110976
+      name: gitf_card_1521196746
       vouchers_count: 50
       voucher:
         type: GIFT_VOUCHER
@@ -3829,7 +3684,7 @@ definitions:
     properties:
       name:
         description: ''
-        example: gitf_card_1521110976
+        example: gitf_card_1521196746
         type: string
       vouchers_count:
         description: ''
@@ -3892,7 +3747,7 @@ definitions:
     example:
       name: Jan Kowalski
       email: jan@kowalski.pl
-      description: 1521110976
+      description: 1521196746
       source_id: src_id
       phone: +48 123456789
     type: object
@@ -3907,7 +3762,7 @@ definitions:
         type: string
       description:
         description: ''
-        example: 1521110976
+        example: 1521196746
         type: string
       source_id:
         description: ''
@@ -3945,7 +3800,7 @@ definitions:
     title: CreateRequest
     example:
       name: Jan Kowalski
-      email: jan1521110976@kowalski.pl
+      email: jan1521196746@kowalski.pl
     type: object
     properties:
       name:
@@ -3954,7 +3809,7 @@ definitions:
         type: string
       email:
         description: ''
-        example: jan1521110976@kowalski.pl
+        example: jan1521196746@kowalski.pl
         type: string
     required:
     - name
@@ -3963,7 +3818,7 @@ definitions:
     title: DeleteRequest
     example:
       name: Jan Kowalski
-      email: jan1521110976@kowalski.pl
+      email: jan1521196746@kowalski.pl
     type: object
     properties:
       name:
@@ -3972,7 +3827,7 @@ definitions:
         type: string
       email:
         description: ''
-        example: jan1521110976@kowalski.pl
+        example: jan1521196746@kowalski.pl
         type: string
     required:
     - name
@@ -4191,7 +4046,7 @@ definitions:
   Import vouchers  to campaignrequest:
     title: Import vouchers - to campaignRequest
     example:
-      code: CODE_1521110976
+      code: CODE_1521196746
       redemption:
         quantity: 1
       metadata:
@@ -4201,7 +4056,7 @@ definitions:
     properties:
       code:
         description: ''
-        example: CODE_1521110976
+        example: CODE_1521196746
         type: string
       redemption:
         $ref: '#/definitions/Redemption22'
@@ -4220,7 +4075,7 @@ definitions:
     title: CreateRequest27
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1521110976
+      source_id: internal_crm_id_1521196746
       attributes:
       - color
       - memory
@@ -4234,7 +4089,7 @@ definitions:
         type: string
       source_id:
         description: ''
-        example: internal_crm_id_1521110976
+        example: internal_crm_id_1521196746
         type: string
       attributes:
         description: ''
@@ -4284,7 +4139,7 @@ definitions:
     title: Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1521110976
+      source_id: internal_erp_sku_id_1521196746
       currency: USD
       price: 70000
       attributes:
@@ -4298,7 +4153,7 @@ definitions:
         type: string
       source_id:
         description: ''
-        example: internal_erp_sku_id_1521110976
+        example: internal_erp_sku_id_1521196746
         type: string
       currency:
         description: ''
@@ -4559,7 +4414,7 @@ definitions:
     title: Update voucherRequest
     example:
       metadata:
-        update_time: 1521110976
+        update_time: 1521196746
       category: postman
     type: object
     properties:
@@ -4575,12 +4430,12 @@ definitions:
   Metadata48:
     title: Metadata48
     example:
-      update_time: 1521110976
+      update_time: 1521196746
     type: object
     properties:
       update_time:
         description: ''
-        example: 1521110976
+        example: 1521196746
         type: string
     required:
     - update_time
@@ -4975,7 +4830,7 @@ definitions:
     title: TC6 - Create ProductRequest
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1521110976
+      source_id: internal_crm_id_1521196746
       attributes:
       - color
       - memory
@@ -4989,7 +4844,7 @@ definitions:
         type: string
       source_id:
         description: ''
-        example: internal_crm_id_1521110976
+        example: internal_crm_id_1521196746
         type: string
       attributes:
         description: ''
@@ -5010,7 +4865,7 @@ definitions:
     title: TC6 - Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1521110976
+      source_id: internal_erp_sku_id_1521196746
       currency: USD
       price: 70000
       attributes:
@@ -5024,7 +4879,7 @@ definitions:
         type: string
       source_id:
         description: ''
-        example: internal_erp_sku_id_1521110976
+        example: internal_erp_sku_id_1521196746
         type: string
       currency:
         description: ''
