@@ -22,12 +22,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/Tc6  create campaignrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -43,6 +37,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc6  create campaignrequest'
       responses:
         200:
           description: ''
@@ -52,9 +52,9 @@ paths:
           method: POST
           uri: /v1/campaigns
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{"name":"TC6 - test campaign","start_date":"2016-09-26T00:00:00Z","expiration_date":"2020-12-26T00:00:00Z","type":"AUTO_UPDATE","vouchers_count":10,"voucher":{"type":"DISCOUNT_VOUCHER","discount":{"percent_off":"10.0","type":"PERCENT"},"redemption":{"quantity":1},"code_config":{"pattern":"TC6-PROMO-#######"}},"metadata":{"test":true}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -135,12 +135,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/CreateRequest'
       - name: X-App-Id
         in: header
         required: true
@@ -156,6 +150,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateRequest'
       responses:
         200:
           description: ''
@@ -165,10 +165,10 @@ paths:
           method: POST
           uri: /v1/customers
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: '{"name":"Jan Kowalski","email":"jan1531219142@kowalski.pl"}'
+            Content-Type: application/json
+          body: '{"name":"Jan Kowalski","email":"jan1531306264@kowalski.pl"}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -234,12 +234,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/UpdateRequest'
       - name: X-App-Id
         in: header
         required: true
@@ -255,6 +249,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateRequest'
       - name: customerId
         in: path
         required: true
@@ -280,12 +280,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/DeleteRequest'
       - name: X-App-Id
         in: header
         required: true
@@ -301,6 +295,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/DeleteRequest'
       - name: createdCustomerId
         in: path
         required: true
@@ -379,12 +379,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/DisableRequest'
       - name: X-App-Id
         in: header
         required: true
@@ -400,6 +394,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/DisableRequest'
       responses:
         200:
           description: ''
@@ -409,9 +409,9 @@ paths:
           method: POST
           uri: /v1/vouchers/test-activity/disable
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{"campaign":"100k-test","channel":"MailChimp"}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -439,12 +439,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/CreateExportrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -460,6 +454,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateExportrequest'
       responses:
         200:
           description: ''
@@ -469,9 +469,9 @@ paths:
           method: POST
           uri: /v1/exports
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{"exported_object":"voucher","parameters":{"fields":["code","voucher_type"],"filter":{"categories":{"conditions":{"$in":["postman"]}}}}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -630,14 +630,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          type: array
-          items:
-            $ref: '#/definitions/Import vouchers  duplicaterequest'
       - name: X-App-Id
         in: header
         required: true
@@ -653,6 +645,14 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/Import vouchers  duplicaterequest'
       responses:
         200:
           description: ''
@@ -662,9 +662,9 @@ paths:
           method: POST
           uri: /v1/vouchers/import
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '[{"code":"test","category":"postman","type":"DISCOUNT_VOUCHER","discount":{"amount_off":3000,"type":"AMOUNT"},"start_date":"2015-12-01T23:00:00Z","expiration_date":"2015-12-19T23:00:00Z","redemption":{"quantity":1.0},"metadata":{"unit":"EUR"},"additional_info":"secret-code1"}]'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -692,14 +692,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          type: array
-          items:
-            $ref: '#/definitions/Import vouchers  to campaignrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -715,6 +707,14 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/Import vouchers  to campaignrequest'
       responses:
         200:
           description: ''
@@ -724,10 +724,10 @@ paths:
           method: POST
           uri: /v1/campaigns/postman-import/import
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: '[{"code":"CODE_1531219142","redemption":{"quantity":1.0},"metadata":{"unit":"EUR"},"additional_info":"secret-code1"}]'
+            Content-Type: application/json
+          body: '[{"code":"CODE_1531306264","redemption":{"quantity":1.0},"metadata":{"unit":"EUR"},"additional_info":"secret-code1"}]'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -806,12 +806,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/Tc6  create productrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -827,6 +821,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc6  create productrequest'
       responses:
         200:
           description: ''
@@ -836,10 +836,10 @@ paths:
           method: POST
           uri: /v1/products
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: '{"name":"Apple iPhone 7","source_id":"internal_crm_id_1531219142","attributes":["color","memory"],"metadata":{"test":true}}'
+            Content-Type: application/json
+          body: '{"name":"Apple iPhone 7","source_id":"internal_crm_id_1531306264","attributes":["color","memory"],"metadata":{"test":true}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -905,12 +905,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/UpdateProductrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -926,6 +920,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateProductrequest'
       - name: createdProductId
         in: path
         required: true
@@ -950,12 +950,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          type: object
       - name: X-App-Id
         in: header
         required: true
@@ -971,6 +965,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
       - name: createdProductId
         in: path
         required: true
@@ -1035,12 +1035,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/Tc6  add skurequest'
       - name: X-App-Id
         in: header
         required: true
@@ -1056,6 +1050,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc6  add skurequest'
       - name: createdProductId
         in: path
         required: true
@@ -1125,12 +1125,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/UpdateSkurequest'
       - name: X-App-Id
         in: header
         required: true
@@ -1146,6 +1140,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateSkurequest'
       - name: createdProductId
         in: path
         required: true
@@ -1220,12 +1220,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/Tc4  publish voucher form autoUpdate campaignrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -1241,6 +1235,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc4  publish voucher form autoUpdate campaignrequest'
       responses:
         200:
           description: ''
@@ -1250,9 +1250,9 @@ paths:
           method: POST
           uri: /v1/vouchers/publish
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{"campaign":"TEST-DEMO-1","customer":{"source_id":"test@myshop.pl","name":"Test Publish Customer"},"metadata":{"test":true,"app":"postman"}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1448,12 +1448,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          type: object
       - name: X-App-Id
         in: header
         required: true
@@ -1469,6 +1463,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
       responses:
         200:
           description: ''
@@ -1478,9 +1478,9 @@ paths:
           method: POST
           uri: /v1/vouchers/test/redemption
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1508,12 +1508,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          type: object
       - name: X-App-Id
         in: header
         required: true
@@ -1529,6 +1523,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
       responses:
         200:
           description: ''
@@ -1538,9 +1538,9 @@ paths:
           method: POST
           uri: /v1/vouchers/NotFound123/redemption
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1568,12 +1568,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          type: object
       - name: X-App-Id
         in: header
         required: true
@@ -1589,6 +1583,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
       responses:
         200:
           description: ''
@@ -1598,9 +1598,9 @@ paths:
           method: POST
           uri: /v1/vouchers/invalid/redemption
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1633,12 +1633,6 @@ paths:
         required: true
         type: string
         description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          type: object
       - name: X-Client-Application-Id
         in: header
         required: true
@@ -1659,6 +1653,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
       responses:
         200:
           description: ''
@@ -1668,9 +1668,9 @@ paths:
           method: POST
           uri: /client/v1/redeem?code=test
           headers:
-            Content-Type: application/json
             X-Client-Application-Id: 011240bf-d5fc-4ef1-9e82-11eb68c43bf5
             X-Client-Token: 9e2230c5-71fb-460a-91c6-fbee64707a20
+            Content-Type: application/json
             Origin: origin
           body: '{}'
         expectedResponse:
@@ -1699,12 +1699,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/Redeem  order detailsrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -1720,6 +1714,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Redeem  order detailsrequest'
       responses:
         200:
           description: ''
@@ -1729,9 +1729,9 @@ paths:
           method: POST
           uri: /v1/vouchers/LdprQtRL/redemption
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{"order":{"items":[{"sku_id":"sku_dSbRQfbyUMyHnt","quantity":"1"},{"sku_id":"sku_0KtP4rvwEECQ2U","quantity":"1"}]}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1817,12 +1817,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/CreateSegmentrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -1838,6 +1832,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateSegmentrequest'
       responses:
         200:
           description: ''
@@ -1847,9 +1847,9 @@ paths:
           method: POST
           uri: /v1/segments
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{"name":"test segment2","customers":["cust_EkqCdCA7JyIDlFBvkOMTnceJ"],"type":"static"}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1956,12 +1956,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/Tc2  create voucher without coderequest'
       - name: X-App-Id
         in: header
         required: true
@@ -1977,6 +1971,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc2  create voucher without coderequest'
       responses:
         200:
           description: ''
@@ -1986,9 +1986,9 @@ paths:
           method: POST
           uri: /v1/vouchers
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{"type":"DISCOUNT_VOUCHER","discount":{"percent_off":"10.0","type":"PERCENT"},"redemption":{"quantity":"1"},"category":"postman-tc5","code_config":{"pattern":"TC5-PROMO-#######"}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -2006,22 +2006,16 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /v1/vouchers/1531219142:
+  /v1/vouchers/1531306264:
     post:
       description: Create discount voucher with a given code
       summary: Create voucher with a given code
       tags:
       - Standalone2
-      operationId: V1Vouchers1531219142Post2
+      operationId: V1Vouchers1531306264Post2
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/CreateVoucherWithAGivenCoderequest'
       - name: X-App-Id
         in: header
         required: true
@@ -2037,6 +2031,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateVoucherWithAGivenCoderequest'
       responses:
         200:
           description: ''
@@ -2044,11 +2044,11 @@ paths:
       x-unitTests:
       - request:
           method: POST
-          uri: /v1/vouchers/1531219142
+          uri: /v1/vouchers/1531306264
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{"type":"DISCOUNT_VOUCHER","discount":{"percent_off":"10.0","type":"PERCENT"},"redemption":{"quantity":"1"},"category":"postman"}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -2128,12 +2128,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/UpdateVoucherrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -2149,6 +2143,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateVoucherrequest'
       responses:
         200:
           description: ''
@@ -2158,10 +2158,10 @@ paths:
           method: PUT
           uri: /v1/vouchers/test
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
-          body: '{"metadata":{"update_time":"1531219142"},"category":"postman"}'
+            Content-Type: application/json
+          body: '{"metadata":{"update_time":"1531306264"},"category":"postman"}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2351,12 +2351,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          type: object
       - name: X-App-Id
         in: header
         required: true
@@ -2372,6 +2366,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
       - name: TC1-code
         in: path
         required: true
@@ -2436,12 +2436,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          type: object
       - name: X-App-Id
         in: header
         required: true
@@ -2457,6 +2451,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
       - name: TC1-code
         in: path
         required: true
@@ -2482,12 +2482,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/Tc3  redeemrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -2503,6 +2497,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc3  redeemrequest'
       responses:
         200:
           description: ''
@@ -2512,9 +2512,9 @@ paths:
           method: POST
           uri: /v1/vouchers/IzvHT3Ba/redemption
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{"customer":{"id":"cust_eIH9UtbvIfRUP9nZyBqDeMEv"},"order":{"items":[{"product_id":"prod_anJ03RZZq74z4v","quantity":"1"}]}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -2542,12 +2542,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/ValidateVoucherForGivenCustomerOrderrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -2563,6 +2557,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/ValidateVoucherForGivenCustomerOrderrequest'
       - name: TC3-code
         in: path
         required: true
@@ -2593,12 +2593,6 @@ paths:
         required: true
         type: string
         description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/RedeemRequest'
       - name: X-App-Id
         in: header
         required: true
@@ -2614,6 +2608,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/RedeemRequest'
       - name: TC3-code
         in: path
         required: true
@@ -2678,12 +2678,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/Tc2  redeem 2nd time after rollbackrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -2699,6 +2693,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc2  redeem 2nd time after rollbackrequest'
       - name: TC3-code
         in: path
         required: true
@@ -2862,12 +2862,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/Tc5  redeemrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -2883,6 +2877,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc5  redeemrequest'
       - name: TC5-code
         in: path
         required: true
@@ -2953,12 +2953,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/CreateRequest115'
       - name: X-App-Id
         in: header
         required: true
@@ -2974,6 +2968,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateRequest115'
       responses:
         200:
           description: ''
@@ -2983,9 +2983,9 @@ paths:
           method: POST
           uri: /v1/validation-rules
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{"voucher_code":"val_rul_test","orders":{"total_amount":{"$more_than":[10000]}}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -3052,12 +3052,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/UpdateRequest118'
       - name: X-App-Id
         in: header
         required: true
@@ -3073,6 +3067,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateRequest118'
       - name: createdValidationRulesId
         in: path
         required: true
@@ -3137,12 +3137,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/Tc6  add voucher to campaignrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -3158,6 +3152,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Tc6  add voucher to campaignrequest'
       - name: createdCampaignName
         in: path
         required: true
@@ -3183,12 +3183,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/ValidateRequest'
       - name: X-App-Id
         in: header
         required: true
@@ -3204,6 +3198,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/ValidateRequest'
       responses:
         200:
           description: ''
@@ -3213,9 +3213,9 @@ paths:
           method: POST
           uri: /v1/vouchers/test/validate
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{"order":{"amount":1000}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -3243,12 +3243,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          type: object
       - name: X-App-Id
         in: header
         required: true
@@ -3264,6 +3258,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
       responses:
         200:
           description: ''
@@ -3273,9 +3273,9 @@ paths:
           method: POST
           uri: /v1/vouchers/invalid/validate
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -3303,12 +3303,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          type: object
       - name: X-App-Id
         in: header
         required: true
@@ -3324,6 +3318,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: object
       responses:
         200:
           description: ''
@@ -3333,9 +3333,9 @@ paths:
           method: POST
           uri: /v1/vouchers/invalid-disabled/validate
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -3427,12 +3427,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/Validate  order detailsrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -3448,6 +3442,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Validate  order detailsrequest'
       responses:
         200:
           description: ''
@@ -3457,9 +3457,9 @@ paths:
           method: POST
           uri: /v1/vouchers/IzvHT3Ba/validate
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{"customer":{"id":"cust_eIH9UtbvIfRUP9nZyBqDeMEv"},"order":{"items":[{"product_id":"prod_anJ03RZZq74z4v","quantity":"1"}]}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -3487,12 +3487,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/Validate  order details skusrequest'
       - name: X-App-Id
         in: header
         required: true
@@ -3508,6 +3502,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Validate  order details skusrequest'
       responses:
         200:
           description: ''
@@ -3517,9 +3517,9 @@ paths:
           method: POST
           uri: /v1/vouchers/LdprQtRL/validate
           headers:
-            Content-Type: application/json
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
+            Content-Type: application/json
           body: '{"order":{"items":[{"sku_id":"sku_dSbRQfbyUMyHnt","quantity":"1"},{"sku_id":"sku_0KtP4rvwEECQ2U","quantity":"1"}]}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -3541,7 +3541,7 @@ definitions:
   CreateCampaignrequest:
     title: Create campaignRequest
     example:
-      name: test campaign 1531219142
+      name: test campaign 1531306264
       start_date: 2016-10-26T00:00:00.0000000Z
       expiration_date: 2016-12-26T00:00:00.0000000Z
       vouchers_count: 100
@@ -3560,7 +3560,7 @@ definitions:
     properties:
       name:
         description: ''
-        example: test campaign 1531219142
+        example: test campaign 1531306264
         type: string
       start_date:
         description: ''
@@ -3672,7 +3672,7 @@ definitions:
   CreateGiftCardCampaignrequest:
     title: Create gift card campaignRequest
     example:
-      name: gitf_card_1531219142
+      name: gitf_card_1531306264
       vouchers_count: 50
       voucher:
         type: GIFT_VOUCHER
@@ -3684,7 +3684,7 @@ definitions:
     properties:
       name:
         description: ''
-        example: gitf_card_1531219142
+        example: gitf_card_1531306264
         type: string
       vouchers_count:
         description: ''
@@ -3748,7 +3748,7 @@ definitions:
     example:
       name: Jan Kowalski
       email: jan@kowalski.pl
-      description: 1531219142
+      description: 1531306264
       source_id: src_id
       phone: +48 123456789
     type: object
@@ -3763,7 +3763,7 @@ definitions:
         type: string
       description:
         description: ''
-        example: 1531219142
+        example: 1531306264
         type: string
       source_id:
         description: ''
@@ -3801,7 +3801,7 @@ definitions:
     title: CreateRequest
     example:
       name: Jan Kowalski
-      email: jan1531219142@kowalski.pl
+      email: jan1531306264@kowalski.pl
     type: object
     properties:
       name:
@@ -3810,7 +3810,7 @@ definitions:
         type: string
       email:
         description: ''
-        example: jan1531219142@kowalski.pl
+        example: jan1531306264@kowalski.pl
         type: string
     required:
     - name
@@ -3819,7 +3819,7 @@ definitions:
     title: DeleteRequest
     example:
       name: Jan Kowalski
-      email: jan1531219142@kowalski.pl
+      email: jan1531306264@kowalski.pl
     type: object
     properties:
       name:
@@ -3828,7 +3828,7 @@ definitions:
         type: string
       email:
         description: ''
-        example: jan1531219142@kowalski.pl
+        example: jan1531306264@kowalski.pl
         type: string
     required:
     - name
@@ -4047,7 +4047,7 @@ definitions:
   Import vouchers  to campaignrequest:
     title: Import vouchers - to campaignRequest
     example:
-      code: CODE_1531219142
+      code: CODE_1531306264
       redemption:
         quantity: 1
       metadata:
@@ -4057,7 +4057,7 @@ definitions:
     properties:
       code:
         description: ''
-        example: CODE_1531219142
+        example: CODE_1531306264
         type: string
       redemption:
         $ref: '#/definitions/Redemption22'
@@ -4076,7 +4076,7 @@ definitions:
     title: CreateRequest27
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1531219142
+      source_id: internal_crm_id_1531306264
       attributes:
       - color
       - memory
@@ -4090,7 +4090,7 @@ definitions:
         type: string
       source_id:
         description: ''
-        example: internal_crm_id_1531219142
+        example: internal_crm_id_1531306264
         type: string
       attributes:
         description: ''
@@ -4140,7 +4140,7 @@ definitions:
     title: Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1531219142
+      source_id: internal_erp_sku_id_1531306264
       currency: USD
       price: 70000
       attributes:
@@ -4154,7 +4154,7 @@ definitions:
         type: string
       source_id:
         description: ''
-        example: internal_erp_sku_id_1531219142
+        example: internal_erp_sku_id_1531306264
         type: string
       currency:
         description: ''
@@ -4415,7 +4415,7 @@ definitions:
     title: Update voucherRequest
     example:
       metadata:
-        update_time: 1531219142
+        update_time: 1531306264
       category: postman
     type: object
     properties:
@@ -4431,12 +4431,12 @@ definitions:
   Metadata48:
     title: Metadata48
     example:
-      update_time: 1531219142
+      update_time: 1531306264
     type: object
     properties:
       update_time:
         description: ''
-        example: 1531219142
+        example: 1531306264
         type: string
     required:
     - update_time
@@ -4831,7 +4831,7 @@ definitions:
     title: TC6 - Create ProductRequest
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1531219142
+      source_id: internal_crm_id_1531306264
       attributes:
       - color
       - memory
@@ -4845,7 +4845,7 @@ definitions:
         type: string
       source_id:
         description: ''
-        example: internal_crm_id_1531219142
+        example: internal_crm_id_1531306264
         type: string
       attributes:
         description: ''
@@ -4866,7 +4866,7 @@ definitions:
     title: TC6 - Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1531219142
+      source_id: internal_erp_sku_id_1531306264
       currency: USD
       price: 70000
       attributes:
@@ -4880,7 +4880,7 @@ definitions:
         type: string
       source_id:
         description: ''
-        example: internal_erp_sku_id_1531219142
+        example: internal_erp_sku_id_1531306264
         type: string
       currency:
         description: ''
