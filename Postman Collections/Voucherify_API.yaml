@@ -25,21 +25,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/Tc6  create campaignrequest'
@@ -85,16 +89,19 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -138,21 +145,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/CreateRequest'
@@ -168,7 +179,7 @@ paths:
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
             Content-Type: application/json
-          body: '{"name":"Jan Kowalski","email":"jan1533465543@kowalski.pl"}'
+          body: '{"name":"Jan Kowalski","email":"jan1533551943@kowalski.pl"}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -198,21 +209,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: customerId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -237,27 +252,32 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/UpdateRequest'
       - name: customerId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -283,27 +303,32 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/DeleteRequest'
       - name: createdCustomerId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -329,16 +354,19 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -382,21 +410,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/DisableRequest'
@@ -442,21 +474,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/CreateExportrequest'
@@ -502,21 +538,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: exportId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -541,21 +581,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: exportId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -581,16 +625,19 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -633,16 +680,19 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
@@ -695,16 +745,19 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
@@ -727,7 +780,7 @@ paths:
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
             Content-Type: application/json
-          body: '[{"code":"CODE_1533465543","redemption":{"quantity":1.0},"metadata":{"unit":"EUR"},"additional_info":"secret-code1"}]'
+          body: '[{"code":"CODE_1533551943","redemption":{"quantity":1.0},"metadata":{"unit":"EUR"},"additional_info":"secret-code1"}]'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -757,16 +810,19 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -809,21 +865,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/Tc6  create productrequest'
@@ -839,7 +899,7 @@ paths:
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
             Content-Type: application/json
-          body: '{"name":"Apple iPhone 7","source_id":"internal_crm_id_1533465543","attributes":["color","memory"],"metadata":{"test":true}}'
+          body: '{"name":"Apple iPhone 7","source_id":"internal_crm_id_1533551943","attributes":["color","memory"],"metadata":{"test":true}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -869,21 +929,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: createdProductId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -908,27 +972,32 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/UpdateProductrequest'
       - name: createdProductId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -953,27 +1022,32 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           type: object
       - name: createdProductId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -999,21 +1073,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: createdProductId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -1038,27 +1116,32 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/Tc6  add skurequest'
       - name: createdProductId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -1084,26 +1167,31 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: createdProductId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       - name: createdSKUId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -1128,32 +1216,38 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/UpdateSkurequest'
       - name: createdProductId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       - name: createdSKUId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -1178,26 +1272,31 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: createdProductId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       - name: createdSKUId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -1223,21 +1322,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/Tc4  publish voucher form autoUpdate campaignrequest'
@@ -1283,16 +1386,19 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -1336,26 +1442,31 @@ paths:
       - name: filters[campaign][conditions][$is][0]
         in: query
         required: true
+        default: ''
         type: string
         description: ''
       - name: filters[Result][conditions][$is][1]
         in: query
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -1399,16 +1510,19 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -1451,21 +1565,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           type: object
@@ -1511,21 +1629,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           type: object
@@ -1571,21 +1693,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           type: object
@@ -1631,31 +1757,37 @@ paths:
       - name: code
         in: query
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-Client-Application-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-Client-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Origin
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           type: object
@@ -1702,21 +1834,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/Redeem  order detailsrequest'
@@ -1762,21 +1898,25 @@ paths:
       - name: result
         in: query
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -1820,21 +1960,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/CreateSegmentrequest'
@@ -1880,21 +2024,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: createdSegmentId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -1919,21 +2067,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: createdSegmentId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -1959,21 +2111,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/Tc2  create voucher without coderequest'
@@ -2006,34 +2162,38 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /v1/vouchers/1533465543:
+  /v1/vouchers/1533551943:
     post:
       description: Create discount voucher with a given code
       summary: Create voucher with a given code
       tags:
       - Standalone2
-      operationId: V1Vouchers1533465543Post2
+      operationId: V1Vouchers1533551943Post2
       produces:
       - application/json
       parameters:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/CreateVoucherWithAGivenCoderequest'
@@ -2044,7 +2204,7 @@ paths:
       x-unitTests:
       - request:
           method: POST
-          uri: /v1/vouchers/1533465543
+          uri: /v1/vouchers/1533551943
           headers:
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
@@ -2079,16 +2239,19 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2131,21 +2294,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/UpdateVoucherrequest'
@@ -2161,7 +2328,7 @@ paths:
             X-App-Id: c70a6f00-cf91-4756-9df5-47628850002b
             X-App-Token: 3266b9f8-e246-4f79-bdf0-833929b1380c
             Content-Type: application/json
-          body: '{"metadata":{"update_time":"1533465543"},"category":"postman"}'
+          body: '{"metadata":{"update_time":"1533551943"},"category":"postman"}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2191,16 +2358,19 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2244,33 +2414,39 @@ paths:
       - name: campaign
         in: query
         required: true
+        default: ''
         type: string
         description: ''
       - name: limit
         in: query
         required: true
+        default: ''
         type: integer
         format: int32
         description: ''
       - name: skip
         in: query
         required: true
+        default: ''
         type: integer
         format: int32
         description: ''
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2314,21 +2490,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: generatedCode
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2354,27 +2534,32 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           type: object
       - name: TC1-code
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2400,21 +2585,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: TC1-code
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2439,27 +2628,32 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           type: object
       - name: TC1-code
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2485,21 +2679,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/Tc3  redeemrequest'
@@ -2545,27 +2743,32 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/ValidateVoucherForGivenCustomerOrderrequest'
       - name: TC3-code
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2591,32 +2794,38 @@ paths:
       - name: tracking_id
         in: query
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/RedeemRequest'
       - name: TC3-code
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2642,21 +2851,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: TC3-code
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2681,27 +2894,32 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/Tc2  redeem 2nd time after rollbackrequest'
       - name: TC3-code
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2727,21 +2945,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: TC3-customer-id
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2767,26 +2989,31 @@ paths:
       - name: tracking_id
         in: query
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: TC3-redemption-id
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2812,16 +3039,19 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2865,27 +3095,32 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/Tc5  redeemrequest'
       - name: TC5-code
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2911,26 +3146,31 @@ paths:
       - name: reason
         in: query
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: TC5-redemption-id
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -2956,21 +3196,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/CreateRequest115'
@@ -3016,21 +3260,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: createdValidationRulesId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -3055,27 +3303,32 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/UpdateRequest118'
       - name: createdValidationRulesId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -3100,21 +3353,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: createdValidationRulesId
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -3140,27 +3397,32 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/Tc6  add voucher to campaignrequest'
       - name: createdCampaignName
         in: path
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -3186,21 +3448,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/ValidateRequest'
@@ -3246,21 +3512,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           type: object
@@ -3306,21 +3576,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           type: object
@@ -3366,26 +3640,31 @@ paths:
       - name: code
         in: query
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-Client-Application-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-Client-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Origin
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       responses:
@@ -3430,21 +3709,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/Validate  order detailsrequest'
@@ -3490,21 +3773,25 @@ paths:
       - name: X-App-Id
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: X-App-Token
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Content-Type
         in: header
         required: true
+        default: ''
         type: string
         description: ''
       - name: Body
         in: body
         required: true
+        default: ''
         description: ''
         schema:
           $ref: '#/definitions/Validate  order details skusrequest'
@@ -3541,7 +3828,7 @@ definitions:
   CreateCampaignrequest:
     title: Create campaignRequest
     example:
-      name: test campaign 1533465543
+      name: test campaign 1533551943
       start_date: 2016-10-26T00:00:00.0000000Z
       expiration_date: 2016-12-26T00:00:00.0000000Z
       vouchers_count: 100
@@ -3560,25 +3847,31 @@ definitions:
     properties:
       name:
         description: ''
-        example: test campaign 1533465543
+        example: test campaign 1533551943
         type: string
+        default: ''
       start_date:
         description: ''
         example: 10/26/2016 12:00:00 AM
         type: string
+        default: ''
       expiration_date:
         description: ''
         example: 12/26/2016 12:00:00 AM
         type: string
+        default: ''
       vouchers_count:
         description: ''
         example: 100
         type: integer
+        default: ''
         format: int32
       voucher:
         $ref: '#/definitions/Voucher'
+        default: ''
       metadata:
         $ref: '#/definitions/Metadata'
+        default: ''
     required:
     - name
     - start_date
@@ -3603,12 +3896,16 @@ definitions:
         description: ''
         example: DISCOUNT_VOUCHER
         type: string
+        default: ''
       discount:
         $ref: '#/definitions/Discount'
+        default: ''
       redemption:
         $ref: '#/definitions/Redemption'
+        default: ''
       code_config:
         $ref: '#/definitions/CodeConfig'
+        default: ''
     required:
     - type
     - discount
@@ -3625,10 +3922,12 @@ definitions:
         description: ''
         example: 10.0
         type: string
+        default: ''
       type:
         description: ''
         example: PERCENT
         type: string
+        default: ''
     required:
     - percent_off
     - type
@@ -3642,6 +3941,7 @@ definitions:
         description: ''
         example: 1
         type: integer
+        default: ''
         format: int32
     required:
     - quantity
@@ -3655,6 +3955,7 @@ definitions:
         description: ''
         example: TC6-PROMO-#######
         type: string
+        default: ''
     required:
     - pattern
   Metadata:
@@ -3667,12 +3968,13 @@ definitions:
         description: ''
         example: true
         type: boolean
+        default: ''
     required:
     - test
   CreateGiftCardCampaignrequest:
     title: Create gift card campaignRequest
     example:
-      name: gitf_card_1533465543
+      name: gitf_card_1533551943
       vouchers_count: 50
       voucher:
         type: GIFT_VOUCHER
@@ -3684,15 +3986,18 @@ definitions:
     properties:
       name:
         description: ''
-        example: gitf_card_1533465543
+        example: gitf_card_1533551943
         type: string
+        default: ''
       vouchers_count:
         description: ''
         example: 50
         type: integer
+        default: ''
         format: int32
       voucher:
         $ref: '#/definitions/Voucher7'
+        default: ''
     required:
     - name
     - vouchers_count
@@ -3711,10 +4016,13 @@ definitions:
         description: ''
         example: GIFT_VOUCHER
         type: string
+        default: ''
       gift:
         $ref: '#/definitions/Gift'
+        default: ''
       redemption:
         $ref: '#/definitions/Redemption9'
+        default: ''
     required:
     - type
     - gift
@@ -3729,6 +4037,7 @@ definitions:
         description: ''
         example: 10000
         type: integer
+        default: ''
         format: int32
     required:
     - amount
@@ -3741,6 +4050,7 @@ definitions:
       quantity:
         description: ''
         type: string
+        default: ''
     required:
     - quantity
   Create  src idrequest:
@@ -3748,7 +4058,7 @@ definitions:
     example:
       name: Jan Kowalski
       email: jan@kowalski.pl
-      description: 1533465543
+      description: 1533551943
       source_id: src_id
       phone: +48 123456789
     type: object
@@ -3757,22 +4067,27 @@ definitions:
         description: ''
         example: Jan Kowalski
         type: string
+        default: ''
       email:
         description: ''
         example: jan@kowalski.pl
         type: string
+        default: ''
       description:
         description: ''
-        example: 1533465543
+        example: 1533551943
         type: string
+        default: ''
       source_id:
         description: ''
         example: src_id
         type: string
+        default: ''
       phone:
         description: ''
         example: +48 123456789
         type: string
+        default: ''
     required:
     - name
     - email
@@ -3790,10 +4105,12 @@ definitions:
         description: ''
         example: John Doe
         type: string
+        default: ''
       email:
         description: ''
         example: john@doe.com
         type: string
+        default: ''
     required:
     - name
     - email
@@ -3801,17 +4118,19 @@ definitions:
     title: CreateRequest
     example:
       name: Jan Kowalski
-      email: jan1533465543@kowalski.pl
+      email: jan1533551943@kowalski.pl
     type: object
     properties:
       name:
         description: ''
         example: Jan Kowalski
         type: string
+        default: ''
       email:
         description: ''
-        example: jan1533465543@kowalski.pl
+        example: jan1533551943@kowalski.pl
         type: string
+        default: ''
     required:
     - name
     - email
@@ -3819,17 +4138,19 @@ definitions:
     title: DeleteRequest
     example:
       name: Jan Kowalski
-      email: jan1533465543@kowalski.pl
+      email: jan1533551943@kowalski.pl
     type: object
     properties:
       name:
         description: ''
         example: Jan Kowalski
         type: string
+        default: ''
       email:
         description: ''
-        example: jan1533465543@kowalski.pl
+        example: jan1533551943@kowalski.pl
         type: string
+        default: ''
     required:
     - name
     - email
@@ -3844,10 +4165,12 @@ definitions:
         description: ''
         example: 100k-test
         type: string
+        default: ''
       channel:
         description: ''
         example: MailChimp
         type: string
+        default: ''
     required:
     - campaign
     - channel
@@ -3870,8 +4193,10 @@ definitions:
         description: ''
         example: voucher
         type: string
+        default: ''
       parameters:
         $ref: '#/definitions/Parameters'
+        default: ''
     required:
     - exported_object
     - parameters
@@ -3898,6 +4223,7 @@ definitions:
           type: string
       filter:
         $ref: '#/definitions/Filter'
+        default: ''
     required:
     - fields
     - filter
@@ -3912,6 +4238,7 @@ definitions:
     properties:
       categories:
         $ref: '#/definitions/Categories'
+        default: ''
     required:
     - categories
   Categories:
@@ -3924,6 +4251,7 @@ definitions:
     properties:
       conditions:
         $ref: '#/definitions/Conditions'
+        default: ''
     required:
     - conditions
   Conditions:
@@ -3964,32 +4292,41 @@ definitions:
         description: ''
         example: test
         type: string
+        default: ''
       category:
         description: ''
         example: postman
         type: string
+        default: ''
       type:
         description: ''
         example: DISCOUNT_VOUCHER
         type: string
+        default: ''
       discount:
         $ref: '#/definitions/Discount21'
+        default: ''
       start_date:
         description: ''
         example: 12/1/2015 11:00:00 PM
         type: string
+        default: ''
       expiration_date:
         description: ''
         example: 12/19/2015 11:00:00 PM
         type: string
+        default: ''
       redemption:
         $ref: '#/definitions/Redemption22'
+        default: ''
       metadata:
         $ref: '#/definitions/Metadata23'
+        default: ''
       additional_info:
         description: ''
         example: secret-code1
         type: string
+        default: ''
     required:
     - code
     - category
@@ -4011,11 +4348,13 @@ definitions:
         description: ''
         example: 3000
         type: integer
+        default: ''
         format: int32
       type:
         description: ''
         example: AMOUNT
         type: string
+        default: ''
     required:
     - amount_off
     - type
@@ -4029,6 +4368,7 @@ definitions:
         description: ''
         example: 1
         type: number
+        default: ''
         format: double
     required:
     - quantity
@@ -4042,12 +4382,13 @@ definitions:
         description: ''
         example: EUR
         type: string
+        default: ''
     required:
     - unit
   Import vouchers  to campaignrequest:
     title: Import vouchers - to campaignRequest
     example:
-      code: CODE_1533465543
+      code: CODE_1533551943
       redemption:
         quantity: 1
       metadata:
@@ -4057,16 +4398,20 @@ definitions:
     properties:
       code:
         description: ''
-        example: CODE_1533465543
+        example: CODE_1533551943
         type: string
+        default: ''
       redemption:
         $ref: '#/definitions/Redemption22'
+        default: ''
       metadata:
         $ref: '#/definitions/Metadata23'
+        default: ''
       additional_info:
         description: ''
         example: secret-code1
         type: string
+        default: ''
     required:
     - code
     - redemption
@@ -4076,7 +4421,7 @@ definitions:
     title: CreateRequest27
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1533465543
+      source_id: internal_crm_id_1533551943
       attributes:
       - color
       - memory
@@ -4088,10 +4433,12 @@ definitions:
         description: ''
         example: Apple iPhone 7
         type: string
+        default: ''
       source_id:
         description: ''
-        example: internal_crm_id_1533465543
+        example: internal_crm_id_1533551943
         type: string
+        default: ''
       attributes:
         description: ''
         example:
@@ -4102,6 +4449,7 @@ definitions:
           type: string
       metadata:
         $ref: '#/definitions/Metadata'
+        default: ''
     required:
     - name
     - source_id
@@ -4119,8 +4467,10 @@ definitions:
         description: ''
         example: Apple iPhone 8
         type: string
+        default: ''
       metadata:
         $ref: '#/definitions/Metadata30'
+        default: ''
     required:
     - name
     - metadata
@@ -4134,13 +4484,14 @@ definitions:
         description: ''
         example: false
         type: string
+        default: ''
     required:
     - test
   AddSkurequest:
     title: Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1533465543
+      source_id: internal_erp_sku_id_1533551943
       currency: USD
       price: 70000
       attributes:
@@ -4152,21 +4503,26 @@ definitions:
         description: ''
         example: APPLE_IPHONE_7
         type: string
+        default: ''
       source_id:
         description: ''
-        example: internal_erp_sku_id_1533465543
+        example: internal_erp_sku_id_1533551943
         type: string
+        default: ''
       currency:
         description: ''
         example: USD
         type: string
+        default: ''
       price:
         description: ''
         example: 70000
         type: integer
+        default: ''
         format: int32
       attributes:
         $ref: '#/definitions/Attributes'
+        default: ''
     required:
     - sku
     - source_id
@@ -4184,10 +4540,12 @@ definitions:
         description: ''
         example: black
         type: string
+        default: ''
       memory:
         description: ''
         example: 32
         type: string
+        default: ''
     required:
     - color
     - memory
@@ -4203,9 +4561,11 @@ definitions:
         description: ''
         example: 50000
         type: integer
+        default: ''
         format: int32
       attributes:
         $ref: '#/definitions/Attributes34'
+        default: ''
     required:
     - price
     - attributes
@@ -4219,6 +4579,7 @@ definitions:
         description: ''
         example: 16
         type: integer
+        default: ''
         format: int32
     required:
     - memory
@@ -4233,10 +4594,12 @@ definitions:
         description: ''
         example: 100k-test
         type: string
+        default: ''
       channel:
         description: ''
         example: MailChimp
         type: string
+        default: ''
     required:
     - campaign
     - channel
@@ -4251,10 +4614,12 @@ definitions:
         description: ''
         example: postman-paging
         type: string
+        default: ''
       channel:
         description: ''
         example: MailChimp
         type: string
+        default: ''
     required:
     - campaign
     - channel
@@ -4271,6 +4636,7 @@ definitions:
     properties:
       order:
         $ref: '#/definitions/Order'
+        default: ''
     required:
     - order
   Order:
@@ -4306,10 +4672,12 @@ definitions:
         description: ''
         example: sku_dSbRQfbyUMyHnt
         type: string
+        default: ''
       quantity:
         description: ''
         example: 1
         type: string
+        default: ''
     required:
     - sku_id
     - quantity
@@ -4326,6 +4694,7 @@ definitions:
         description: ''
         example: test segment2
         type: string
+        default: ''
       customers:
         description: ''
         example:
@@ -4337,6 +4706,7 @@ definitions:
         description: ''
         example: static
         type: string
+        default: ''
     required:
     - name
     - customers
@@ -4357,14 +4727,18 @@ definitions:
         description: ''
         example: DISCOUNT_VOUCHER
         type: string
+        default: ''
       discount:
         $ref: '#/definitions/Discount'
+        default: ''
       redemption:
         $ref: '#/definitions/Redemption43'
+        default: ''
       category:
         description: ''
         example: postman
         type: string
+        default: ''
     required:
     - type
     - discount
@@ -4380,6 +4754,7 @@ definitions:
         description: ''
         example: 1
         type: string
+        default: ''
     required:
     - quantity
   CreateVoucherWithAGivenCoderequest:
@@ -4398,14 +4773,18 @@ definitions:
         description: ''
         example: DISCOUNT_VOUCHER
         type: string
+        default: ''
       discount:
         $ref: '#/definitions/Discount'
+        default: ''
       redemption:
         $ref: '#/definitions/Redemption43'
+        default: ''
       category:
         description: ''
         example: postman
         type: string
+        default: ''
     required:
     - type
     - discount
@@ -4415,29 +4794,32 @@ definitions:
     title: Update voucherRequest
     example:
       metadata:
-        update_time: 1533465543
+        update_time: 1533551943
       category: postman
     type: object
     properties:
       metadata:
         $ref: '#/definitions/Metadata48'
+        default: ''
       category:
         description: ''
         example: postman
         type: string
+        default: ''
     required:
     - metadata
     - category
   Metadata48:
     title: Metadata48
     example:
-      update_time: 1533465543
+      update_time: 1533551943
     type: object
     properties:
       update_time:
         description: ''
-        example: 1533465543
+        example: 1533551943
         type: string
+        default: ''
     required:
     - update_time
   Tc1  create voucher without coderequest:
@@ -4456,14 +4838,18 @@ definitions:
         description: ''
         example: DISCOUNT_VOUCHER
         type: string
+        default: ''
       discount:
         $ref: '#/definitions/Discount'
+        default: ''
       redemption:
         $ref: '#/definitions/Redemption43'
+        default: ''
       category:
         description: ''
         example: postman
         type: string
+        default: ''
     required:
     - type
     - discount
@@ -4482,8 +4868,10 @@ definitions:
     properties:
       customer:
         $ref: '#/definitions/Customer'
+        default: ''
       order:
         $ref: '#/definitions/Order62'
+        default: ''
     required:
     - customer
     - order
@@ -4497,6 +4885,7 @@ definitions:
         description: ''
         example: cust_eIH9UtbvIfRUP9nZyBqDeMEv
         type: string
+        default: ''
     required:
     - id
   Order62:
@@ -4528,10 +4917,12 @@ definitions:
         description: ''
         example: prod_anJ03RZZq74z4v
         type: string
+        default: ''
       quantity:
         description: ''
         example: 1
         type: string
+        default: ''
     required:
     - product_id
     - quantity
@@ -4553,16 +4944,21 @@ definitions:
         description: ''
         example: DISCOUNT_VOUCHER
         type: string
+        default: ''
       discount:
         $ref: '#/definitions/Discount'
+        default: ''
       redemption:
         $ref: '#/definitions/Redemption43'
+        default: ''
       category:
         description: ''
         example: postman-tc3
         type: string
+        default: ''
       code_config:
         $ref: '#/definitions/CodeConfig'
+        default: ''
     required:
     - type
     - discount
@@ -4582,8 +4978,10 @@ definitions:
         description: ''
         example: shop@myshop.com
         type: string
+        default: ''
       order:
         $ref: '#/definitions/Order69'
+        default: ''
     required:
     - tracking_id
     - order
@@ -4598,6 +4996,7 @@ definitions:
         description: ''
         example: 10000
         type: integer
+        default: ''
         format: int32
       items:
         description: ''
@@ -4618,6 +5017,7 @@ definitions:
     properties:
       order:
         $ref: '#/definitions/Order69'
+        default: ''
     required:
     - order
   Tc2  redeem 2nd time after rollbackrequest:
@@ -4634,8 +5034,10 @@ definitions:
     properties:
       customer:
         $ref: '#/definitions/Customer73'
+        default: ''
       order:
         $ref: '#/definitions/Order69'
+        default: ''
     required:
     - customer
     - order
@@ -4651,14 +5053,17 @@ definitions:
         description: ''
         example: '{{TC3-customer-id}}'
         type: string
+        default: ''
       name:
         description: ''
         example: Test Customer Postman
         type: string
+        default: ''
       email:
         description: ''
         example: test@myshop.com
         type: string
+        default: ''
     required:
     - id
     - name
@@ -4679,10 +5084,13 @@ definitions:
         description: ''
         example: TEST-DEMO-1
         type: string
+        default: ''
       customer:
         $ref: '#/definitions/Customer76'
+        default: ''
       metadata:
         $ref: '#/definitions/Metadata77'
+        default: ''
     required:
     - campaign
     - customer
@@ -4698,10 +5106,12 @@ definitions:
         description: ''
         example: test@myshop.pl
         type: string
+        default: ''
       name:
         description: ''
         example: Test Publish Customer
         type: string
+        default: ''
     required:
     - source_id
     - name
@@ -4716,10 +5126,12 @@ definitions:
         description: ''
         example: true
         type: boolean
+        default: ''
       app:
         description: ''
         example: postman
         type: string
+        default: ''
     required:
     - test
     - app
@@ -4738,8 +5150,10 @@ definitions:
     properties:
       customer:
         $ref: '#/definitions/Customer83'
+        default: ''
       order:
         $ref: '#/definitions/Order69'
+        default: ''
     required:
     - customer
     - order
@@ -4756,18 +5170,22 @@ definitions:
         description: ''
         example: test-postman@voucherify.io
         type: string
+        default: ''
       email:
         description: ''
         example: test-postman@voucherify.io
         type: string
+        default: ''
       name:
         description: ''
         example: Test Postman
         type: string
+        default: ''
       description:
         description: ''
         example: Test done from postman client
         type: string
+        default: ''
     required:
     - source_id
     - email
@@ -4798,27 +5216,34 @@ definitions:
         description: ''
         example: TC6 - test campaign
         type: string
+        default: ''
       start_date:
         description: ''
         example: 9/26/2016 12:00:00 AM
         type: string
+        default: ''
       expiration_date:
         description: ''
         example: 12/26/2020 12:00:00 AM
         type: string
+        default: ''
       type:
         description: ''
         example: AUTO_UPDATE
         type: string
+        default: ''
       vouchers_count:
         description: ''
         example: 10
         type: integer
+        default: ''
         format: int32
       voucher:
         $ref: '#/definitions/Voucher'
+        default: ''
       metadata:
         $ref: '#/definitions/Metadata'
+        default: ''
     required:
     - name
     - start_date
@@ -4831,7 +5256,7 @@ definitions:
     title: TC6 - Create ProductRequest
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1533465543
+      source_id: internal_crm_id_1533551943
       attributes:
       - color
       - memory
@@ -4843,10 +5268,12 @@ definitions:
         description: ''
         example: Apple iPhone 7
         type: string
+        default: ''
       source_id:
         description: ''
-        example: internal_crm_id_1533465543
+        example: internal_crm_id_1533551943
         type: string
+        default: ''
       attributes:
         description: ''
         example:
@@ -4857,6 +5284,7 @@ definitions:
           type: string
       metadata:
         $ref: '#/definitions/Metadata'
+        default: ''
     required:
     - name
     - source_id
@@ -4866,7 +5294,7 @@ definitions:
     title: TC6 - Add SKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1533465543
+      source_id: internal_erp_sku_id_1533551943
       currency: USD
       price: 70000
       attributes:
@@ -4878,21 +5306,26 @@ definitions:
         description: ''
         example: APPLE_IPHONE_7
         type: string
+        default: ''
       source_id:
         description: ''
-        example: internal_erp_sku_id_1533465543
+        example: internal_erp_sku_id_1533551943
         type: string
+        default: ''
       currency:
         description: ''
         example: USD
         type: string
+        default: ''
       price:
         description: ''
         example: 70000
         type: integer
+        default: ''
         format: int32
       attributes:
         $ref: '#/definitions/Attributes'
+        default: ''
     required:
     - sku
     - source_id
@@ -4921,14 +5354,18 @@ definitions:
         description: ''
         example: '{{createdCampaignName}}'
         type: string
+        default: ''
       junction:
         description: ''
         example: AND
         type: string
+        default: ''
       skus:
         $ref: '#/definitions/Skus'
+        default: ''
       orders:
         $ref: '#/definitions/Orders'
+        default: ''
     required:
     - campaign_name
     - junction
@@ -4947,8 +5384,10 @@ definitions:
         description: ''
         example: AND
         type: string
+        default: ''
       conditions:
         $ref: '#/definitions/Conditions100'
+        default: ''
     required:
     - junction
     - conditions
@@ -4978,6 +5417,7 @@ definitions:
         description: ''
         example: '{{createdSKUId}}'
         type: string
+        default: ''
     required:
     - id
   Orders:
@@ -4994,11 +5434,14 @@ definitions:
         description: ''
         example: AND
         type: string
+        default: ''
       total_amount:
         description: ''
         type: string
+        default: ''
       products_count:
         $ref: '#/definitions/ProductsCount'
+        default: ''
     required:
     - junction
     - total_amount
@@ -5029,6 +5472,7 @@ definitions:
     properties:
       metadata:
         $ref: '#/definitions/Metadata'
+        default: ''
     required:
     - metadata
   ValidateRequest:
@@ -5040,6 +5484,7 @@ definitions:
     properties:
       order:
         $ref: '#/definitions/Order107'
+        default: ''
     required:
     - order
   Order107:
@@ -5052,6 +5497,7 @@ definitions:
         description: ''
         example: 1000
         type: integer
+        default: ''
         format: int32
     required:
     - amount
@@ -5068,8 +5514,10 @@ definitions:
     properties:
       customer:
         $ref: '#/definitions/Customer'
+        default: ''
       order:
         $ref: '#/definitions/Order62'
+        default: ''
     required:
     - customer
     - order
@@ -5086,6 +5534,7 @@ definitions:
     properties:
       order:
         $ref: '#/definitions/Order'
+        default: ''
     required:
     - order
   CreateRequest115:
@@ -5102,8 +5551,10 @@ definitions:
         description: ''
         example: val_rul_test
         type: string
+        default: ''
       orders:
         $ref: '#/definitions/Orders116'
+        default: ''
     required:
     - voucher_code
     - orders
@@ -5117,6 +5568,7 @@ definitions:
     properties:
       total_amount:
         $ref: '#/definitions/TotalAmount'
+        default: ''
     required:
     - total_amount
   TotalAmount:
@@ -5147,5 +5599,6 @@ definitions:
     properties:
       orders:
         $ref: '#/definitions/Orders116'
+        default: ''
     required:
     - orders
