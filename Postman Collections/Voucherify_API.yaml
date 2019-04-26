@@ -6,12 +6,9 @@
   },
   "item": [
     {
-      "_postman_id": "2209223-5604bb75-a1f3-1d73-ef1e-4bb5db63a01b",
       "name": "Campaigns",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-5781039f-29b3-9a9f-9815-bb06e6bc2b4b",
           "name": "Create campaign",
           "event": [
             {
@@ -26,6 +23,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-5781039f-29b3-9a9f-9815-bb06e6bc2b4b",
           "request": {
             "method": "POST",
             "header": [
@@ -52,7 +50,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-f6ebd316-a61f-5ceb-3514-f15faf0486dd",
           "name": "Get campaign",
           "event": [
             {
@@ -67,6 +64,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-f6ebd316-a61f-5ceb-3514-f15faf0486dd",
           "request": {
             "method": "GET",
             "header": [
@@ -92,7 +90,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-236113ea-dd9a-7793-3aca-3317f10d47a3",
           "name": "Create gift card campaign ",
           "event": [
             {
@@ -107,6 +104,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-236113ea-dd9a-7793-3aca-3317f10d47a3",
           "request": {
             "method": "POST",
             "header": [
@@ -131,15 +129,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-5604bb75-a1f3-1d73-ef1e-4bb5db63a01b"
     },
     {
-      "_postman_id": "2209223-a0321673-1369-601f-5559-7f6b00a04744",
       "name": "Customers",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-dad20655-b2fd-ecaa-5d8e-81558abe2427",
           "name": "Create - src id",
           "event": [
             {
@@ -156,6 +152,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-dad20655-b2fd-ecaa-5d8e-81558abe2427",
           "request": {
             "method": "POST",
             "header": [
@@ -181,7 +178,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-2a7c2c31-4333-4bdd-855d-a80bf48e632d",
           "name": "Get",
           "event": [
             {
@@ -196,6 +192,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-2a7c2c31-4333-4bdd-855d-a80bf48e632d",
           "request": {
             "method": "GET",
             "header": [
@@ -221,7 +218,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-25738a71-6858-a046-062a-4bcec485d3e8",
           "name": "Update",
           "event": [
             {
@@ -238,6 +234,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-25738a71-6858-a046-062a-4bcec485d3e8",
           "request": {
             "method": "PUT",
             "header": [
@@ -263,7 +260,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-6ce3920a-346d-5849-5c81-6510d25eb8ad",
           "name": "Create",
           "event": [
             {
@@ -279,6 +275,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-6ce3920a-346d-5849-5c81-6510d25eb8ad",
           "request": {
             "method": "POST",
             "header": [
@@ -304,7 +301,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-f77aea53-da6f-bf21-dec6-f5b0680f5b26",
           "name": "Delete",
           "event": [
             {
@@ -319,6 +315,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-f77aea53-da6f-bf21-dec6-f5b0680f5b26",
           "request": {
             "method": "DELETE",
             "header": [
@@ -343,15 +340,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-a0321673-1369-601f-5559-7f6b00a04744"
     },
     {
-      "_postman_id": "2209223-1606f0d9-07b0-ce56-9394-49c6ab2d3f29",
       "name": "Enable/disable",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-795479d7-a3df-8b7a-66e8-1d435c5ab09e",
           "name": "Enable",
           "event": [
             {
@@ -366,6 +361,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-795479d7-a3df-8b7a-66e8-1d435c5ab09e",
           "request": {
             "method": "POST",
             "header": [
@@ -391,7 +387,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-0b7d1894-0b18-2913-cdaa-0c2e4f65502c",
           "name": "Disable",
           "event": [
             {
@@ -405,6 +400,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-0b7d1894-0b18-2913-cdaa-0c2e4f65502c",
           "request": {
             "method": "POST",
             "header": [
@@ -429,15 +425,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-1606f0d9-07b0-ce56-9394-49c6ab2d3f29"
     },
     {
-      "_postman_id": "2209223-d9fc8bd4-a84f-41fa-caf8-c4a086a877e1",
       "name": "Export",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-b341c8ac-0233-0c65-6da3-3cea84e57c69",
           "name": "Create Export",
           "event": [
             {
@@ -453,6 +447,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-b341c8ac-0233-0c65-6da3-3cea84e57c69",
           "request": {
             "method": "POST",
             "header": [
@@ -478,7 +473,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-64f79d37-4e20-9a74-41ff-ade8dcc89537",
           "name": "Get Export",
           "event": [
             {
@@ -493,6 +487,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-64f79d37-4e20-9a74-41ff-ade8dcc89537",
           "request": {
             "method": "GET",
             "header": [
@@ -518,7 +513,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-059d43fb-b23a-fe0f-9210-00ff5b0a6079",
           "name": "Delete Export",
           "event": [
             {
@@ -532,6 +526,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-059d43fb-b23a-fe0f-9210-00ff5b0a6079",
           "request": {
             "method": "DELETE",
             "header": [
@@ -556,15 +551,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-d9fc8bd4-a84f-41fa-caf8-c4a086a877e1"
     },
     {
-      "_postman_id": "2209223-f16bb084-2da9-7031-91a2-b336ae29e76c",
       "name": "Import",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-52941906-9849-6490-4986-626464821790",
           "name": "Import vouchers",
           "event": [
             {
@@ -579,6 +572,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-52941906-9849-6490-4986-626464821790",
           "request": {
             "method": "GET",
             "header": [
@@ -604,7 +598,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-4e0e4e55-6448-06c7-d4c6-c78c886f78b1",
           "name": "Import vouchers - duplicate",
           "event": [
             {
@@ -619,6 +612,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-4e0e4e55-6448-06c7-d4c6-c78c886f78b1",
           "request": {
             "method": "POST",
             "header": [
@@ -644,7 +638,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-1437d936-9947-2eb9-6ba3-290cca46cdea",
           "name": "Import vouchers - to campaign",
           "event": [
             {
@@ -659,6 +652,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-1437d936-9947-2eb9-6ba3-290cca46cdea",
           "request": {
             "method": "POST",
             "header": [
@@ -683,15 +677,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-f16bb084-2da9-7031-91a2-b336ae29e76c"
     },
     {
-      "_postman_id": "2209223-9e0f4f33-abdb-30f7-7813-32389c6887c8",
       "name": "Products",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-01427842-a3c8-39f9-6057-4ac12159929d",
           "name": "Create",
           "event": [
             {
@@ -708,6 +700,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-01427842-a3c8-39f9-6057-4ac12159929d",
           "request": {
             "method": "POST",
             "header": [
@@ -733,7 +726,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-c7d87894-f88c-2c0c-e3d6-e73740f68761",
           "name": "Update product",
           "event": [
             {
@@ -748,6 +740,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-c7d87894-f88c-2c0c-e3d6-e73740f68761",
           "request": {
             "method": "PUT",
             "header": [
@@ -773,7 +766,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-b8ec9876-2900-6e9a-5b6b-a5bc9c68a39c",
           "name": "Add SKU",
           "event": [
             {
@@ -790,6 +782,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-b8ec9876-2900-6e9a-5b6b-a5bc9c68a39c",
           "request": {
             "method": "POST",
             "header": [
@@ -815,7 +808,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-efba07b8-4ba6-835d-0287-bcb868f9e699",
           "name": "Get product",
           "event": [
             {
@@ -831,6 +823,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-efba07b8-4ba6-835d-0287-bcb868f9e699",
           "request": {
             "method": "GET",
             "header": [
@@ -856,7 +849,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-6047ddbe-8f2d-cfbc-bc19-9a78267a2a22",
           "name": "List products",
           "event": [
             {
@@ -871,6 +863,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-6047ddbe-8f2d-cfbc-bc19-9a78267a2a22",
           "request": {
             "method": "GET",
             "header": [
@@ -896,7 +889,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-d17e96c0-66ae-55b8-9076-2ae02b681b29",
           "name": "Get SKU",
           "event": [
             {
@@ -911,6 +903,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-d17e96c0-66ae-55b8-9076-2ae02b681b29",
           "request": {
             "method": "GET",
             "header": [
@@ -936,7 +929,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-90044df7-e5d2-744d-0da1-833481e572a0",
           "name": "Update SKU",
           "event": [
             {
@@ -951,6 +943,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-90044df7-e5d2-744d-0da1-833481e572a0",
           "request": {
             "method": "PUT",
             "header": [
@@ -976,7 +969,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-761d9687-c1ed-a9db-d8e9-becec76147a8",
           "name": "List SKUs",
           "event": [
             {
@@ -993,6 +985,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-761d9687-c1ed-a9db-d8e9-becec76147a8",
           "request": {
             "method": "GET",
             "header": [
@@ -1018,7 +1011,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-e6f5dae4-aa4d-1eb9-c5d2-cca0db76c519",
           "name": "Delete SKU",
           "event": [
             {
@@ -1033,6 +1025,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-e6f5dae4-aa4d-1eb9-c5d2-cca0db76c519",
           "request": {
             "method": "DELETE",
             "header": [
@@ -1058,7 +1051,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-5752044e-8cb3-f456-4001-2242a77e642e",
           "name": "Delete product",
           "event": [
             {
@@ -1072,6 +1064,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-5752044e-8cb3-f456-4001-2242a77e642e",
           "request": {
             "method": "DELETE",
             "header": [
@@ -1096,15 +1089,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-9e0f4f33-abdb-30f7-7813-32389c6887c8"
     },
     {
-      "_postman_id": "2209223-2657fb64-e6a0-f2ae-41af-16e966a7e1db",
       "name": "Publish",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-7d0f513f-5d86-f436-d87d-989d62874742",
           "name": "Publish",
           "event": [
             {
@@ -1121,6 +1112,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-7d0f513f-5d86-f436-d87d-989d62874742",
           "request": {
             "method": "POST",
             "header": [
@@ -1146,7 +1138,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-3afad032-225b-7105-8e4e-f6bcba6891aa",
           "name": "Publish bad request",
           "event": [
             {
@@ -1161,6 +1152,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-3afad032-225b-7105-8e4e-f6bcba6891aa",
           "request": {
             "method": "POST",
             "header": [
@@ -1186,7 +1178,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-220f9c44-2b4e-c47e-1a1a-2c846e5b2c96",
           "name": "List Publications",
           "event": [
             {
@@ -1201,6 +1192,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-220f9c44-2b4e-c47e-1a1a-2c846e5b2c96",
           "request": {
             "method": "GET",
             "header": [
@@ -1226,7 +1218,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-ad77b1aa-0239-b9dc-4afb-15cda21c5ab0",
           "name": "List Publications filters",
           "event": [
             {
@@ -1241,6 +1232,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-ad77b1aa-0239-b9dc-4afb-15cda21c5ab0",
           "request": {
             "method": "GET",
             "header": [
@@ -1283,15 +1275,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-2657fb64-e6a0-f2ae-41af-16e966a7e1db"
     },
     {
-      "_postman_id": "2209223-c1cd8042-3108-61e3-3a6e-cd773dd69115",
       "name": "Redeem",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-f48ae193-712d-45a1-06c3-08441b083def",
           "name": "Redeem",
           "event": [
             {
@@ -1307,6 +1297,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-f48ae193-712d-45a1-06c3-08441b083def",
           "request": {
             "method": "POST",
             "header": [
@@ -1332,7 +1323,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-d87c5e33-fbfb-6c9e-a2aa-1e2231794a4e",
           "name": "Redeem - not found",
           "event": [
             {
@@ -1347,6 +1337,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-d87c5e33-fbfb-6c9e-a2aa-1e2231794a4e",
           "request": {
             "method": "POST",
             "header": [
@@ -1372,7 +1363,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-2382f000-db5d-cd79-e382-2b0d813902a9",
           "name": "Redeem - expired",
           "event": [
             {
@@ -1387,6 +1377,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-2382f000-db5d-cd79-e382-2b0d813902a9",
           "request": {
             "method": "POST",
             "header": [
@@ -1412,7 +1403,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-b7279494-838a-1b58-4b4b-fad9876026fc",
           "name": "Redeem - client side",
           "event": [
             {
@@ -1427,6 +1417,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-b7279494-838a-1b58-4b4b-fad9876026fc",
           "request": {
             "method": "POST",
             "header": [
@@ -1475,7 +1466,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-7135ad07-5b52-1d12-1517-2dde45508370",
           "name": "Redeem - order details",
           "event": [
             {
@@ -1491,6 +1481,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-7135ad07-5b52-1d12-1517-2dde45508370",
           "request": {
             "method": "POST",
             "header": [
@@ -1515,15 +1506,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-c1cd8042-3108-61e3-3a6e-cd773dd69115"
     },
     {
-      "_postman_id": "2209223-46f09be1-f81e-8256-8cf9-e73fa4c75e2d",
       "name": "Redemptions",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-4b58c448-6cdc-d582-e11d-95add67a09d2",
           "name": "Get voucher's redemptions",
           "event": [
             {
@@ -1538,6 +1527,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-4b58c448-6cdc-d582-e11d-95add67a09d2",
           "request": {
             "method": "GET",
             "header": [
@@ -1563,7 +1553,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-63094953-0c51-bd33-22fc-bf57763f39f2",
           "name": "List redemptions - success",
           "event": [
             {
@@ -1581,6 +1570,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-63094953-0c51-bd33-22fc-bf57763f39f2",
           "request": {
             "method": "GET",
             "header": [
@@ -1619,15 +1609,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-46f09be1-f81e-8256-8cf9-e73fa4c75e2d"
     },
     {
-      "_postman_id": "2209223-47c28acc-aa6e-40db-7ad8-caf0865d2dfd",
       "name": "Segments",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-65db9449-444e-90a4-b356-88ae1f230a11",
           "name": "Create segment",
           "event": [
             {
@@ -1643,6 +1631,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-65db9449-444e-90a4-b356-88ae1f230a11",
           "request": {
             "method": "POST",
             "header": [
@@ -1668,7 +1657,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-714fa2e5-bcfc-0eb4-0631-e0934d1ea898",
           "name": "Get segment",
           "event": [
             {
@@ -1683,6 +1671,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-714fa2e5-bcfc-0eb4-0631-e0934d1ea898",
           "request": {
             "method": "GET",
             "header": [
@@ -1708,7 +1697,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-4dd2f055-7f09-cfc4-69f3-32b9b8a96096",
           "name": "Delete segment",
           "event": [
             {
@@ -1722,6 +1710,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-4dd2f055-7f09-cfc4-69f3-32b9b8a96096",
           "request": {
             "method": "DELETE",
             "header": [
@@ -1746,31 +1735,30 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-47c28acc-aa6e-40db-7ad8-caf0865d2dfd"
     },
     {
-      "_postman_id": "2209223-c55b8ae7-9c1c-032c-080d-ec54515daf42",
       "name": "Standalone",
-      "description": "",
       "item": [
         {
+          "name": "Create voucher without code",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"Type is DISCOUNT VOUCHER\"] = jsonData.type === \"DISCOUNT_VOUCHER\";",
+                  "tests[\"Code is not empty\"] = _.isEmpty(jsonData.code) !== true; ",
+                  "postman.setEnvironmentVariable(\"generatedCode\", jsonData.code);"
+                ]
+              }
+            }
+          ],
           "_postman_id": "2209223-46cd6ba1-57a9-ac96-74bd-66051c31b086",
-          "name": "Create voucher without code",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"Type is DISCOUNT VOUCHER\"] = jsonData.type === \"DISCOUNT_VOUCHER\";",
-                  "tests[\"Code is not empty\"] = _.isEmpty(jsonData.code) !== true; ",
-                  "postman.setEnvironmentVariable(\"generatedCode\", jsonData.code);"
-                ]
-              }
-            }
-          ],
           "request": {
             "method": "POST",
             "header": [
@@ -1797,23 +1785,23 @@
           "response": []
         },
         {
+          "name": "Create voucher with a given code",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"Type is DISCOUNT VOUCHER\"] = jsonData.type === \"DISCOUNT_VOUCHER\";",
+                  "tests[\"Code is not empty\"] = jsonData.code == request.url.substr(request.url.lastIndexOf('/') + 1); ",
+                  ""
+                ]
+              }
+            }
+          ],
           "_postman_id": "2209223-04029035-0076-9368-d117-9f6045210e31",
-          "name": "Create voucher with a given code",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"Type is DISCOUNT VOUCHER\"] = jsonData.type === \"DISCOUNT_VOUCHER\";",
-                  "tests[\"Code is not empty\"] = jsonData.code == request.url.substr(request.url.lastIndexOf('/') + 1); ",
-                  ""
-                ]
-              }
-            }
-          ],
           "request": {
             "method": "POST",
             "header": [
@@ -1840,7 +1828,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-caf5f957-b756-332e-8ef8-7595788ae47d",
           "name": "Update voucher",
           "event": [
             {
@@ -1856,6 +1843,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-caf5f957-b756-332e-8ef8-7595788ae47d",
           "request": {
             "method": "PUT",
             "header": [
@@ -1882,7 +1870,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-e0a2d636-d50f-ceb3-a537-9739905033f9",
           "name": "Get voucher - existing",
           "event": [
             {
@@ -1898,6 +1885,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-e0a2d636-d50f-ceb3-a537-9739905033f9",
           "request": {
             "method": "GET",
             "header": [
@@ -1924,7 +1912,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-d4107f15-f860-aa08-c447-12ab6c282a92",
           "name": "Get voucher - non-existent",
           "event": [
             {
@@ -1938,6 +1925,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-d4107f15-f860-aa08-c447-12ab6c282a92",
           "request": {
             "method": "GET",
             "header": [
@@ -1963,7 +1951,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-4b7222b9-1f61-1aab-2384-d100b283cbc2",
           "name": "List vouchers",
           "event": [
             {
@@ -1981,6 +1968,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-4b7222b9-1f61-1aab-2384-d100b283cbc2",
           "request": {
             "method": "GET",
             "header": [
@@ -2024,7 +2012,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-437e2b2d-f1dc-88dc-bc49-3892af0eb353",
           "name": "List vouchers - paging",
           "event": [
             {
@@ -2040,6 +2027,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-437e2b2d-f1dc-88dc-bc49-3892af0eb353",
           "request": {
             "method": "GET",
             "header": [
@@ -2087,7 +2075,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-1f88a86d-f1b4-7621-0655-cd09b008875a",
           "name": "Delete voucher",
           "event": [
             {
@@ -2102,6 +2089,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-1f88a86d-f1b4-7621-0655-cd09b008875a",
           "request": {
             "method": "DELETE",
             "header": [
@@ -2126,15 +2114,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-c55b8ae7-9c1c-032c-080d-ec54515daf42"
     },
     {
-      "_postman_id": "2209223-b314f6bc-544a-4bd2-1dd6-fbcbacd8e786",
       "name": "Standalone2",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-da3b3562-1705-2ae8-a88a-c3833c64bb27",
           "name": "Create voucher without code",
           "event": [
             {
@@ -2151,6 +2137,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-da3b3562-1705-2ae8-a88a-c3833c64bb27",
           "request": {
             "method": "POST",
             "header": [
@@ -2177,7 +2164,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-a62cb99f-e13c-7277-698d-205312dc7be5",
           "name": "Create voucher with a given code",
           "event": [
             {
@@ -2194,6 +2180,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-a62cb99f-e13c-7277-698d-205312dc7be5",
           "request": {
             "method": "POST",
             "header": [
@@ -2220,7 +2207,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-7f455b80-d2a4-e768-a960-987fd7d72819",
           "name": "Update voucher",
           "event": [
             {
@@ -2236,6 +2222,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-7f455b80-d2a4-e768-a960-987fd7d72819",
           "request": {
             "method": "PUT",
             "header": [
@@ -2262,7 +2249,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-9a9fb5c8-9754-07a5-74c4-c549ba3add7e",
           "name": "Get voucher - existing",
           "event": [
             {
@@ -2278,6 +2264,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-9a9fb5c8-9754-07a5-74c4-c549ba3add7e",
           "request": {
             "method": "GET",
             "header": [
@@ -2304,7 +2291,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-ac56a24d-a45b-df73-9aa1-c4bdf70882b4",
           "name": "Get voucher - non-existent",
           "event": [
             {
@@ -2318,6 +2304,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-ac56a24d-a45b-df73-9aa1-c4bdf70882b4",
           "request": {
             "method": "GET",
             "header": [
@@ -2343,7 +2330,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-2c839e48-1f60-0f71-85ba-b8b542d09eb9",
           "name": "List vouchers",
           "event": [
             {
@@ -2361,6 +2347,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-2c839e48-1f60-0f71-85ba-b8b542d09eb9",
           "request": {
             "method": "GET",
             "header": [
@@ -2404,7 +2391,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-616b7fcb-9b73-3721-170f-fbdcf2399712",
           "name": "List vouchers - paging",
           "event": [
             {
@@ -2420,6 +2406,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-616b7fcb-9b73-3721-170f-fbdcf2399712",
           "request": {
             "method": "GET",
             "header": [
@@ -2467,7 +2454,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-cda05a62-8a4e-5aca-f073-0f8c785028d4",
           "name": "Delete voucher",
           "event": [
             {
@@ -2482,6 +2468,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-cda05a62-8a4e-5aca-f073-0f8c785028d4",
           "request": {
             "method": "DELETE",
             "header": [
@@ -2506,15 +2493,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-b314f6bc-544a-4bd2-1dd6-fbcbacd8e786"
     },
     {
-      "_postman_id": "2209223-f2747f8e-a917-0f20-5df8-c057edbe2b37",
       "name": "TC1 - Redemption limit 1",
-      "description": "create > validate > redeem > redemption history",
       "item": [
         {
-          "_postman_id": "2209223-1d6090ec-1e08-696d-5177-2126e07f9855",
           "name": "TC1 - Create voucher without code",
           "event": [
             {
@@ -2531,6 +2516,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-1d6090ec-1e08-696d-5177-2126e07f9855",
           "request": {
             "method": "POST",
             "header": [
@@ -2557,7 +2543,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-dc2aedb3-369f-1e81-48ee-10564b977a21",
           "name": "TC1 - Validate",
           "event": [
             {
@@ -2572,6 +2557,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-dc2aedb3-369f-1e81-48ee-10564b977a21",
           "request": {
             "method": "POST",
             "header": [
@@ -2597,7 +2583,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-e8a199a8-cb29-f521-406f-0e3e3eb8e4a2",
           "name": "TC1 - Redeem",
           "event": [
             {
@@ -2613,6 +2598,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-e8a199a8-cb29-f521-406f-0e3e3eb8e4a2",
           "request": {
             "method": "POST",
             "header": [
@@ -2638,7 +2624,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-5c717f2b-5774-d2de-65d1-68d04485311d",
           "name": "TC1 - Second redeem",
           "event": [
             {
@@ -2654,6 +2639,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-5c717f2b-5774-d2de-65d1-68d04485311d",
           "request": {
             "method": "POST",
             "header": [
@@ -2680,7 +2666,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-f26bbb27-11d7-002d-dcbd-98254d81f52f",
           "name": "TC1 - Get  redemptions",
           "event": [
             {
@@ -2696,6 +2681,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-f26bbb27-11d7-002d-dcbd-98254d81f52f",
           "request": {
             "method": "GET",
             "header": [
@@ -2720,15 +2706,14 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-f2747f8e-a917-0f20-5df8-c057edbe2b37",
+      "description": "create > validate > redeem > redemption history"
     },
     {
-      "_postman_id": "2209223-2e2c68b6-aa26-b5e0-8a96-8cdb160345df",
       "name": "TC3 - discount rules",
-      "description": "Vouchers valid only for a particular product and a customer segment. ",
       "item": [
         {
-          "_postman_id": "2209223-927d7ddb-e4bb-60e7-8b5c-4ad900859297",
           "name": "TC3 - Redeem",
           "event": [
             {
@@ -2744,6 +2729,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-927d7ddb-e4bb-60e7-8b5c-4ad900859297",
           "request": {
             "method": "POST",
             "header": [
@@ -2768,15 +2754,14 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-2e2c68b6-aa26-b5e0-8a96-8cdb160345df",
+      "description": "Vouchers valid only for a particular product and a customer segment. "
     },
     {
-      "_postman_id": "2209223-e93a5d08-88d6-cbaa-46a9-3e3152da48d6",
       "name": "TC3 - e-commerce integration",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-0ff0183d-3421-0243-ac40-9310bdeffd59",
           "name": "TC2 - Create voucher without code",
           "event": [
             {
@@ -2793,6 +2778,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-0ff0183d-3421-0243-ac40-9310bdeffd59",
           "request": {
             "method": "POST",
             "header": [
@@ -2819,7 +2805,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-5141bff0-741b-7713-fad6-b76dd67cae4a",
           "name": "Validate voucher for given customer order",
           "event": [
             {
@@ -2835,6 +2820,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-5141bff0-741b-7713-fad6-b76dd67cae4a",
           "request": {
             "method": "POST",
             "header": [
@@ -2860,7 +2846,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-9068cb5e-1043-abd4-32e9-55b557da0d2e",
           "name": "Redeem",
           "event": [
             {
@@ -2879,6 +2864,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-9068cb5e-1043-abd4-32e9-55b557da0d2e",
           "request": {
             "method": "POST",
             "header": [
@@ -2920,7 +2906,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-cf8b6116-9ad0-6ce2-a5d6-1b6ca3cfa5cf",
           "name": "Get  redemption",
           "event": [
             {
@@ -2935,6 +2920,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-cf8b6116-9ad0-6ce2-a5d6-1b6ca3cfa5cf",
           "request": {
             "method": "GET",
             "header": [
@@ -2960,7 +2946,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-104ddfcf-b4fd-009f-0342-b7f835a81b23",
           "name": "TC2 - Get  customer",
           "event": [
             {
@@ -2975,6 +2960,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-104ddfcf-b4fd-009f-0342-b7f835a81b23",
           "request": {
             "method": "GET",
             "header": [
@@ -3000,7 +2986,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-3684de6f-6232-a0d5-f96d-94960624a532",
           "name": "TC2 - Rollback redemption",
           "event": [
             {
@@ -3019,6 +3004,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-3684de6f-6232-a0d5-f96d-94960624a532",
           "request": {
             "method": "POST",
             "header": [
@@ -3061,7 +3047,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-5fec5356-5935-2ddb-7db9-4856483c6afe",
           "name": "TC2 - Redeem 2nd time after rollback",
           "event": [
             {
@@ -3083,6 +3068,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-5fec5356-5935-2ddb-7db9-4856483c6afe",
           "request": {
             "method": "POST",
             "header": [
@@ -3108,15 +3094,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-e93a5d08-88d6-cbaa-46a9-3e3152da48d6"
     },
     {
-      "_postman_id": "2209223-9fbce6c6-aab3-66a7-7f09-59a77ad9d40a",
       "name": "TC4 - Distribution",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-4a82ef46-c7f6-e157-2292-36e6c8263fe0",
           "name": "TC4 - Publish voucher form auto-update campaign",
           "event": [
             {
@@ -3132,6 +3116,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-4a82ef46-c7f6-e157-2292-36e6c8263fe0",
           "request": {
             "method": "POST",
             "header": [
@@ -3157,7 +3142,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-34517da1-eb70-0605-107a-1c71f1937562",
           "name": "TC4 - Get voucher",
           "event": [
             {
@@ -3173,6 +3157,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-34517da1-eb70-0605-107a-1c71f1937562",
           "request": {
             "method": "GET",
             "header": [
@@ -3197,15 +3182,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-9fbce6c6-aab3-66a7-7f09-59a77ad9d40a"
     },
     {
-      "_postman_id": "2209223-3e728d4f-9236-7f52-62d6-b272d7cafb59",
       "name": "TC5 - Rollback Redemption",
-      "description": "ATTENTION: To run properly this TC you have to set up some delay - at least 100ms.\n\nYour business logic may include a case when you need to undo a redemption. You can revert a redemption by calling this API endpoint. The operation creates a rollback entry in voucher's redemption history (redemption.redemption_entries) and gives 1 redemption back to the pool (decreases redeemed_quantity by 1).",
       "item": [
         {
-          "_postman_id": "2209223-8155dbbd-4043-3b83-69e6-6e0d117fbecf",
           "name": "TC5 - Create voucher without code",
           "event": [
             {
@@ -3222,6 +3205,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-8155dbbd-4043-3b83-69e6-6e0d117fbecf",
           "request": {
             "method": "POST",
             "header": [
@@ -3248,7 +3232,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-51a319f6-05e8-a8e3-4caf-c319761effaa",
           "name": "TC5 - Redeem",
           "event": [
             {
@@ -3267,6 +3250,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-51a319f6-05e8-a8e3-4caf-c319761effaa",
           "request": {
             "method": "POST",
             "header": [
@@ -3292,7 +3276,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-cae518ab-173c-6bdc-b60f-648af185dd02",
           "name": "TC5 - Rollback Redemption",
           "event": [
             {
@@ -3308,6 +3291,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-cae518ab-173c-6bdc-b60f-648af185dd02",
           "request": {
             "method": "POST",
             "header": [
@@ -3349,7 +3333,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-07c5a146-05b4-e5d1-802e-76e3a61fa4a1",
           "name": "TC5 - Redeem 2nd time",
           "event": [
             {
@@ -3368,6 +3351,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-07c5a146-05b4-e5d1-802e-76e3a61fa4a1",
           "request": {
             "method": "POST",
             "header": [
@@ -3393,7 +3377,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-7d8506a2-343e-0ed8-a990-428f205a4f8f",
           "name": "TC5 - Rollback 2nd time Redemption - pass related customer profile",
           "event": [
             {
@@ -3415,6 +3398,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-7d8506a2-343e-0ed8-a990-428f205a4f8f",
           "request": {
             "method": "POST",
             "header": [
@@ -3455,15 +3439,14 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-3e728d4f-9236-7f52-62d6-b272d7cafb59",
+      "description": "ATTENTION: To run properly this TC you have to set up some delay - at least 100ms.\n\nYour business logic may include a case when you need to undo a redemption. You can revert a redemption by calling this API endpoint. The operation creates a rollback entry in voucher's redemption history (redemption.redemption_entries) and gives 1 redemption back to the pool (decreases redeemed_quantity by 1)."
     },
     {
-      "_postman_id": "2209223-081e17a2-e073-61a8-4081-17bc728ea876",
       "name": "TC6 - Campaign with Validation Rules",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-a3617f62-43a2-a3b7-d620-26d1bded0276",
           "name": "TC6 - Create campaign",
           "event": [
             {
@@ -3479,6 +3462,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-a3617f62-43a2-a3b7-d620-26d1bded0276",
           "request": {
             "method": "POST",
             "header": [
@@ -3504,7 +3488,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-2f219cb5-3f65-fecf-7247-b1d22b10152c",
           "name": "TC6 - Create Product",
           "event": [
             {
@@ -3521,6 +3504,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-2f219cb5-3f65-fecf-7247-b1d22b10152c",
           "request": {
             "method": "POST",
             "header": [
@@ -3546,7 +3530,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-669bfa04-7d5a-3375-912e-573b22ecc2de",
           "name": "TC6 - Add SKU",
           "event": [
             {
@@ -3563,6 +3546,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-669bfa04-7d5a-3375-912e-573b22ecc2de",
           "request": {
             "method": "POST",
             "header": [
@@ -3588,7 +3572,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-04b44197-06b3-a744-1703-5efee281cdc3",
           "name": "TC6 - Create Validation Rules",
           "event": [
             {
@@ -3605,6 +3588,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-04b44197-06b3-a744-1703-5efee281cdc3",
           "request": {
             "method": "POST",
             "header": [
@@ -3630,7 +3614,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-f465fa24-d15b-b3bf-b90e-196111778cfe",
           "name": "TC6- Get Validation Rules",
           "event": [
             {
@@ -3649,6 +3632,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-f465fa24-d15b-b3bf-b90e-196111778cfe",
           "request": {
             "method": "GET",
             "header": [
@@ -3674,7 +3658,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-23c2673f-9b7f-4c33-d17c-637987f8ed35",
           "name": "TC6 - Add voucher to campaign",
           "event": [
             {
@@ -3690,6 +3673,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-23c2673f-9b7f-4c33-d17c-637987f8ed35",
           "request": {
             "method": "POST",
             "header": [
@@ -3714,27 +3698,23 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-081e17a2-e073-61a8-4081-17bc728ea876"
     },
     {
-      "_postman_id": "2209223-937a00cc-5c74-195c-00c2-4b90f7e82c5b",
       "name": "TC7 - referral program",
-      "description": "",
-      "item": []
+      "item": [],
+      "_postman_id": "2209223-937a00cc-5c74-195c-00c2-4b90f7e82c5b"
     },
     {
-      "_postman_id": "2209223-ec8077b6-1d29-731a-107f-8059131c55dd",
       "name": "TC8 - Segments API",
-      "description": "",
-      "item": []
+      "item": [],
+      "_postman_id": "2209223-ec8077b6-1d29-731a-107f-8059131c55dd"
     },
     {
-      "_postman_id": "2209223-9ff4656c-9a9b-dd07-8815-9d91c90ea9f6",
       "name": "Validate",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-100943c3-84b1-1acc-836c-854ab46c2c55",
           "name": "Validate",
           "event": [
             {
@@ -3750,6 +3730,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-100943c3-84b1-1acc-836c-854ab46c2c55",
           "request": {
             "method": "POST",
             "header": [
@@ -3775,7 +3756,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-447656e8-2a04-0be3-b270-347143fe6292",
           "name": "Validate - expired",
           "event": [
             {
@@ -3791,6 +3771,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-447656e8-2a04-0be3-b270-347143fe6292",
           "request": {
             "method": "POST",
             "header": [
@@ -3816,7 +3797,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-0ae5f891-e2cf-de12-4cb6-472539f692d8",
           "name": "Validate - disabled",
           "event": [
             {
@@ -3832,6 +3812,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-0ae5f891-e2cf-de12-4cb6-472539f692d8",
           "request": {
             "method": "POST",
             "header": [
@@ -3857,7 +3838,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-21303ec2-0f03-84ad-2def-187e792dcfd4",
           "name": "Validate - client side",
           "event": [
             {
@@ -3873,6 +3853,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-21303ec2-0f03-84ad-2def-187e792dcfd4",
           "request": {
             "method": "GET",
             "header": [
@@ -3921,7 +3902,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-7abf7492-36c9-5de9-cba8-ad83ab92bf05",
           "name": "Validate - order details",
           "event": [
             {
@@ -3936,6 +3916,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-7abf7492-36c9-5de9-cba8-ad83ab92bf05",
           "request": {
             "method": "POST",
             "header": [
@@ -3961,7 +3942,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-33c16815-960f-7508-07f8-8a107c36eaf7",
           "name": "Validate - order details skus",
           "event": [
             {
@@ -3976,6 +3956,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-33c16815-960f-7508-07f8-8a107c36eaf7",
           "request": {
             "method": "POST",
             "header": [
@@ -4000,15 +3981,13 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-9ff4656c-9a9b-dd07-8815-9d91c90ea9f6"
     },
     {
-      "_postman_id": "2209223-a3dabfdb-52de-8971-f1aa-4d59a29c4f50",
       "name": "Validation rules",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2209223-e512c5d7-6e0a-316e-59dd-22c06f248a3e",
           "name": "Create",
           "event": [
             {
@@ -4025,6 +4004,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-e512c5d7-6e0a-316e-59dd-22c06f248a3e",
           "request": {
             "method": "POST",
             "header": [
@@ -4050,7 +4030,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-17b0556d-a2a7-f2ef-9f69-a3d94c07ae84",
           "name": "Get",
           "event": [
             {
@@ -4064,6 +4043,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-17b0556d-a2a7-f2ef-9f69-a3d94c07ae84",
           "request": {
             "method": "GET",
             "header": [
@@ -4089,7 +4069,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-fb4187cf-04cf-75bb-d3ac-e7c2000b577b",
           "name": "Update",
           "event": [
             {
@@ -4103,6 +4082,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-fb4187cf-04cf-75bb-d3ac-e7c2000b577b",
           "request": {
             "method": "PUT",
             "header": [
@@ -4128,7 +4108,6 @@
           "response": []
         },
         {
-          "_postman_id": "2209223-0be7374c-3d9f-5c88-1e29-90485842df70",
           "name": "Delete",
           "event": [
             {
@@ -4142,6 +4121,7 @@
               }
             }
           ],
+          "_postman_id": "2209223-0be7374c-3d9f-5c88-1e29-90485842df70",
           "request": {
             "method": "DELETE",
             "header": [
@@ -4166,7 +4146,8 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2209223-a3dabfdb-52de-8971-f1aa-4d59a29c4f50"
     }
   ]
 }
