@@ -1388,13 +1388,13 @@ paths:
         200:
           description: ''
           headers: {}
-  /v1/vouchers/1573036749:
+  /v1/vouchers/1573123148:
     post:
       description: Create discount voucher with a given code
       summary: Create voucher with a given code
       tags:
       - Standalone
-      operationId: V1Vouchers1573036749Post
+      operationId: V1Vouchers1573123148Post
       deprecated: false
       produces:
       - application/json
@@ -2505,7 +2505,7 @@ definitions:
   CreatecampaignRequest:
     title: CreatecampaignRequest
     example:
-      name: test campaign 1573036749
+      name: test campaign 1573123148
       start_date: 2016-10-26T00:00:00Z
       expiration_date: 2016-12-26T00:00:00Z
       vouchers_count: 100
@@ -2616,7 +2616,7 @@ definitions:
   CreategiftcardcampaignRequest:
     title: CreategiftcardcampaignRequest
     example:
-      name: gitf_card_1573036749
+      name: gitf_card_1573123148
       vouchers_count: 50
       voucher:
         type: GIFT_VOUCHER
@@ -2683,7 +2683,7 @@ definitions:
     example:
       name: Jan Kowalski
       email: jan@kowalski.pl
-      description: 1573036749
+      description: 1573123148
       source_id: src_id
       phone: +48 123456789
     type: object
@@ -2722,7 +2722,7 @@ definitions:
     title: CreateRequest
     example:
       name: Jan Kowalski
-      email: jan1573036749@kowalski.pl
+      email: jan1573123148@kowalski.pl
     type: object
     properties:
       name:
@@ -2736,7 +2736,7 @@ definitions:
     title: DeleteRequest
     example:
       name: Jan Kowalski
-      email: jan1573036749@kowalski.pl
+      email: jan1573123148@kowalski.pl
     type: object
     properties:
       name:
@@ -2927,7 +2927,7 @@ definitions:
   Importvouchers-tocampaignRequest:
     title: Importvouchers-tocampaignRequest
     example:
-      code: CODE_1573036749
+      code: CODE_1573123148
       redemption:
         quantity: 1
       metadata:
@@ -2952,7 +2952,7 @@ definitions:
     title: CreateRequest1
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1573036749
+      source_id: internal_crm_id_1573123148
       attributes:
       - color
       - memory
@@ -3004,7 +3004,7 @@ definitions:
     title: AddSKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1573036749
+      source_id: internal_erp_sku_id_1573123148
       currency: USD
       price: 70000
       attributes:
@@ -3228,7 +3228,7 @@ definitions:
     title: UpdatevoucherRequest
     example:
       metadata:
-        update_time: 1573036749
+        update_time: 1573123148
       category: postman
     type: object
     properties:
@@ -3242,7 +3242,7 @@ definitions:
   Metadata5:
     title: Metadata5
     example:
-      update_time: 1573036749
+      update_time: 1573123148
     type: object
     properties:
       update_time:
@@ -3632,7 +3632,7 @@ definitions:
     title: TC6-CreateProductRequest
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1573036749
+      source_id: internal_crm_id_1573123148
       attributes:
       - color
       - memory
@@ -3659,7 +3659,7 @@ definitions:
     title: TC6-AddSKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1573036749
+      source_id: internal_erp_sku_id_1573123148
       currency: USD
       price: 70000
       attributes:
