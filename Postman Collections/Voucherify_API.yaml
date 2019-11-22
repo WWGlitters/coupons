@@ -20,7 +20,7 @@ paths:
       summary: Create campaign
       tags:
       - Campaigns
-      operationId: V1CampaignsPost
+      operationId: Createcampaign
       deprecated: false
       produces:
       - application/json
@@ -56,7 +56,7 @@ paths:
       summary: Get campaign
       tags:
       - Campaigns
-      operationId: V1CampaignsTestCampaignGet
+      operationId: Getcampaign
       deprecated: false
       produces:
       - application/json
@@ -86,7 +86,7 @@ paths:
       summary: Create - src id
       tags:
       - Customers
-      operationId: V1CustomersPost
+      operationId: Create-srcid
       deprecated: false
       produces:
       - application/json
@@ -122,7 +122,7 @@ paths:
       summary: Get
       tags:
       - Customers
-      operationId: V1CustomersByCustomerIdGet
+      operationId: Get
       deprecated: false
       produces:
       - application/json
@@ -156,7 +156,7 @@ paths:
       summary: Update
       tags:
       - Customers
-      operationId: V1CustomersByCustomerIdPut
+      operationId: Update
       deprecated: false
       produces:
       - application/json
@@ -197,7 +197,7 @@ paths:
       summary: Delete
       tags:
       - Customers
-      operationId: V1CustomersByCreatedCustomerIdDelete
+      operationId: Delete
       deprecated: false
       produces:
       - application/json
@@ -238,7 +238,7 @@ paths:
       summary: Enable
       tags:
       - Enable/disable
-      operationId: V1VouchersTestActivityEnablePost
+      operationId: Enable
       deprecated: false
       produces:
       - application/json
@@ -268,7 +268,7 @@ paths:
       summary: Disable
       tags:
       - Enable/disable
-      operationId: V1VouchersTestActivityDisablePost
+      operationId: Disable
       deprecated: false
       produces:
       - application/json
@@ -304,7 +304,7 @@ paths:
       summary: Create Export
       tags:
       - Export
-      operationId: V1ExportsPost
+      operationId: CreateExport
       deprecated: false
       produces:
       - application/json
@@ -340,7 +340,7 @@ paths:
       summary: Get Export
       tags:
       - Export
-      operationId: V1ExportsByExportIdGet
+      operationId: GetExport
       deprecated: false
       produces:
       - application/json
@@ -374,7 +374,7 @@ paths:
       summary: Delete Export
       tags:
       - Export
-      operationId: V1ExportsByExportIdDelete
+      operationId: DeleteExport
       deprecated: false
       produces:
       - application/json
@@ -409,7 +409,7 @@ paths:
       summary: Import vouchers
       tags:
       - Import
-      operationId: V1VouchersImportGet
+      operationId: Importvouchers
       deprecated: false
       produces:
       - application/json
@@ -438,7 +438,7 @@ paths:
       summary: Import vouchers - duplicate
       tags:
       - Import
-      operationId: V1VouchersImportPost
+      operationId: Importvouchers-duplicate
       deprecated: false
       produces:
       - application/json
@@ -476,7 +476,7 @@ paths:
       summary: Import vouchers - to campaign
       tags:
       - Import
-      operationId: V1CampaignsPostmanImportImportPost
+      operationId: Importvouchers-tocampaign
       deprecated: false
       produces:
       - application/json
@@ -514,7 +514,7 @@ paths:
       summary: Create
       tags:
       - Products
-      operationId: V1ProductsPost
+      operationId: PostCreate
       deprecated: false
       produces:
       - application/json
@@ -549,7 +549,7 @@ paths:
       summary: List products
       tags:
       - Products
-      operationId: V1ProductsGet
+      operationId: Listproducts
       deprecated: false
       produces:
       - application/json
@@ -579,7 +579,7 @@ paths:
       summary: Update product
       tags:
       - Products
-      operationId: V1ProductsByCreatedProductIdPut
+      operationId: Updateproduct
       deprecated: false
       produces:
       - application/json
@@ -619,7 +619,7 @@ paths:
       summary: Get product
       tags:
       - Products
-      operationId: V1ProductsByCreatedProductIdGet
+      operationId: Getproduct
       deprecated: false
       produces:
       - application/json
@@ -653,7 +653,7 @@ paths:
       summary: Delete product
       tags:
       - Products
-      operationId: V1ProductsByCreatedProductIdDelete
+      operationId: Deleteproduct
       deprecated: false
       produces:
       - application/json
@@ -694,7 +694,7 @@ paths:
       summary: Add SKU
       tags:
       - Products
-      operationId: V1ProductsSkusByCreatedProductIdPost
+      operationId: AddSKU
       deprecated: false
       produces:
       - application/json
@@ -734,7 +734,7 @@ paths:
       summary: List SKUs
       tags:
       - Products
-      operationId: V1ProductsSkusByCreatedProductIdGet
+      operationId: ListSKUs
       deprecated: false
       produces:
       - application/json
@@ -769,7 +769,7 @@ paths:
       summary: Get SKU
       tags:
       - Products
-      operationId: V1ProductsSkusByCreatedProductIdAndCreatedSKUIdGet
+      operationId: GetSKU
       deprecated: false
       produces:
       - application/json
@@ -808,7 +808,7 @@ paths:
       summary: Update SKU
       tags:
       - Products
-      operationId: V1ProductsSkusByCreatedProductIdAndCreatedSKUIdPut
+      operationId: UpdateSKU
       deprecated: false
       produces:
       - application/json
@@ -853,7 +853,7 @@ paths:
       summary: Delete SKU
       tags:
       - Products
-      operationId: V1ProductsSkusByCreatedProductIdAndCreatedSKUIdDelete
+      operationId: DeleteSKU
       deprecated: false
       produces:
       - application/json
@@ -893,7 +893,7 @@ paths:
       summary: Publish
       tags:
       - Publish
-      operationId: V1VouchersPublishPost
+      operationId: Publish
       deprecated: false
       produces:
       - application/json
@@ -929,7 +929,7 @@ paths:
       summary: List Publications
       tags:
       - Publish
-      operationId: V1PublicationsGet
+      operationId: ListPublications
       deprecated: false
       produces:
       - application/json
@@ -959,7 +959,7 @@ paths:
       summary: List Publications filters
       tags:
       - Publish
-      operationId: PublicationsGet
+      operationId: ListPublicationsfilters
       deprecated: false
       produces:
       - application/json
@@ -999,7 +999,7 @@ paths:
       summary: Redeem
       tags:
       - Redeem
-      operationId: V1VouchersTestRedemptionPost
+      operationId: Redeem
       deprecated: false
       produces:
       - application/json
@@ -1034,7 +1034,7 @@ paths:
       summary: Get voucher's redemptions
       tags:
       - Redemptions
-      operationId: V1VouchersTestRedemptionGet
+      operationId: Getvoucher'sredemptions
       deprecated: false
       produces:
       - application/json
@@ -1064,7 +1064,7 @@ paths:
       summary: Redeem - not found
       tags:
       - Redeem
-      operationId: V1VouchersNotFound123RedemptionPost
+      operationId: Redeem-notfound
       deprecated: false
       produces:
       - application/json
@@ -1100,7 +1100,7 @@ paths:
       summary: Redeem - expired
       tags:
       - Redeem
-      operationId: V1VouchersInvalidRedemptionPost
+      operationId: Redeem-expired
       deprecated: false
       produces:
       - application/json
@@ -1136,7 +1136,7 @@ paths:
       summary: Redeem - client side
       tags:
       - Redeem
-      operationId: ClientV1RedeemPost
+      operationId: Redeem-clientside
       deprecated: false
       produces:
       - application/json
@@ -1182,7 +1182,7 @@ paths:
       summary: Redeem - order details
       tags:
       - Redeem
-      operationId: V1VouchersLdprQtRLRedemptionPost
+      operationId: Redeem-orderdetails
       deprecated: false
       produces:
       - application/json
@@ -1218,7 +1218,7 @@ paths:
       summary: List redemptions - success
       tags:
       - Redemptions
-      operationId: RedemptionsGet
+      operationId: Listredemptions-success
       deprecated: false
       produces:
       - application/json
@@ -1253,7 +1253,7 @@ paths:
       summary: Create segment
       tags:
       - Segments
-      operationId: V1SegmentsPost
+      operationId: Createsegment
       deprecated: false
       produces:
       - application/json
@@ -1289,7 +1289,7 @@ paths:
       summary: Get segment
       tags:
       - Segments
-      operationId: V1SegmentsByCreatedSegmentIdGet
+      operationId: Getsegment
       deprecated: false
       produces:
       - application/json
@@ -1323,7 +1323,7 @@ paths:
       summary: Delete segment
       tags:
       - Segments
-      operationId: V1SegmentsByCreatedSegmentIdDelete
+      operationId: Deletesegment
       deprecated: false
       produces:
       - application/json
@@ -1358,7 +1358,7 @@ paths:
       summary: Create voucher without code
       tags:
       - Standalone
-      operationId: V1VouchersPost
+      operationId: Createvoucherwithoutcode
       deprecated: false
       produces:
       - application/json
@@ -1388,13 +1388,13 @@ paths:
         200:
           description: ''
           headers: {}
-  /v1/vouchers/1574332787:
+  /v1/vouchers/1574419147:
     post:
       description: Create discount voucher with a given code
       summary: Create voucher with a given code
       tags:
       - Standalone
-      operationId: V1Vouchers1574332787Post
+      operationId: Createvoucherwithagivencode
       deprecated: false
       produces:
       - application/json
@@ -1430,7 +1430,7 @@ paths:
       summary: Update voucher
       tags:
       - Standalone
-      operationId: V1VouchersTestPut
+      operationId: Updatevoucher
       deprecated: false
       produces:
       - application/json
@@ -1465,7 +1465,7 @@ paths:
       summary: Get voucher - existing
       tags:
       - Standalone
-      operationId: V1VouchersTestGet
+      operationId: Getvoucher-existing
       deprecated: false
       produces:
       - application/json
@@ -1495,7 +1495,7 @@ paths:
       summary: Get voucher - non-existent
       tags:
       - Standalone
-      operationId: V1VouchersNotfound123Get
+      operationId: Getvoucher-non-existent
       deprecated: false
       produces:
       - application/json
@@ -1525,7 +1525,7 @@ paths:
       summary: List vouchers
       tags:
       - Standalone
-      operationId: VouchersGet
+      operationId: Listvouchers
       deprecated: false
       produces:
       - application/json
@@ -1566,7 +1566,7 @@ paths:
       summary: Delete voucher
       tags:
       - Standalone
-      operationId: V1VouchersByGeneratedCodeDelete
+      operationId: Deletevoucher
       deprecated: false
       produces:
       - application/json
@@ -1601,7 +1601,7 @@ paths:
       summary: TC1 - Validate
       tags:
       - TC1 - Redemption limit 1
-      operationId: V1VouchersValidateByTC1CodePost
+      operationId: TC1-Validate
       deprecated: false
       produces:
       - application/json
@@ -1642,7 +1642,7 @@ paths:
       summary: TC1 - Redeem
       tags:
       - TC1 - Redemption limit 1
-      operationId: V1VouchersRedemptionByTC1CodePost
+      operationId: TC1-Redeem
       deprecated: false
       produces:
       - application/json
@@ -1682,7 +1682,7 @@ paths:
       summary: TC1 - Get  redemptions
       tags:
       - TC1 - Redemption limit 1
-      operationId: V1VouchersRedemptionByTC1CodeGet
+      operationId: TC1-Getredemptions
       deprecated: false
       produces:
       - application/json
@@ -1717,7 +1717,7 @@ paths:
       summary: TC3 - Redeem
       tags:
       - TC3 - discount rules
-      operationId: V1VouchersIzvHT3BaRedemptionPost
+      operationId: TC3-Redeem
       deprecated: false
       produces:
       - application/json
@@ -1753,7 +1753,7 @@ paths:
       summary: Validate voucher for given customer order
       tags:
       - TC3 - e-commerce integration
-      operationId: V1VouchersValidateByTC3CodePost
+      operationId: Validatevoucherforgivencustomerorder
       deprecated: false
       produces:
       - application/json
@@ -1794,7 +1794,7 @@ paths:
       summary: Redeem
       tags:
       - TC3 - e-commerce integration
-      operationId: VouchersRedemptionByTC3CodePost
+      operationId: PostRedeem
       deprecated: false
       produces:
       - application/json
@@ -1840,7 +1840,7 @@ paths:
       summary: Get  redemption
       tags:
       - TC3 - e-commerce integration
-      operationId: V1VouchersRedemptionByTC3CodeGet
+      operationId: Getredemption
       deprecated: false
       produces:
       - application/json
@@ -1874,7 +1874,7 @@ paths:
       summary: TC2 - Redeem 2nd time after rollback
       tags:
       - TC3 - e-commerce integration
-      operationId: V1VouchersRedemptionByTC3CodePost
+      operationId: TC2-Redeem2ndtimeafterrollback
       deprecated: false
       produces:
       - application/json
@@ -1915,7 +1915,7 @@ paths:
       summary: TC2 - Get  customer
       tags:
       - TC3 - e-commerce integration
-      operationId: V1CustomersByTC3CustomerIdGet
+      operationId: TC2-Getcustomer
       deprecated: false
       produces:
       - application/json
@@ -1950,7 +1950,7 @@ paths:
       summary: TC2 - Rollback redemption
       tags:
       - TC3 - e-commerce integration
-      operationId: RedemptionsRollbackByTC3RedemptionIdPost
+      operationId: TC2-Rollbackredemption
       deprecated: false
       produces:
       - application/json
@@ -1990,7 +1990,7 @@ paths:
       summary: TC4 - Get voucher
       tags:
       - TC4 - Distribution
-      operationId: V1VouchersTC4DISBJ5JIRuyL7C2016Get
+      operationId: TC4-Getvoucher
       deprecated: false
       produces:
       - application/json
@@ -2020,7 +2020,7 @@ paths:
       summary: TC5 - Redeem
       tags:
       - TC5 - Rollback Redemption
-      operationId: V1VouchersRedemptionByTC5CodePost
+      operationId: TC5-Redeem
       deprecated: false
       produces:
       - application/json
@@ -2061,7 +2061,7 @@ paths:
       summary: TC5 - Rollback Redemption
       tags:
       - TC5 - Rollback Redemption
-      operationId: RedemptionsRollbackByTC5RedemptionIdPost
+      operationId: TC5-RollbackRedemption
       deprecated: false
       produces:
       - application/json
@@ -2101,7 +2101,7 @@ paths:
       summary: TC6 - Create Validation Rules
       tags:
       - TC6 - Campaign with Validation Rules
-      operationId: V1ValidationRulesPost
+      operationId: TC6-CreateValidationRules
       deprecated: false
       produces:
       - application/json
@@ -2137,7 +2137,7 @@ paths:
       summary: TC6- Get Validation Rules
       tags:
       - TC6 - Campaign with Validation Rules
-      operationId: V1ValidationRulesByCreatedValidationRulesIdGet
+      operationId: TC6-GetValidationRules
       deprecated: false
       produces:
       - application/json
@@ -2171,7 +2171,7 @@ paths:
       summary: Update
       tags:
       - Validation rules
-      operationId: V1ValidationRulesByCreatedValidationRulesIdPut
+      operationId: PutUpdate
       deprecated: false
       produces:
       - application/json
@@ -2211,7 +2211,7 @@ paths:
       summary: Delete
       tags:
       - Validation rules
-      operationId: V1ValidationRulesByCreatedValidationRulesIdDelete
+      operationId: Delete1
       deprecated: false
       produces:
       - application/json
@@ -2246,7 +2246,7 @@ paths:
       summary: TC6 - Add voucher to campaign
       tags:
       - TC6 - Campaign with Validation Rules
-      operationId: V1CampaignsVouchersByCreatedCampaignNamePost
+      operationId: TC6-Addvouchertocampaign
       deprecated: false
       produces:
       - application/json
@@ -2287,7 +2287,7 @@ paths:
       summary: Validate
       tags:
       - Validate
-      operationId: V1VouchersTestValidatePost
+      operationId: Validate
       deprecated: false
       produces:
       - application/json
@@ -2323,7 +2323,7 @@ paths:
       summary: Validate - expired
       tags:
       - Validate
-      operationId: V1VouchersInvalidValidatePost
+      operationId: Validate-expired
       deprecated: false
       produces:
       - application/json
@@ -2359,7 +2359,7 @@ paths:
       summary: Validate - disabled
       tags:
       - Validate
-      operationId: V1VouchersInvalidDisabledValidatePost
+      operationId: Validate-disabled
       deprecated: false
       produces:
       - application/json
@@ -2395,7 +2395,7 @@ paths:
       summary: Validate - client side
       tags:
       - Validate
-      operationId: ClientV1ValidateGet
+      operationId: Validate-clientside
       deprecated: false
       produces:
       - application/json
@@ -2435,7 +2435,7 @@ paths:
       summary: Validate - order details
       tags:
       - Validate
-      operationId: V1VouchersIzvHT3BaValidatePost
+      operationId: Validate-orderdetails
       deprecated: false
       produces:
       - application/json
@@ -2471,7 +2471,7 @@ paths:
       summary: Validate - order details skus
       tags:
       - Validate
-      operationId: V1VouchersLdprQtRLValidatePost
+      operationId: Validate-orderdetailsskus
       deprecated: false
       produces:
       - application/json
@@ -2505,7 +2505,7 @@ definitions:
   CreatecampaignRequest:
     title: CreatecampaignRequest
     example:
-      name: test campaign 1574332787
+      name: test campaign 1574419147
       start_date: 2016-10-26T00:00:00Z
       expiration_date: 2016-12-26T00:00:00Z
       vouchers_count: 100
@@ -2616,7 +2616,7 @@ definitions:
   CreategiftcardcampaignRequest:
     title: CreategiftcardcampaignRequest
     example:
-      name: gitf_card_1574332787
+      name: gitf_card_1574419147
       vouchers_count: 50
       voucher:
         type: GIFT_VOUCHER
@@ -2683,7 +2683,7 @@ definitions:
     example:
       name: Jan Kowalski
       email: jan@kowalski.pl
-      description: 1574332787
+      description: 1574419147
       source_id: src_id
       phone: +48 123456789
     type: object
@@ -2722,7 +2722,7 @@ definitions:
     title: CreateRequest
     example:
       name: Jan Kowalski
-      email: jan1574332787@kowalski.pl
+      email: jan1574419147@kowalski.pl
     type: object
     properties:
       name:
@@ -2736,7 +2736,7 @@ definitions:
     title: DeleteRequest
     example:
       name: Jan Kowalski
-      email: jan1574332787@kowalski.pl
+      email: jan1574419147@kowalski.pl
     type: object
     properties:
       name:
@@ -2927,7 +2927,7 @@ definitions:
   Importvouchers-tocampaignRequest:
     title: Importvouchers-tocampaignRequest
     example:
-      code: CODE_1574332787
+      code: CODE_1574419147
       redemption:
         quantity: 1
       metadata:
@@ -2952,7 +2952,7 @@ definitions:
     title: CreateRequest1
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1574332787
+      source_id: internal_crm_id_1574419147
       attributes:
       - color
       - memory
@@ -3004,7 +3004,7 @@ definitions:
     title: AddSKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1574332787
+      source_id: internal_erp_sku_id_1574419147
       currency: USD
       price: 70000
       attributes:
@@ -3228,7 +3228,7 @@ definitions:
     title: UpdatevoucherRequest
     example:
       metadata:
-        update_time: 1574332787
+        update_time: 1574419147
       category: postman
     type: object
     properties:
@@ -3242,7 +3242,7 @@ definitions:
   Metadata5:
     title: Metadata5
     example:
-      update_time: 1574332787
+      update_time: 1574419147
     type: object
     properties:
       update_time:
@@ -3632,7 +3632,7 @@ definitions:
     title: TC6-CreateProductRequest
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1574332787
+      source_id: internal_crm_id_1574419147
       attributes:
       - color
       - memory
@@ -3659,7 +3659,7 @@ definitions:
     title: TC6-AddSKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1574332787
+      source_id: internal_erp_sku_id_1574419147
       currency: USD
       price: 70000
       attributes:
