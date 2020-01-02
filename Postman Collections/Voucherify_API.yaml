@@ -2,7 +2,6 @@ swagger: '2.0'
 info:
   version: '1.0'
   title: Voucherify API
-  description: 'TODO: Add Description'
   contact: {}
 host: 'https:'
 basePath: //api.voucherify.io/v1
@@ -52,7 +51,6 @@ paths:
           headers: {}
   /v1/campaigns/test campaign:
     get:
-      description: 'TODO: Add Description'
       summary: Get campaign
       tags:
       - Campaigns
@@ -82,7 +80,6 @@ paths:
           headers: {}
   /v1/customers:
     post:
-      description: 'TODO: Add Description'
       summary: Create - src id
       tags:
       - Customers
@@ -118,7 +115,6 @@ paths:
           headers: {}
   /v1/customers/{customerId}:
     get:
-      description: 'TODO: Add Description'
       summary: Get
       tags:
       - Customers
@@ -152,7 +148,6 @@ paths:
           description: ''
           headers: {}
     put:
-      description: 'TODO: Add Description'
       summary: Update
       tags:
       - Customers
@@ -193,7 +188,6 @@ paths:
           headers: {}
   /v1/customers/{createdCustomerId}:
     delete:
-      description: 'TODO: Add Description'
       summary: Delete
       tags:
       - Customers
@@ -234,7 +228,6 @@ paths:
           headers: {}
   /v1/vouchers/test-activity/enable:
     post:
-      description: 'TODO: Add Description'
       summary: Enable
       tags:
       - Enable/disable
@@ -264,7 +257,6 @@ paths:
           headers: {}
   /v1/vouchers/test-activity/disable:
     post:
-      description: 'TODO: Add Description'
       summary: Disable
       tags:
       - Enable/disable
@@ -300,7 +292,6 @@ paths:
           headers: {}
   /v1/exports:
     post:
-      description: 'TODO: Add Description'
       summary: Create Export
       tags:
       - Export
@@ -336,7 +327,6 @@ paths:
           headers: {}
   /v1/exports/{exportId}:
     get:
-      description: 'TODO: Add Description'
       summary: Get Export
       tags:
       - Export
@@ -370,7 +360,6 @@ paths:
           description: ''
           headers: {}
     delete:
-      description: 'TODO: Add Description'
       summary: Delete Export
       tags:
       - Export
@@ -405,7 +394,6 @@ paths:
           headers: {}
   /v1/vouchers/import:
     get:
-      description: 'TODO: Add Description'
       summary: Import vouchers
       tags:
       - Import
@@ -434,7 +422,6 @@ paths:
           description: ''
           headers: {}
     post:
-      description: 'TODO: Add Description'
       summary: Import vouchers - duplicate
       tags:
       - Import
@@ -463,6 +450,20 @@ paths:
         required: true
         description: ''
         schema:
+          example:
+          - code: test
+            category: postman
+            type: DISCOUNT_VOUCHER
+            discount:
+              amount_off: 3000
+              type: AMOUNT
+            start_date: 2015-12-01T23:00:00Z
+            expiration_date: 2015-12-19T23:00:00Z
+            redemption:
+              quantity: 1
+            metadata:
+              unit: EUR
+            additional_info: secret-code1
           type: array
           items:
             $ref: '#/definitions/Importvouchers-duplicateRequest'
@@ -472,7 +473,6 @@ paths:
           headers: {}
   /v1/campaigns/postman-import/import:
     post:
-      description: 'TODO: Add Description'
       summary: Import vouchers - to campaign
       tags:
       - Import
@@ -501,6 +501,13 @@ paths:
         required: true
         description: ''
         schema:
+          example:
+          - code: CODE_1577961547
+            redemption:
+              quantity: 1
+            metadata:
+              unit: EUR
+            additional_info: secret-code1
           type: array
           items:
             $ref: '#/definitions/Importvouchers-tocampaignRequest'
@@ -510,7 +517,6 @@ paths:
           headers: {}
   /v1/products:
     post:
-      description: 'TODO: Add Description'
       summary: Create
       tags:
       - Products
@@ -545,7 +551,6 @@ paths:
           description: ''
           headers: {}
     get:
-      description: 'TODO: Add Description'
       summary: List products
       tags:
       - Products
@@ -575,7 +580,6 @@ paths:
           headers: {}
   /v1/products/{createdProductId}:
     put:
-      description: 'TODO: Add Description'
       summary: Update product
       tags:
       - Products
@@ -615,7 +619,6 @@ paths:
           description: ''
           headers: {}
     get:
-      description: 'TODO: Add Description'
       summary: Get product
       tags:
       - Products
@@ -649,7 +652,6 @@ paths:
           description: ''
           headers: {}
     delete:
-      description: 'TODO: Add Description'
       summary: Delete product
       tags:
       - Products
@@ -678,6 +680,7 @@ paths:
         required: true
         description: ''
         schema:
+          example: {}
           type: object
       - name: createdProductId
         in: path
@@ -690,7 +693,6 @@ paths:
           headers: {}
   /v1/products/{createdProductId}/skus:
     post:
-      description: 'TODO: Add Description'
       summary: Add SKU
       tags:
       - Products
@@ -730,7 +732,6 @@ paths:
           description: ''
           headers: {}
     get:
-      description: 'TODO: Add Description'
       summary: List SKUs
       tags:
       - Products
@@ -765,7 +766,6 @@ paths:
           headers: {}
   /v1/products/{createdProductId}/skus/{createdSKUId}:
     get:
-      description: 'TODO: Add Description'
       summary: Get SKU
       tags:
       - Products
@@ -804,7 +804,6 @@ paths:
           description: ''
           headers: {}
     put:
-      description: 'TODO: Add Description'
       summary: Update SKU
       tags:
       - Products
@@ -849,7 +848,6 @@ paths:
           description: ''
           headers: {}
     delete:
-      description: 'TODO: Add Description'
       summary: Delete SKU
       tags:
       - Products
@@ -889,7 +887,6 @@ paths:
           headers: {}
   /v1/vouchers/publish:
     post:
-      description: 'TODO: Add Description'
       summary: Publish
       tags:
       - Publish
@@ -925,7 +922,6 @@ paths:
           headers: {}
   /v1/publications:
     get:
-      description: 'TODO: Add Description'
       summary: List Publications
       tags:
       - Publish
@@ -955,7 +951,6 @@ paths:
           headers: {}
   /publications:
     get:
-      description: 'TODO: Add Description'
       summary: List Publications filters
       tags:
       - Publish
@@ -995,7 +990,6 @@ paths:
           headers: {}
   /v1/vouchers/test/redemption:
     post:
-      description: 'TODO: Add Description'
       summary: Redeem
       tags:
       - Redeem
@@ -1024,13 +1018,13 @@ paths:
         required: true
         description: ''
         schema:
+          example: {}
           type: object
       responses:
         200:
           description: ''
           headers: {}
     get:
-      description: 'TODO: Add Description'
       summary: Get voucher's redemptions
       tags:
       - Redemptions
@@ -1060,7 +1054,6 @@ paths:
           headers: {}
   /v1/vouchers/NotFound123/redemption:
     post:
-      description: 'TODO: Add Description'
       summary: Redeem - not found
       tags:
       - Redeem
@@ -1089,6 +1082,7 @@ paths:
         required: true
         description: ''
         schema:
+          example: {}
           type: object
       responses:
         200:
@@ -1096,7 +1090,6 @@ paths:
           headers: {}
   /v1/vouchers/invalid/redemption:
     post:
-      description: 'TODO: Add Description'
       summary: Redeem - expired
       tags:
       - Redeem
@@ -1125,6 +1118,7 @@ paths:
         required: true
         description: ''
         schema:
+          example: {}
           type: object
       responses:
         200:
@@ -1132,7 +1126,6 @@ paths:
           headers: {}
   /client/v1/redeem:
     post:
-      description: 'TODO: Add Description'
       summary: Redeem - client side
       tags:
       - Redeem
@@ -1171,6 +1164,7 @@ paths:
         required: true
         description: ''
         schema:
+          example: {}
           type: object
       responses:
         200:
@@ -1178,7 +1172,6 @@ paths:
           headers: {}
   /v1/vouchers/LdprQtRL/redemption:
     post:
-      description: 'TODO: Add Description'
       summary: Redeem - order details
       tags:
       - Redeem
@@ -1214,7 +1207,6 @@ paths:
           headers: {}
   /redemptions:
     get:
-      description: 'TODO: Add Description'
       summary: List redemptions - success
       tags:
       - Redemptions
@@ -1249,7 +1241,6 @@ paths:
           headers: {}
   /v1/segments:
     post:
-      description: 'TODO: Add Description'
       summary: Create segment
       tags:
       - Segments
@@ -1285,7 +1276,6 @@ paths:
           headers: {}
   /v1/segments/{createdSegmentId}:
     get:
-      description: 'TODO: Add Description'
       summary: Get segment
       tags:
       - Segments
@@ -1319,7 +1309,6 @@ paths:
           description: ''
           headers: {}
     delete:
-      description: 'TODO: Add Description'
       summary: Delete segment
       tags:
       - Segments
@@ -1388,7 +1377,7 @@ paths:
         200:
           description: ''
           headers: {}
-  /v1/vouchers/1577875148:
+  /v1/vouchers/1577961547:
     post:
       description: Create discount voucher with a given code
       summary: Create voucher with a given code
@@ -1491,7 +1480,6 @@ paths:
           headers: {}
   /v1/vouchers/notfound123:
     get:
-      description: 'TODO: Add Description'
       summary: Get voucher - non-existent
       tags:
       - Standalone
@@ -1521,7 +1509,6 @@ paths:
           headers: {}
   /vouchers:
     get:
-      description: 'TODO: Add Description'
       summary: List vouchers
       tags:
       - Standalone
@@ -1562,7 +1549,6 @@ paths:
           headers: {}
   /v1/vouchers/{generatedCode}:
     delete:
-      description: 'TODO: Add Description'
       summary: Delete voucher
       tags:
       - Standalone
@@ -1597,7 +1583,6 @@ paths:
           headers: {}
   /v1/vouchers/{TC1-code}/validate:
     post:
-      description: 'TODO: Add Description'
       summary: TC1 - Validate
       tags:
       - TC1 - Redemption limit 1
@@ -1626,6 +1611,7 @@ paths:
         required: true
         description: ''
         schema:
+          example: {}
           type: object
       - name: TC1-code
         in: path
@@ -1638,7 +1624,6 @@ paths:
           headers: {}
   /v1/vouchers/{TC1-code}/redemption:
     post:
-      description: 'TODO: Add Description'
       summary: TC1 - Redeem
       tags:
       - TC1 - Redemption limit 1
@@ -1667,6 +1652,7 @@ paths:
         required: true
         description: ''
         schema:
+          example: {}
           type: object
       - name: TC1-code
         in: path
@@ -1678,7 +1664,6 @@ paths:
           description: ''
           headers: {}
     get:
-      description: 'TODO: Add Description'
       summary: TC1 - Get  redemptions
       tags:
       - TC1 - Redemption limit 1
@@ -1713,7 +1698,6 @@ paths:
           headers: {}
   /v1/vouchers/IzvHT3Ba/redemption:
     post:
-      description: 'TODO: Add Description'
       summary: TC3 - Redeem
       tags:
       - TC3 - discount rules
@@ -1749,7 +1733,6 @@ paths:
           headers: {}
   /v1/vouchers/{TC3-code}/validate:
     post:
-      description: 'TODO: Add Description'
       summary: Validate voucher for given customer order
       tags:
       - TC3 - e-commerce integration
@@ -1790,7 +1773,6 @@ paths:
           headers: {}
   /vouchers/{TC3-code}/redemption:
     post:
-      description: 'TODO: Add Description'
       summary: Redeem
       tags:
       - TC3 - e-commerce integration
@@ -1836,7 +1818,6 @@ paths:
           headers: {}
   /v1/vouchers/{TC3-code}/redemption:
     get:
-      description: 'TODO: Add Description'
       summary: Get  redemption
       tags:
       - TC3 - e-commerce integration
@@ -1911,7 +1892,6 @@ paths:
           headers: {}
   /v1/customers/{TC3-customer-id}:
     get:
-      description: 'TODO: Add Description'
       summary: TC2 - Get  customer
       tags:
       - TC3 - e-commerce integration
@@ -1986,7 +1966,6 @@ paths:
           headers: {}
   /v1/vouchers/TC4-DIS-BJ5J-iRuy-L7C-2016:
     get:
-      description: 'TODO: Add Description'
       summary: TC4 - Get voucher
       tags:
       - TC4 - Distribution
@@ -2016,7 +1995,6 @@ paths:
           headers: {}
   /v1/vouchers/{TC5-code}/redemption:
     post:
-      description: 'TODO: Add Description'
       summary: TC5 - Redeem
       tags:
       - TC5 - Rollback Redemption
@@ -2057,7 +2035,6 @@ paths:
           headers: {}
   /redemptions/{TC5-redemption-id}/rollback:
     post:
-      description: 'TODO: Add Description'
       summary: TC5 - Rollback Redemption
       tags:
       - TC5 - Rollback Redemption
@@ -2097,7 +2074,6 @@ paths:
           headers: {}
   /v1/validation-rules:
     post:
-      description: 'TODO: Add Description'
       summary: TC6 - Create Validation Rules
       tags:
       - TC6 - Campaign with Validation Rules
@@ -2133,7 +2109,6 @@ paths:
           headers: {}
   /v1/validation-rules/{createdValidationRulesId}:
     get:
-      description: 'TODO: Add Description'
       summary: TC6- Get Validation Rules
       tags:
       - TC6 - Campaign with Validation Rules
@@ -2167,7 +2142,6 @@ paths:
           description: ''
           headers: {}
     put:
-      description: 'TODO: Add Description'
       summary: Update
       tags:
       - Validation rules
@@ -2207,7 +2181,6 @@ paths:
           description: ''
           headers: {}
     delete:
-      description: 'TODO: Add Description'
       summary: Delete
       tags:
       - Validation rules
@@ -2242,7 +2215,6 @@ paths:
           headers: {}
   /v1/campaigns/{createdCampaignName}/vouchers:
     post:
-      description: 'TODO: Add Description'
       summary: TC6 - Add voucher to campaign
       tags:
       - TC6 - Campaign with Validation Rules
@@ -2283,7 +2255,6 @@ paths:
           headers: {}
   /v1/vouchers/test/validate:
     post:
-      description: 'TODO: Add Description'
       summary: Validate
       tags:
       - Validate
@@ -2319,7 +2290,6 @@ paths:
           headers: {}
   /v1/vouchers/invalid/validate:
     post:
-      description: 'TODO: Add Description'
       summary: Validate - expired
       tags:
       - Validate
@@ -2348,6 +2318,7 @@ paths:
         required: true
         description: ''
         schema:
+          example: {}
           type: object
       responses:
         200:
@@ -2355,7 +2326,6 @@ paths:
           headers: {}
   /v1/vouchers/invalid-disabled/validate:
     post:
-      description: 'TODO: Add Description'
       summary: Validate - disabled
       tags:
       - Validate
@@ -2384,6 +2354,7 @@ paths:
         required: true
         description: ''
         schema:
+          example: {}
           type: object
       responses:
         200:
@@ -2391,7 +2362,6 @@ paths:
           headers: {}
   /client/v1/validate:
     get:
-      description: 'TODO: Add Description'
       summary: Validate - client side
       tags:
       - Validate
@@ -2431,7 +2401,6 @@ paths:
           headers: {}
   /v1/vouchers/IzvHT3Ba/validate:
     post:
-      description: 'TODO: Add Description'
       summary: Validate - order details
       tags:
       - Validate
@@ -2467,7 +2436,6 @@ paths:
           headers: {}
   /v1/vouchers/LdprQtRL/validate:
     post:
-      description: 'TODO: Add Description'
       summary: Validate - order details skus
       tags:
       - Validate
@@ -2505,7 +2473,7 @@ definitions:
   CreatecampaignRequest:
     title: CreatecampaignRequest
     example:
-      name: test campaign 1577875148
+      name: test campaign 1577961547
       start_date: 2016-10-26T00:00:00Z
       expiration_date: 2016-12-26T00:00:00Z
       vouchers_count: 100
@@ -2616,7 +2584,7 @@ definitions:
   CreategiftcardcampaignRequest:
     title: CreategiftcardcampaignRequest
     example:
-      name: gitf_card_1577875148
+      name: gitf_card_1577961547
       vouchers_count: 50
       voucher:
         type: GIFT_VOUCHER
@@ -2683,7 +2651,7 @@ definitions:
     example:
       name: Jan Kowalski
       email: jan@kowalski.pl
-      description: 1577875148
+      description: 1577961547
       source_id: src_id
       phone: +48 123456789
     type: object
@@ -2722,7 +2690,7 @@ definitions:
     title: CreateRequest
     example:
       name: Jan Kowalski
-      email: jan1577875148@kowalski.pl
+      email: jan1577961547@kowalski.pl
     type: object
     properties:
       name:
@@ -2736,7 +2704,7 @@ definitions:
     title: DeleteRequest
     example:
       name: Jan Kowalski
-      email: jan1577875148@kowalski.pl
+      email: jan1577961547@kowalski.pl
     type: object
     properties:
       name:
@@ -2927,7 +2895,7 @@ definitions:
   Importvouchers-tocampaignRequest:
     title: Importvouchers-tocampaignRequest
     example:
-      code: CODE_1577875148
+      code: CODE_1577961547
       redemption:
         quantity: 1
       metadata:
@@ -2952,7 +2920,7 @@ definitions:
     title: CreateRequest1
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1577875148
+      source_id: internal_crm_id_1577961547
       attributes:
       - color
       - memory
@@ -3004,7 +2972,7 @@ definitions:
     title: AddSKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1577875148
+      source_id: internal_erp_sku_id_1577961547
       currency: USD
       price: 70000
       attributes:
@@ -3228,7 +3196,7 @@ definitions:
     title: UpdatevoucherRequest
     example:
       metadata:
-        update_time: 1577875148
+        update_time: 1577961547
       category: postman
     type: object
     properties:
@@ -3242,7 +3210,7 @@ definitions:
   Metadata5:
     title: Metadata5
     example:
-      update_time: 1577875148
+      update_time: 1577961547
     type: object
     properties:
       update_time:
@@ -3632,7 +3600,7 @@ definitions:
     title: TC6-CreateProductRequest
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1577875148
+      source_id: internal_crm_id_1577961547
       attributes:
       - color
       - memory
@@ -3659,7 +3627,7 @@ definitions:
     title: TC6-AddSKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1577875148
+      source_id: internal_erp_sku_id_1577961547
       currency: USD
       price: 70000
       attributes:
