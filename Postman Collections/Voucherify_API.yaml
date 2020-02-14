@@ -23,6 +23,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -58,6 +60,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -86,6 +90,8 @@ paths:
       operationId: Create-srcid
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -122,6 +128,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -154,6 +162,8 @@ paths:
       operationId: Update
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -195,6 +205,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -235,6 +247,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -263,6 +277,8 @@ paths:
       operationId: Disable
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -299,6 +315,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -334,6 +352,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -366,6 +386,8 @@ paths:
       operationId: DeleteExport
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -401,6 +423,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -428,6 +452,8 @@ paths:
       operationId: Importvouchers-duplicate
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -480,6 +506,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -502,7 +530,7 @@ paths:
         description: ''
         schema:
           example:
-          - code: CODE_1581590350
+          - code: CODE_1581676751
             redemption:
               quantity: 1
             metadata:
@@ -523,6 +551,8 @@ paths:
       operationId: PostCreate
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -558,6 +588,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -586,6 +618,8 @@ paths:
       operationId: Updateproduct
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -626,6 +660,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -658,6 +694,8 @@ paths:
       operationId: Deleteproduct
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -700,6 +738,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -739,6 +779,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -772,6 +814,8 @@ paths:
       operationId: GetSKU
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -810,6 +854,8 @@ paths:
       operationId: UpdateSKU
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -855,6 +901,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -894,6 +942,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -929,6 +979,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -957,6 +1009,8 @@ paths:
       operationId: ListPublicationsfilters
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: filters[campaign][conditions][$is][0]
@@ -997,6 +1051,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -1032,6 +1088,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -1060,6 +1118,8 @@ paths:
       operationId: Redeem-notfound
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -1097,6 +1157,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -1132,6 +1194,8 @@ paths:
       operationId: Redeem-clientside
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: code
@@ -1179,6 +1243,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -1214,6 +1280,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: result
         in: query
@@ -1247,6 +1315,8 @@ paths:
       operationId: Createsegment
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -1283,6 +1353,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -1315,6 +1387,8 @@ paths:
       operationId: Deletesegment
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -1351,6 +1425,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -1377,7 +1453,7 @@ paths:
         200:
           description: ''
           headers: {}
-  /v1/vouchers/1581590350:
+  /v1/vouchers/1581676751:
     post:
       description: Create discount voucher with a given code
       summary: Create voucher with a given code
@@ -1386,6 +1462,8 @@ paths:
       operationId: Createvoucherwithagivencode
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -1423,6 +1501,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -1458,6 +1538,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -1487,6 +1569,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -1515,6 +1599,8 @@ paths:
       operationId: Listvouchers
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: category
@@ -1556,6 +1642,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -1589,6 +1677,8 @@ paths:
       operationId: TC1-Validate
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -1631,6 +1721,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -1671,6 +1763,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -1704,6 +1798,8 @@ paths:
       operationId: TC3-Redeem
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -1739,6 +1835,8 @@ paths:
       operationId: Validatevoucherforgivencustomerorder
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -1779,6 +1877,8 @@ paths:
       operationId: PostRedeem
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: tracking_id
@@ -1825,6 +1925,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -1858,6 +1960,8 @@ paths:
       operationId: TC2-Redeem2ndtimeafterrollback
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -1899,6 +2003,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -1933,6 +2039,8 @@ paths:
       operationId: TC2-Rollbackredemption
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: tracking_id
@@ -1973,6 +2081,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -2001,6 +2111,8 @@ paths:
       operationId: TC5-Redeem
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -2042,6 +2154,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: reason
         in: query
@@ -2081,6 +2195,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -2116,6 +2232,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -2148,6 +2266,8 @@ paths:
       operationId: PutUpdate
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -2188,6 +2308,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -2221,6 +2343,8 @@ paths:
       operationId: TC6-Addvouchertocampaign
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -2262,6 +2386,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -2296,6 +2422,8 @@ paths:
       operationId: Validate-expired
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: X-App-Id
@@ -2333,6 +2461,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -2368,6 +2498,8 @@ paths:
       operationId: Validate-clientside
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: code
@@ -2408,6 +2540,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -2443,6 +2577,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-App-Id
         in: header
@@ -2473,7 +2609,7 @@ definitions:
   CreatecampaignRequest:
     title: CreatecampaignRequest
     example:
-      name: test campaign 1581590350
+      name: test campaign 1581676751
       start_date: 2016-10-26T00:00:00Z
       expiration_date: 2016-12-26T00:00:00Z
       vouchers_count: 100
@@ -2584,7 +2720,7 @@ definitions:
   CreategiftcardcampaignRequest:
     title: CreategiftcardcampaignRequest
     example:
-      name: gitf_card_1581590350
+      name: gitf_card_1581676751
       vouchers_count: 50
       voucher:
         type: GIFT_VOUCHER
@@ -2651,7 +2787,7 @@ definitions:
     example:
       name: Jan Kowalski
       email: jan@kowalski.pl
-      description: 1581590350
+      description: 1581676751
       source_id: src_id
       phone: +48 123456789
     type: object
@@ -2690,7 +2826,7 @@ definitions:
     title: CreateRequest
     example:
       name: Jan Kowalski
-      email: jan1581590350@kowalski.pl
+      email: jan1581676751@kowalski.pl
     type: object
     properties:
       name:
@@ -2704,7 +2840,7 @@ definitions:
     title: DeleteRequest
     example:
       name: Jan Kowalski
-      email: jan1581590350@kowalski.pl
+      email: jan1581676751@kowalski.pl
     type: object
     properties:
       name:
@@ -2895,7 +3031,7 @@ definitions:
   Importvouchers-tocampaignRequest:
     title: Importvouchers-tocampaignRequest
     example:
-      code: CODE_1581590350
+      code: CODE_1581676751
       redemption:
         quantity: 1
       metadata:
@@ -2920,7 +3056,7 @@ definitions:
     title: CreateRequest1
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1581590350
+      source_id: internal_crm_id_1581676751
       attributes:
       - color
       - memory
@@ -2972,7 +3108,7 @@ definitions:
     title: AddSKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1581590350
+      source_id: internal_erp_sku_id_1581676751
       currency: USD
       price: 70000
       attributes:
@@ -3196,7 +3332,7 @@ definitions:
     title: UpdatevoucherRequest
     example:
       metadata:
-        update_time: 1581590350
+        update_time: 1581676751
       category: postman
     type: object
     properties:
@@ -3210,7 +3346,7 @@ definitions:
   Metadata5:
     title: Metadata5
     example:
-      update_time: 1581590350
+      update_time: 1581676751
     type: object
     properties:
       update_time:
@@ -3600,7 +3736,7 @@ definitions:
     title: TC6-CreateProductRequest
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1581590350
+      source_id: internal_crm_id_1581676751
       attributes:
       - color
       - memory
@@ -3627,7 +3763,7 @@ definitions:
     title: TC6-AddSKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1581590350
+      source_id: internal_erp_sku_id_1581676751
       currency: USD
       price: 70000
       attributes:
