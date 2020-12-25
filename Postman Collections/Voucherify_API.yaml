@@ -530,7 +530,7 @@ paths:
         description: ''
         schema:
           example:
-          - code: CODE_1608806356
+          - code: CODE_1608892756
             redemption:
               quantity: 1
             metadata:
@@ -1453,7 +1453,7 @@ paths:
         200:
           description: ''
           headers: {}
-  /v1/vouchers/1608806356:
+  /v1/vouchers/1608892756:
     post:
       description: Create discount voucher with a given code
       summary: Create voucher with a given code
@@ -2609,7 +2609,7 @@ definitions:
   CreatecampaignRequest:
     title: CreatecampaignRequest
     example:
-      name: test campaign 1608806356
+      name: test campaign 1608892756
       start_date: 2016-10-26T00:00:00Z
       expiration_date: 2016-12-26T00:00:00Z
       vouchers_count: 100
@@ -2720,7 +2720,7 @@ definitions:
   CreategiftcardcampaignRequest:
     title: CreategiftcardcampaignRequest
     example:
-      name: gitf_card_1608806356
+      name: gitf_card_1608892756
       vouchers_count: 50
       voucher:
         type: GIFT_VOUCHER
@@ -2787,7 +2787,7 @@ definitions:
     example:
       name: Jan Kowalski
       email: jan@kowalski.pl
-      description: 1608806356
+      description: 1608892756
       source_id: src_id
       phone: +48 123456789
     type: object
@@ -2826,7 +2826,7 @@ definitions:
     title: CreateRequest
     example:
       name: Jan Kowalski
-      email: jan1608806356@kowalski.pl
+      email: jan1608892756@kowalski.pl
     type: object
     properties:
       name:
@@ -2840,7 +2840,7 @@ definitions:
     title: DeleteRequest
     example:
       name: Jan Kowalski
-      email: jan1608806356@kowalski.pl
+      email: jan1608892756@kowalski.pl
     type: object
     properties:
       name:
@@ -3031,7 +3031,7 @@ definitions:
   Importvouchers-tocampaignRequest:
     title: Importvouchers-tocampaignRequest
     example:
-      code: CODE_1608806356
+      code: CODE_1608892756
       redemption:
         quantity: 1
       metadata:
@@ -3056,7 +3056,7 @@ definitions:
     title: CreateRequest1
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1608806356
+      source_id: internal_crm_id_1608892756
       attributes:
       - color
       - memory
@@ -3108,7 +3108,7 @@ definitions:
     title: AddSKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1608806356
+      source_id: internal_erp_sku_id_1608892756
       currency: USD
       price: 70000
       attributes:
@@ -3332,7 +3332,7 @@ definitions:
     title: UpdatevoucherRequest
     example:
       metadata:
-        update_time: 1608806356
+        update_time: 1608892756
       category: postman
     type: object
     properties:
@@ -3346,7 +3346,7 @@ definitions:
   Metadata5:
     title: Metadata5
     example:
-      update_time: 1608806356
+      update_time: 1608892756
     type: object
     properties:
       update_time:
@@ -3736,7 +3736,7 @@ definitions:
     title: TC6-CreateProductRequest
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1608806356
+      source_id: internal_crm_id_1608892756
       attributes:
       - color
       - memory
@@ -3763,7 +3763,7 @@ definitions:
     title: TC6-AddSKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1608806356
+      source_id: internal_erp_sku_id_1608892756
       currency: USD
       price: 70000
       attributes:
