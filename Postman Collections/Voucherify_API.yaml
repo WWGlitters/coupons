@@ -530,7 +530,7 @@ paths:
         description: ''
         schema:
           example:
-          - code: CODE_1615286346
+          - code: CODE_1615372746
             redemption:
               quantity: 1
             metadata:
@@ -1453,7 +1453,7 @@ paths:
         200:
           description: ''
           headers: {}
-  /v1/vouchers/1615286346:
+  /v1/vouchers/1615372746:
     post:
       description: Create discount voucher with a given code
       summary: Create voucher with a given code
@@ -2609,14 +2609,14 @@ definitions:
   CreatecampaignRequest:
     title: CreatecampaignRequest
     example:
-      name: test campaign 1615286346
+      name: test campaign 1615372746
       start_date: 2016-10-26T00:00:00Z
       expiration_date: 2016-12-26T00:00:00Z
       vouchers_count: 100
       voucher:
         type: DISCOUNT_VOUCHER
         discount:
-          percent_off: 10.0
+          percent_off: '10.0'
           type: PERCENT
         redemption:
           quantity: 1
@@ -2651,7 +2651,7 @@ definitions:
     example:
       type: DISCOUNT_VOUCHER
       discount:
-        percent_off: 10.0
+        percent_off: '10.0'
         type: PERCENT
       redemption:
         quantity: 1
@@ -2675,7 +2675,7 @@ definitions:
   Discount:
     title: Discount
     example:
-      percent_off: 10.0
+      percent_off: '10.0'
       type: PERCENT
     type: object
     properties:
@@ -2720,14 +2720,14 @@ definitions:
   CreategiftcardcampaignRequest:
     title: CreategiftcardcampaignRequest
     example:
-      name: gitf_card_1615286346
+      name: gitf_card_1615372746
       vouchers_count: 50
       voucher:
         type: GIFT_VOUCHER
         gift:
           amount: 10000
         redemption:
-          quantity: 
+          quantity: ''
     type: object
     properties:
       name:
@@ -2748,7 +2748,7 @@ definitions:
       gift:
         amount: 10000
       redemption:
-        quantity: 
+        quantity: ''
     type: object
     properties:
       type:
@@ -2775,7 +2775,7 @@ definitions:
   Redemption1:
     title: Redemption1
     example:
-      quantity: 
+      quantity: ''
     type: object
     properties:
       quantity:
@@ -2787,7 +2787,7 @@ definitions:
     example:
       name: Jan Kowalski
       email: jan@kowalski.pl
-      description: 1615286346
+      description: '1615372746'
       source_id: src_id
       phone: +48 123456789
     type: object
@@ -2826,7 +2826,7 @@ definitions:
     title: CreateRequest
     example:
       name: Jan Kowalski
-      email: jan1615286346@kowalski.pl
+      email: jan1615372746@kowalski.pl
     type: object
     properties:
       name:
@@ -2840,7 +2840,7 @@ definitions:
     title: DeleteRequest
     example:
       name: Jan Kowalski
-      email: jan1615286346@kowalski.pl
+      email: jan1615372746@kowalski.pl
     type: object
     properties:
       name:
@@ -3031,7 +3031,7 @@ definitions:
   Importvouchers-tocampaignRequest:
     title: Importvouchers-tocampaignRequest
     example:
-      code: CODE_1615286346
+      code: CODE_1615372746
       redemption:
         quantity: 1
       metadata:
@@ -3056,7 +3056,7 @@ definitions:
     title: CreateRequest1
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1615286346
+      source_id: internal_crm_id_1615372746
       attributes:
       - color
       - memory
@@ -3084,7 +3084,7 @@ definitions:
     example:
       name: Apple iPhone 8
       metadata:
-        test: false
+        test: 'false'
     type: object
     properties:
       name:
@@ -3097,7 +3097,7 @@ definitions:
   Metadata4:
     title: Metadata4
     example:
-      test: false
+      test: 'false'
     type: object
     properties:
       test:
@@ -3108,12 +3108,12 @@ definitions:
     title: AddSKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1615286346
+      source_id: internal_erp_sku_id_1615372746
       currency: USD
       price: 70000
       attributes:
         color: black
-        memory: 32
+        memory: '32'
     type: object
     properties:
       sku:
@@ -3137,7 +3137,7 @@ definitions:
     title: Attributes
     example:
       color: black
-      memory: 32
+      memory: '32'
     type: object
     properties:
       color:
@@ -3208,9 +3208,9 @@ definitions:
       order:
         items:
         - sku_id: sku_dSbRQfbyUMyHnt
-          quantity: 1
+          quantity: '1'
         - sku_id: sku_0KtP4rvwEECQ2U
-          quantity: 1
+          quantity: '1'
     type: object
     properties:
       order:
@@ -3222,9 +3222,9 @@ definitions:
     example:
       items:
       - sku_id: sku_dSbRQfbyUMyHnt
-        quantity: 1
+        quantity: '1'
       - sku_id: sku_0KtP4rvwEECQ2U
-        quantity: 1
+        quantity: '1'
     type: object
     properties:
       items:
@@ -3237,7 +3237,7 @@ definitions:
     title: Item
     example:
       sku_id: sku_dSbRQfbyUMyHnt
-      quantity: 1
+      quantity: '1'
     type: object
     properties:
       sku_id:
@@ -3273,10 +3273,10 @@ definitions:
     example:
       type: DISCOUNT_VOUCHER
       discount:
-        percent_off: 10.0
+        percent_off: '10.0'
         type: PERCENT
       redemption:
-        quantity: 1
+        quantity: '1'
       category: postman
     type: object
     properties:
@@ -3296,7 +3296,7 @@ definitions:
   Redemption4:
     title: Redemption4
     example:
-      quantity: 1
+      quantity: '1'
     type: object
     properties:
       quantity:
@@ -3308,10 +3308,10 @@ definitions:
     example:
       type: DISCOUNT_VOUCHER
       discount:
-        percent_off: 10.0
+        percent_off: '10.0'
         type: PERCENT
       redemption:
-        quantity: 1
+        quantity: '1'
       category: postman
     type: object
     properties:
@@ -3332,7 +3332,7 @@ definitions:
     title: UpdatevoucherRequest
     example:
       metadata:
-        update_time: 1615286346
+        update_time: '1615372746'
       category: postman
     type: object
     properties:
@@ -3346,7 +3346,7 @@ definitions:
   Metadata5:
     title: Metadata5
     example:
-      update_time: 1615286346
+      update_time: '1615372746'
     type: object
     properties:
       update_time:
@@ -3358,10 +3358,10 @@ definitions:
     example:
       type: DISCOUNT_VOUCHER
       discount:
-        percent_off: 10.0
+        percent_off: '10.0'
         type: PERCENT
       redemption:
-        quantity: 1
+        quantity: '1'
       category: postman
     type: object
     properties:
@@ -3386,7 +3386,7 @@ definitions:
       order:
         items:
         - product_id: prod_anJ03RZZq74z4v
-          quantity: 1
+          quantity: '1'
     type: object
     properties:
       customer:
@@ -3411,7 +3411,7 @@ definitions:
     example:
       items:
       - product_id: prod_anJ03RZZq74z4v
-        quantity: 1
+        quantity: '1'
     type: object
     properties:
       items:
@@ -3424,7 +3424,7 @@ definitions:
     title: Item1
     example:
       product_id: prod_anJ03RZZq74z4v
-      quantity: 1
+      quantity: '1'
     type: object
     properties:
       product_id:
@@ -3439,10 +3439,10 @@ definitions:
     example:
       type: DISCOUNT_VOUCHER
       discount:
-        percent_off: 10.0
+        percent_off: '10.0'
         type: PERCENT
       redemption:
-        quantity: 1
+        quantity: '1'
       category: postman-tc3
       code_config:
         pattern: TC4-PROMO-#######
@@ -3601,10 +3601,10 @@ definitions:
     example:
       type: DISCOUNT_VOUCHER
       discount:
-        percent_off: 10.0
+        percent_off: '10.0'
         type: PERCENT
       redemption:
-        quantity: 1
+        quantity: '1'
       category: postman-tc5
       code_config:
         pattern: TC5-PROMO-#######
@@ -3699,7 +3699,7 @@ definitions:
       voucher:
         type: DISCOUNT_VOUCHER
         discount:
-          percent_off: 10.0
+          percent_off: '10.0'
           type: PERCENT
         redemption:
           quantity: 1
@@ -3736,7 +3736,7 @@ definitions:
     title: TC6-CreateProductRequest
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1615286346
+      source_id: internal_crm_id_1615372746
       attributes:
       - color
       - memory
@@ -3763,12 +3763,12 @@ definitions:
     title: TC6-AddSKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1615286346
+      source_id: internal_erp_sku_id_1615372746
       currency: USD
       price: 70000
       attributes:
         color: black
-        memory: 32
+        memory: '32'
     type: object
     properties:
       sku:
@@ -3800,7 +3800,7 @@ definitions:
           - id: '{{createdSKUId}}'
       orders:
         junction: AND
-        total_amount: 
+        total_amount: ''
         products_count:
           $more_than:
           - 1
@@ -3862,7 +3862,7 @@ definitions:
     title: Orders
     example:
       junction: AND
-      total_amount: 
+      total_amount: ''
       products_count:
         $more_than:
         - 1
@@ -3933,7 +3933,7 @@ definitions:
       order:
         items:
         - product_id: prod_anJ03RZZq74z4v
-          quantity: 1
+          quantity: '1'
     type: object
     properties:
       customer:
@@ -3949,9 +3949,9 @@ definitions:
       order:
         items:
         - sku_id: sku_dSbRQfbyUMyHnt
-          quantity: 1
+          quantity: '1'
         - sku_id: sku_0KtP4rvwEECQ2U
-          quantity: 1
+          quantity: '1'
     type: object
     properties:
       order:
