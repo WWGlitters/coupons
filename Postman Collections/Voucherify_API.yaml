@@ -48,7 +48,7 @@ paths:
         schema:
           $ref: '#/definitions/CreatecampaignRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/campaigns/test campaign:
@@ -79,7 +79,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/customers:
@@ -116,7 +116,7 @@ paths:
         schema:
           $ref: '#/definitions/Create-srcidRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/customers/{customerId}:
@@ -152,7 +152,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     put:
@@ -193,7 +193,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/customers/{createdCustomerId}:
@@ -235,7 +235,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/test-activity/enable:
@@ -266,7 +266,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/test-activity/disable:
@@ -303,7 +303,7 @@ paths:
         schema:
           $ref: '#/definitions/DisableRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/exports:
@@ -340,7 +340,7 @@ paths:
         schema:
           $ref: '#/definitions/CreateExportRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/exports/{exportId}:
@@ -376,7 +376,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     delete:
@@ -411,7 +411,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/import:
@@ -442,7 +442,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     post:
@@ -494,7 +494,7 @@ paths:
           items:
             $ref: '#/definitions/Importvouchers-duplicateRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/campaigns/postman-import/import:
@@ -530,7 +530,7 @@ paths:
         description: ''
         schema:
           example:
-          - code: CODE_1615891150
+          - code: CODE_1615977547
             redemption:
               quantity: 1
             metadata:
@@ -540,7 +540,7 @@ paths:
           items:
             $ref: '#/definitions/Importvouchers-tocampaignRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/products:
@@ -577,7 +577,7 @@ paths:
         schema:
           $ref: '#/definitions/CreateRequest1'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     get:
@@ -607,7 +607,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/products/{createdProductId}:
@@ -649,7 +649,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     get:
@@ -684,7 +684,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     delete:
@@ -726,7 +726,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/products/{createdProductId}/skus:
@@ -768,7 +768,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     get:
@@ -803,7 +803,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/products/{createdProductId}/skus/{createdSKUId}:
@@ -844,7 +844,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     put:
@@ -890,7 +890,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     delete:
@@ -930,7 +930,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/publish:
@@ -967,7 +967,7 @@ paths:
         schema:
           $ref: '#/definitions/PublishRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/publications:
@@ -998,7 +998,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /publications:
@@ -1039,7 +1039,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/test/redemption:
@@ -1077,7 +1077,7 @@ paths:
           example: {}
           type: object
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     get:
@@ -1107,7 +1107,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/NotFound123/redemption:
@@ -1145,7 +1145,7 @@ paths:
           example: {}
           type: object
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/invalid/redemption:
@@ -1183,7 +1183,7 @@ paths:
           example: {}
           type: object
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /client/v1/redeem:
@@ -1231,7 +1231,7 @@ paths:
           example: {}
           type: object
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/LdprQtRL/redemption:
@@ -1268,7 +1268,7 @@ paths:
         schema:
           $ref: '#/definitions/Redeem-orderdetailsRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /redemptions:
@@ -1304,7 +1304,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/segments:
@@ -1341,7 +1341,7 @@ paths:
         schema:
           $ref: '#/definitions/CreatesegmentRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/segments/{createdSegmentId}:
@@ -1377,7 +1377,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     delete:
@@ -1412,7 +1412,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers:
@@ -1450,10 +1450,10 @@ paths:
         schema:
           $ref: '#/definitions/CreatevoucherwithoutcodeRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
-  /v1/vouchers/1615891150:
+  /v1/vouchers/1615977547:
     post:
       description: Create discount voucher with a given code
       summary: Create voucher with a given code
@@ -1488,7 +1488,7 @@ paths:
         schema:
           $ref: '#/definitions/CreatevoucherwithagivencodeRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/test:
@@ -1526,7 +1526,7 @@ paths:
         schema:
           $ref: '#/definitions/UpdatevoucherRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     get:
@@ -1557,7 +1557,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/notfound123:
@@ -1588,7 +1588,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /vouchers:
@@ -1630,7 +1630,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/{generatedCode}:
@@ -1666,7 +1666,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/{TC1-code}/validate:
@@ -1709,7 +1709,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/{TC1-code}/redemption:
@@ -1752,7 +1752,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     get:
@@ -1787,7 +1787,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/IzvHT3Ba/redemption:
@@ -1824,7 +1824,7 @@ paths:
         schema:
           $ref: '#/definitions/TC3-RedeemRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/{TC3-code}/validate:
@@ -1866,7 +1866,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /vouchers/{TC3-code}/redemption:
@@ -1913,7 +1913,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/{TC3-code}/redemption:
@@ -1949,7 +1949,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     post:
@@ -1991,7 +1991,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/customers/{TC3-customer-id}:
@@ -2027,7 +2027,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /redemptions/{TC3-redemption-id}/rollback:
@@ -2069,7 +2069,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/TC4-DIS-BJ5J-iRuy-L7C-2016:
@@ -2100,7 +2100,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/{TC5-code}/redemption:
@@ -2142,7 +2142,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /redemptions/{TC5-redemption-id}/rollback:
@@ -2183,7 +2183,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/validation-rules:
@@ -2220,7 +2220,7 @@ paths:
         schema:
           $ref: '#/definitions/TC6-CreateValidationRulesRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/validation-rules/{createdValidationRulesId}:
@@ -2256,7 +2256,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     put:
@@ -2297,7 +2297,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
     delete:
@@ -2332,7 +2332,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/campaigns/{createdCampaignName}/vouchers:
@@ -2374,7 +2374,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/test/validate:
@@ -2411,7 +2411,7 @@ paths:
         schema:
           $ref: '#/definitions/ValidateRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/invalid/validate:
@@ -2449,7 +2449,7 @@ paths:
           example: {}
           type: object
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/invalid-disabled/validate:
@@ -2487,7 +2487,7 @@ paths:
           example: {}
           type: object
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /client/v1/validate:
@@ -2528,7 +2528,7 @@ paths:
         type: string
         description: ''
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/IzvHT3Ba/validate:
@@ -2565,7 +2565,7 @@ paths:
         schema:
           $ref: '#/definitions/Validate-orderdetailsRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
   /v1/vouchers/LdprQtRL/validate:
@@ -2602,14 +2602,14 @@ paths:
         schema:
           $ref: '#/definitions/Validate-orderdetailsskusRequest'
       responses:
-        200:
+        '200':
           description: ''
           headers: {}
 definitions:
   CreatecampaignRequest:
     title: CreatecampaignRequest
     example:
-      name: test campaign 1615891150
+      name: test campaign 1615977547
       start_date: 2016-10-26T00:00:00Z
       expiration_date: 2016-12-26T00:00:00Z
       vouchers_count: 100
@@ -2720,7 +2720,7 @@ definitions:
   CreategiftcardcampaignRequest:
     title: CreategiftcardcampaignRequest
     example:
-      name: gitf_card_1615891150
+      name: gitf_card_1615977547
       vouchers_count: 50
       voucher:
         type: GIFT_VOUCHER
@@ -2787,7 +2787,7 @@ definitions:
     example:
       name: Jan Kowalski
       email: jan@kowalski.pl
-      description: '1615891150'
+      description: '1615977547'
       source_id: src_id
       phone: +48 123456789
     type: object
@@ -2826,7 +2826,7 @@ definitions:
     title: CreateRequest
     example:
       name: Jan Kowalski
-      email: jan1615891150@kowalski.pl
+      email: jan1615977547@kowalski.pl
     type: object
     properties:
       name:
@@ -2840,7 +2840,7 @@ definitions:
     title: DeleteRequest
     example:
       name: Jan Kowalski
-      email: jan1615891150@kowalski.pl
+      email: jan1615977547@kowalski.pl
     type: object
     properties:
       name:
@@ -3031,7 +3031,7 @@ definitions:
   Importvouchers-tocampaignRequest:
     title: Importvouchers-tocampaignRequest
     example:
-      code: CODE_1615891150
+      code: CODE_1615977547
       redemption:
         quantity: 1
       metadata:
@@ -3056,7 +3056,7 @@ definitions:
     title: CreateRequest1
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1615891150
+      source_id: internal_crm_id_1615977547
       attributes:
       - color
       - memory
@@ -3108,7 +3108,7 @@ definitions:
     title: AddSKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1615891150
+      source_id: internal_erp_sku_id_1615977547
       currency: USD
       price: 70000
       attributes:
@@ -3332,7 +3332,7 @@ definitions:
     title: UpdatevoucherRequest
     example:
       metadata:
-        update_time: '1615891150'
+        update_time: '1615977547'
       category: postman
     type: object
     properties:
@@ -3346,7 +3346,7 @@ definitions:
   Metadata5:
     title: Metadata5
     example:
-      update_time: '1615891150'
+      update_time: '1615977547'
     type: object
     properties:
       update_time:
@@ -3736,7 +3736,7 @@ definitions:
     title: TC6-CreateProductRequest
     example:
       name: Apple iPhone 7
-      source_id: internal_crm_id_1615891150
+      source_id: internal_crm_id_1615977547
       attributes:
       - color
       - memory
@@ -3763,7 +3763,7 @@ definitions:
     title: TC6-AddSKURequest
     example:
       sku: APPLE_IPHONE_7
-      source_id: internal_erp_sku_id_1615891150
+      source_id: internal_erp_sku_id_1615977547
       currency: USD
       price: 70000
       attributes:
